@@ -57,7 +57,7 @@ const MrkImpex = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="w-full px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2 sm:space-x-4">
+                        <div className="flex items-center space-x-2 sm:space-x-4">
               <Button 
                 variant="ghost" 
                 size="sm"
@@ -68,14 +68,17 @@ const MrkImpex = () => {
                 <span className="hidden sm:inline">Back to Home</span>
               </Button>
               <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-                <h1 className="text-xl sm:text-2xl font-bold text-black leading-tight">MRK IMPEX PRIVATE LIMITED</h1>
-                <div className="flex items-center space-x-2 text-gray-600 text-sm sm:text-base mt-1 sm:mt-0">
-                  <MapPin size={16} />
-                  <span>Bhiwadi, Rajasthan</span>
-                </div>
-              </div>
+              <h1 className="text-xl sm:text-2xl font-bold text-black leading-tight">MRK IMPEX PRIVATE LIMITED</h1>
             </div>
+            <div className="hidden sm:flex items-center space-x-2 text-gray-600 text-sm sm:text-base">
+              <MapPin size={16} />
+              <span>Bhiwadi, Rajasthan</span>
+            </div>
+          </div>
+          {/* Mobile address below company name */}
+          <div className="flex items-center space-x-2 text-gray-600 text-sm mt-2 sm:hidden">
+            <MapPin size={16} />
+            <span>Bhiwadi, Rajasthan</span>
           </div>
         </div>
       </header>

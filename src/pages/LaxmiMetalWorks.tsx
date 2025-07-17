@@ -53,14 +53,17 @@ const LaxmiMetalWorks = () => {
                 <span className="hidden sm:inline">Back to Home</span>
               </Button>
               <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-                <h1 className="text-xl sm:text-2xl font-bold text-blue-900 leading-tight">LAXMI METAL WORKS</h1>
-                <div className="flex items-center space-x-2 text-gray-600 text-sm sm:text-base mt-1 sm:mt-0">
-                  <MapPin size={16} />
-                  <span>New Delhi, Delhi</span>
-                </div>
-              </div>
+              <h1 className="text-xl sm:text-2xl font-bold text-blue-900 leading-tight">LAXMI METAL WORKS</h1>
             </div>
+            <div className="hidden sm:flex items-center space-x-2 text-gray-600 text-sm sm:text-base">
+              <MapPin size={16} />
+              <span>New Delhi, Delhi</span>
+            </div>
+          </div>
+          {/* Mobile address below company name */}
+          <div className="flex items-center space-x-2 text-gray-600 text-sm mt-2 sm:hidden">
+            <MapPin size={16} />
+            <span>New Delhi, Delhi</span>
           </div>
         </div>
       </header>
