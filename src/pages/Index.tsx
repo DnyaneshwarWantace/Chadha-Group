@@ -129,7 +129,6 @@ const Index = () => {
               loop
               playsInline
               preload="metadata"
-              poster="/placeholder.svg"
             >
               <source src="/video/video.mp4" type="video/mp4" />
             </video>
@@ -189,12 +188,12 @@ const Index = () => {
                   <div
                     key={company.id}
                     onClick={() => navigate(`/${company.id}`)}
-                    className={`bg-white border-2 ${company.borderColor} rounded-xl p-4 cursor-pointer 
+                    className={`bg-white border-2 ${company.borderColor} rounded-xl p-6 cursor-pointer 
                              hover:shadow-lg hover:scale-105 
-                             transition-all duration-300 group`}
+                             transition-all duration-300 group h-32 flex items-center justify-center`}
                   >
                     <div className="text-center">
-                      <h4 className="font-bold text-gray-900 text-sm mb-1 leading-tight">
+                      <h4 className="font-bold text-gray-900 text-sm mb-2 leading-tight">
                         {company.name}
                       </h4>
                       <p className="text-xs text-gray-600 mb-2">{company.location}</p>
@@ -210,12 +209,12 @@ const Index = () => {
                   <div
                     key={company.id}
                     onClick={() => navigate(`/${company.id}`)}
-                    className={`bg-white border-2 ${company.borderColor} rounded-xl p-4 cursor-pointer 
+                    className={`bg-white border-2 ${company.borderColor} rounded-xl p-6 cursor-pointer 
                              hover:shadow-lg hover:scale-105 
-                             transition-all duration-300 group`}
+                             transition-all duration-300 group h-32 flex items-center justify-center`}
                   >
                     <div className="text-center">
-                      <h4 className="font-bold text-gray-900 text-sm mb-1 leading-tight">
+                      <h4 className="font-bold text-gray-900 text-sm mb-2 leading-tight">
                         {company.name}
                       </h4>
                       <p className="text-xs text-gray-600 mb-2">{company.location}</p>
@@ -229,12 +228,12 @@ const Index = () => {
                 <div className="w-full">
                 <div
                   onClick={() => navigate(`/${companies[4].id}`)}
-                  className={`bg-white border-2 ${companies[4].borderColor} rounded-xl p-4 cursor-pointer 
+                  className={`bg-white border-2 ${companies[4].borderColor} rounded-xl p-6 cursor-pointer 
                            hover:shadow-lg hover:scale-105 
-                             transition-all duration-300 group w-full`}
+                             transition-all duration-300 group w-full h-32 flex items-center justify-center`}
                 >
                   <div className="text-center">
-                    <h4 className="font-bold text-gray-900 text-sm mb-1 leading-tight">
+                    <h4 className="font-bold text-gray-900 text-sm mb-2 leading-tight">
                       {companies[4].name}
                     </h4>
                     <p className="text-xs text-gray-600 mb-2">{companies[4].location}</p>
@@ -259,7 +258,6 @@ const Index = () => {
               loop
               playsInline
               preload="metadata"
-              poster="/placeholder.svg"
             >
               <source src="/video/video.mp4" type="video/mp4" />
             </video>

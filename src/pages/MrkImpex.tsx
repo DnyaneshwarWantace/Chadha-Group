@@ -1,5 +1,5 @@
 
-import { Home, MapPin, Factory, Cpu } from "lucide-react";
+import { Home, MapPin, Factory, Cpu, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -116,17 +116,26 @@ const MrkImpex = () => {
         </div>
       </section>
 
-      {/* Products Section */}
+      {/* Products Section - Show only 2 items */}
       <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-900">Our Products</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {products.map((product, index) => (
+          <div className="flex items-center justify-between mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Our Products</h3>
+            <Button 
+              onClick={() => navigate("/mrk-impex/products")}
+              className="flex items-center space-x-2 bg-black hover:bg-gray-800"
+            >
+              <span>See All Products</span>
+              <ArrowRight size={16} />
+            </Button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+            {products.slice(0, 2).map((product, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <img 
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-40 sm:h-48 object-cover"
+                  className="w-full h-56 sm:h-64 object-cover"
                 />
                 <div className="p-4 sm:p-6">
                   <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
@@ -137,17 +146,26 @@ const MrkImpex = () => {
         </div>
       </section>
 
-      {/* Machinery Section */}
+      {/* Machinery Section - Show only 2 items */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-900">Advanced Machinery & Equipment</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {machinery.map((machine, index) => (
+          <div className="flex items-center justify-between mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Advanced Machinery & Equipment</h3>
+            <Button 
+              onClick={() => navigate("/mrk-impex/equipment")}
+              className="flex items-center space-x-2 bg-black hover:bg-gray-800"
+            >
+              <span>See All Equipment</span>
+              <ArrowRight size={16} />
+            </Button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {machinery.slice(0, 2).map((machine, index) => (
               <div key={index} className="bg-gray-50 rounded-xl p-4 sm:p-6 hover:shadow-lg transition-shadow">
                 <img 
                   src={machine.image}
                   alt={machine.name}
-                  className="w-full h-40 sm:h-48 object-cover rounded-lg mb-4"
+                  className="w-full h-56 sm:h-64 object-cover rounded-lg mb-4"
                 />
                 <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
                 <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
