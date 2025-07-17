@@ -24,7 +24,7 @@ const LaxmiMetalWorksEquipment = () => {
       name: "Shaper Machine",
       specs: "Surface finishing and precision shaping", 
       description: "Precision shaper machines for surface finishing and shaping operations",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Shaper Machine.jpeg",
       capacity: "Surface finishing"
     }
   ];

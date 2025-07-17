@@ -7,15 +7,15 @@ const LaxmiMetalWorks = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: "All Type of Crank Shafts", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Rolls", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+    { name: "All Type of Crank Shafts", image: "/images/All Type of Crank Shafts.jpeg" },
+    { name: "Rolls", image: "/images/Rolls.avif" },
     { name: "Gears", image: "/images/cutting__machining_gear_hobbing_machine.JPG" },
-    { name: "Hydraulic Cylinders", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Tie Rods", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Shafts", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Chilled Iron Ram", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Crane Wheels", image: "/images/lifting_and_material_handling_overhead_crane_also_known_as_a_bridge_crane.JPG" },
-    { name: "Die Forming Components", image: "/images/molding__forming_hydraulic_press_heat_molding_press.JPG" }
+    { name: "Hydraulic Cylinders", image: "/images/Hydraulic Cylinders.jpeg" },
+    { name: "Tie Rods", image: "/images/Tie Rods.jpeg" },
+    { name: "Shafts", image: "/images/Shafts.jpeg" },
+    { name: "Chilled Iron Ram", image: "/images/rChilled Iron Ram.webp" },
+    { name: "Crane Wheels", image: "/images/Crane Wheels.jpeg" },
+    { name: "Die Forming Components", image: "/images/Die Forming Components.jpeg" }
   ];
 
   const machinery = [
@@ -32,7 +32,7 @@ const LaxmiMetalWorks = () => {
     {
       name: "Shaper Machine",
       specs: "Surface finishing and precision shaping", 
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/Shaper Machine.jpeg"
     }
   ];
 
@@ -54,7 +54,7 @@ const LaxmiMetalWorks = () => {
               </Button>
               <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-blue-900 leading-tight">LAXMI METAL WORKS</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-blue-900 leading-tight">LAXMI METAL WORKS</h1>
                 <div className="flex items-center space-x-2 text-gray-600 text-sm mt-1 sm:hidden">
                   <MapPin size={14} />
                   <span>New Delhi, Delhi</span>
@@ -120,21 +120,21 @@ const LaxmiMetalWorks = () => {
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {products.slice(0, 1).map((product, index) => (
-                  <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img 
-                      src={product.image}
-                      alt={product.name}
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <img 
+                  src={product.image}
+                  alt={product.name}
                       className="w-full h-56 sm:h-64 object-cover"
-                    />
-                    <div className="p-4 sm:p-6">
-                      <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
-                    </div>
-                  </div>
-                ))}
+                />
+                <div className="p-4 sm:p-6">
+                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
 
-            {/* Machinery Section */}
+      {/* Machinery Section */}
             <div>
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Machinery & Equipment</h3>
@@ -149,14 +149,14 @@ const LaxmiMetalWorks = () => {
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {machinery.slice(0, 1).map((machine, index) => (
                   <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img 
-                      src={machine.image}
-                      alt={machine.name}
+                <img 
+                  src={machine.image}
+                  alt={machine.name}
                       className="w-full h-56 sm:h-64 object-cover"
-                    />
+                />
                     <div className="p-4 sm:p-6">
-                      <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
-                      <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
+                <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
+                <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
                     </div>
                   </div>
                 ))}

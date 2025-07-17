@@ -24,14 +24,14 @@ const EssEssIndustriesEquipment = () => {
       name: "Robotic Welding Machines",
       specs: "Automated welding operations for precision assembly", 
       description: "Advanced robotic welding systems for precise differential component assembly",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Robotic Welding Machines.jpeg",
       capacity: "Automated welding"
     },
     {
       name: "SPM Machines",
       specs: "15+ specialized purpose machines for custom operations",
       description: "Special purpose machines for custom differential component operations",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/SPM Machines.jpeg",
       capacity: "15+ units available"
     },
     {
@@ -45,7 +45,7 @@ const EssEssIndustriesEquipment = () => {
       name: "Induction Hardening Machine",
       specs: "Heat treatment for durability and precision",
       description: "Advanced induction hardening for differential component durability",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Induction Hardening Machine.jpeg",
       capacity: "Heat treatment"
     }
   ];

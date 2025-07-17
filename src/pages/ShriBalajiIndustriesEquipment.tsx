@@ -10,28 +10,28 @@ const ShriBalajiIndustriesEquipment = () => {
       name: "Hydraulic Press (1200 ton)",
       specs: "Size 2000X4000mm - Maximum capacity, precision capabilities",
       description: "Heavy-duty hydraulic press for large-scale sheet metal forming operations",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Hydraulic Press (1200 ton).png",
       capacity: "1200 ton capacity"
     },
     {
       name: "Hydraulic Press (600 ton)", 
       specs: "Size 800X1400mm - Medium capacity operations",
       description: "Medium-capacity hydraulic press for precision sheet metal work",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Hydraulic Press (600 ton).jpeg",
       capacity: "600 ton capacity"
     },
     {
       name: "Robotic Plasma Machines",
       specs: "4 units for automated cutting operations", 
       description: "Advanced robotic plasma cutting systems for automated precision cutting",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Robotic Plasma Machines.jpeg",
       capacity: "Automated cutting operations"
     },
     {
       name: "Press Brake Machine",
       specs: "Precision bending operations",
       description: "High-precision press brake for accurate sheet metal bending",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/Press Brake Machine.jpeg",
       capacity: "Precision bending"
     },
     {

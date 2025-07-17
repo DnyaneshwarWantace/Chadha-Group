@@ -11,9 +11,9 @@ const EssEssIndustries = () => {
     { name: "Differential 35\" Size", image: "/images/assembly_and_manufacturing_mechanical_parts_assembly_line_likely_gearboxes_or_motor_components.JPG" },
     { name: "Differential 38\" Size", image: "/images/manufacturingassembly_gearbox_or_axle_assembly_line_parts_for_transmissions_or_drive_axles.JPG" },
     { name: "Differential 42\" Size", image: "/images/automotive_manufacturingassembly_axle_assembly.JPG" },
-    { name: "Handle T - Casting Version", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Handle T - Forging Version", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Neck Pipe Components", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+    { name: "Handle T - Casting Version", image: "/images/Handle T - Casting Version.jpeg" },
+    { name: "Handle T - Forging Version", image: "/images/Handle T - Forging Version.jpeg" },
+    { name: "Neck Pipe Components", image: "/images/Neck Pipe Components.webp" }
   ];
 
   const machinery = [
@@ -30,12 +30,12 @@ const EssEssIndustries = () => {
     {
       name: "Robotic Welding Machines",
       specs: "Automated welding operations for precision assembly", 
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/Robotic Welding Machines.jpeg"
     },
     {
       name: "SPM Machines",
       specs: "15+ specialized purpose machines for custom operations",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/SPM Machines.jpeg"
     },
     {
       name: "Laser Cutting Machine",
@@ -45,7 +45,7 @@ const EssEssIndustries = () => {
     {
       name: "Induction Hardening Machine",
       specs: "Heat treatment for durability and precision",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/Induction Hardening Machine.jpeg"
     }
   ];
 
@@ -67,7 +67,7 @@ const EssEssIndustries = () => {
               </Button>
               <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight">ESS ESS INDUSTRIES</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight">ESS ESS INDUSTRIES</h1>
                 <div className="flex items-center space-x-2 text-gray-600 text-sm mt-1 sm:hidden">
                   <MapPin size={14} />
                   <span>Bhiwadi, Rajasthan</span>
@@ -133,21 +133,21 @@ const EssEssIndustries = () => {
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {products.slice(0, 1).map((product, index) => (
-                  <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img 
-                      src={product.image}
-                      alt={product.name}
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <img 
+                  src={product.image}
+                  alt={product.name}
                       className="w-full h-56 sm:h-64 object-cover"
-                    />
-                    <div className="p-4 sm:p-6">
-                      <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
-                    </div>
-                  </div>
-                ))}
+                />
+                <div className="p-4 sm:p-6">
+                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
 
-            {/* Machinery Section */}
+      {/* Machinery Section */}
             <div>
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Machinery & Equipment</h3>
@@ -162,14 +162,14 @@ const EssEssIndustries = () => {
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {machinery.slice(0, 1).map((machine, index) => (
                   <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img 
-                      src={machine.image}
-                      alt={machine.name}
+                <img 
+                  src={machine.image}
+                  alt={machine.name}
                       className="w-full h-56 sm:h-64 object-cover"
-                    />
+                />
                     <div className="p-4 sm:p-6">
-                      <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
-                      <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
+                <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
+                <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
                     </div>
                   </div>
                 ))}

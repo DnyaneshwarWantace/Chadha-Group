@@ -6,15 +6,15 @@ const LaxmiMetalWorksProducts = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: "All Type of Crank Shafts", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Precision-engineered crankshafts for various industrial applications" },
-    { name: "Rolls", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "High-quality rolls for manufacturing and processing industries" },
+    { name: "All Type of Crank Shafts", image: "/images/All Type of Crank Shafts.jpeg", description: "Precision-engineered crankshafts for various industrial applications" },
+    { name: "Rolls", image: "/images/Rolls.avif", description: "High-quality rolls for manufacturing and processing industries" },
     { name: "Gears", image: "/images/cutting__machining_gear_hobbing_machine.JPG", description: "Precision gears manufactured using advanced hobbing technology" },
-    { name: "Hydraulic Cylinders", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Custom hydraulic cylinders for heavy machinery applications" },
-    { name: "Tie Rods", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "High-strength tie rods for structural applications" },
-    { name: "Shafts", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Precision shafts for various industrial machinery" },
-    { name: "Chilled Iron Ram", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Durable chilled iron rams for hydraulic applications" },
-    { name: "Crane Wheels", image: "/images/lifting_and_material_handling_overhead_crane_also_known_as_a_bridge_crane.JPG", description: "Heavy-duty crane wheels for material handling systems" },
-    { name: "Die Forming Components", image: "/images/molding__forming_hydraulic_press_heat_molding_press.JPG", description: "Precision die forming components for manufacturing processes" }
+    { name: "Hydraulic Cylinders", image: "/images/Hydraulic Cylinders.jpeg", description: "Custom hydraulic cylinders for heavy machinery applications" },
+    { name: "Tie Rods", image: "/images/Tie Rods.jpeg", description: "High-strength tie rods for structural applications" },
+    { name: "Shafts", image: "/images/Shafts.jpeg", description: "Precision shafts for various industrial machinery" },
+    { name: "Chilled Iron Ram", image: "/images/rChilled Iron Ram.webp", description: "Durable chilled iron rams for hydraulic applications" },
+    { name: "Crane Wheels", image: "/images/Crane Wheels.jpeg", description: "Heavy-duty crane wheels for material handling systems" },
+    { name: "Die Forming Components", image: "/images/Die Forming Components.jpeg", description: "Precision die forming components for manufacturing processes" }
   ];
 
   return (

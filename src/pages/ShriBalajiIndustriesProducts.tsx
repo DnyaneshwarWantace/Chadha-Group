@@ -6,15 +6,13 @@ const ShriBalajiIndustriesProducts = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: "E-Rickshaw Roof", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Precision-engineered roof components for electric rickshaws" },
-    { name: "Butterfly Components", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Specialized butterfly valve components for industrial applications" },
-    { name: "Back Panel", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Durable back panels for automotive and industrial use" },
-    { name: "Side Panel", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Precision side panels for various vehicle applications" },
-    { name: "Driver Box", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Ergonomic driver compartments for commercial vehicles" },
-    { name: "Loader Roof", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Heavy-duty roof components for loader vehicles" },
-    { name: "Sheet Metal Enclosures", image: "/images/machining_metalworkingmachining_heavyduty_lathe_machine.JPG", description: "Custom sheet metal enclosures for industrial equipment" },
-    { name: "Automotive Body Parts", image: "/images/lifting_and_material_handling_overhead_crane_also_known_as_a_bridge_crane.JPG", description: "Precision automotive body components and panels" },
-    { name: "Industrial Covers", image: "/images/molding__forming_hydraulic_press_heat_molding_press.JPG", description: "Protective covers and guards for industrial machinery" }
+    { name: "E-Rickshaw Roof", image: "/images/e-rickshaw roof.jpeg", description: "Precision-engineered roof components for electric rickshaws" },
+    { name: "Butterfly Components", image: "/images/Butterfly Components.jpeg", description: "Specialized butterfly valve components for industrial applications" },
+    { name: "Back Panel", image: "/images/download.jpeg", description: "Durable back panels for automotive and industrial use" },
+    { name: "Side Panel", image: "/images/Side Panel.jpeg", description: "Precision side panels for various vehicle applications" },
+    { name: "Driver Box", image: "/images/Driver Box.jpeg", description: "Ergonomic driver compartments for commercial vehicles" },
+    { name: "Loader Roof", image: "/images/Loader Roof.jpeg", description: "Heavy-duty roof components for loader vehicles" },
+    
   ];
 
   return (

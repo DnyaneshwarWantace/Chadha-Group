@@ -10,11 +10,10 @@ const EssEssIndustriesProducts = () => {
     { name: "Differential 35\" Size", image: "/images/assembly_and_manufacturing_mechanical_parts_assembly_line_likely_gearboxes_or_motor_components.JPG", description: "High-quality differential assemblies for 35-inch systems" },
     { name: "Differential 38\" Size", image: "/images/manufacturingassembly_gearbox_or_axle_assembly_line_parts_for_transmissions_or_drive_axles.JPG", description: "Advanced differential components for 38-inch applications" },
     { name: "Differential 42\" Size", image: "/images/automotive_manufacturingassembly_axle_assembly.JPG", description: "Heavy-duty differential assemblies for 42-inch systems" },
-    { name: "Handle T - Casting Version", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Precision-cast T-handle components for industrial applications" },
-    { name: "Handle T - Forging Version", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Forged T-handle components for enhanced strength and durability" },
-    { name: "Neck Pipe Components", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Precision neck pipe components for fluid transfer systems" },
-    { name: "Differential Gears", image: "/images/cutting__machining_gear_hobbing_machine.JPG", description: "High-precision differential gears for smooth power transmission" },
-    { name: "Axle Components", image: "/images/lifting_and_material_handling_overhead_crane_also_known_as_a_bridge_crane.JPG", description: "Durable axle components for heavy-duty applications" }
+    { name: "Handle T - Casting Version", image: "/images/Handle T - Casting Version.jpeg", description: "Precision-cast T-handle components for industrial applications" },
+    { name: "Handle T - Forging Version", image: "/images/Handle T - Forging Version.jpeg", description: "Forged T-handle components for enhanced strength and durability" },
+    { name: "Neck Pipe Components", image: "/images/Neck Pipe Components.webp", description: "Precision neck pipe components for fluid transfer systems" },
+    
   ];
 
   return (

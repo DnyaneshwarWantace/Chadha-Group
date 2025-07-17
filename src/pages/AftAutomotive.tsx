@@ -65,7 +65,7 @@ const AftAutomotive = () => {
               </Button>
               <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">AFT AUTOMOTIVE</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">AFT AUTOMOTIVE</h1>
                 <div className="flex items-center space-x-2 text-gray-600 text-sm mt-1 sm:hidden">
                   <MapPin size={14} />
                   <span>Bhiwadi, Rajasthan</span>
@@ -131,21 +131,21 @@ const AftAutomotive = () => {
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {products.slice(0, 1).map((product, index) => (
-                  <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img 
-                      src={product.image}
-                      alt={product.name}
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <img 
+                  src={product.image}
+                  alt={product.name}
                       className="w-full h-56 sm:h-64 object-cover"
-                    />
-                    <div className="p-4 sm:p-6">
-                      <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
-                    </div>
-                  </div>
-                ))}
+                />
+                <div className="p-4 sm:p-6">
+                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
 
-            {/* Machinery Section */}
+      {/* Machinery Section */}
             <div>
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Machinery & Equipment</h3>
@@ -160,14 +160,14 @@ const AftAutomotive = () => {
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {machinery.slice(0, 1).map((machine, index) => (
                   <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img 
-                      src={machine.image}
-                      alt={machine.name}
+                <img 
+                  src={machine.image}
+                  alt={machine.name}
                       className="w-full h-56 sm:h-64 object-cover"
-                    />
+                />
                     <div className="p-4 sm:p-6">
-                      <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
-                      <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
+                <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
+                <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
                     </div>
                   </div>
                 ))}

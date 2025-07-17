@@ -7,34 +7,34 @@ const ShriBalajiIndustries = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: "E-Rickshaw Roof", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Butterfly Components", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Back Panel", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Side Panel", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Driver Box", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Loader Roof", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
+    { name: "E-Rickshaw Roof", image: "/images/e-rickshaw roof.jpeg" },
+    { name: "Butterfly Components", image: "/images/Butterfly Components.jpeg" },
+    { name: "Back Panel", image: "/images/download.jpeg" },
+    { name: "Side Panel", image: "/images/Side Panel.jpeg" },
+    { name: "Driver Box", image: "/images/Driver Box.jpeg" },
+    { name: "Loader Roof", image: "/images/Loader Roof.jpeg" }
   ];
 
   const machinery = [
     {
       name: "Hydraulic Press (1200 ton)",
       specs: "Size 2000X4000mm - Maximum capacity, precision capabilities",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/Hydraulic Press (1200 ton).png"
     },
     {
       name: "Hydraulic Press (600 ton)", 
       specs: "Size 800X1400mm - Medium capacity operations",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/Hydraulic Press (600 ton).jpeg"
     },
     {
       name: "Robotic Plasma Machines",
       specs: "4 units for automated cutting operations", 
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/Robotic Plasma Machines.jpeg"
     },
     {
       name: "Press Brake Machine",
       specs: "Precision bending operations",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/Press Brake Machine.jpeg"
     },
     {
       name: "Power Presses",
@@ -66,7 +66,7 @@ const ShriBalajiIndustries = () => {
               </Button>
               <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
               <div>
-                <h1 className="text-xl sm:text-2xl font-bold text-green-900 leading-tight">SHRI BALAJI INDUSTRIES</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-green-900 leading-tight">SHRI BALAJI INDUSTRIES</h1>
                 <div className="flex items-center space-x-2 text-gray-600 text-sm mt-1 sm:hidden">
                   <MapPin size={14} />
                   <span>Bhiwadi, Rajasthan</span>
@@ -132,21 +132,21 @@ const ShriBalajiIndustries = () => {
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {products.slice(0, 1).map((product, index) => (
-                  <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img 
-                      src={product.image}
-                      alt={product.name}
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <img 
+                  src={product.image}
+                  alt={product.name}
                       className="w-full h-56 sm:h-64 object-cover"
-                    />
-                    <div className="p-4 sm:p-6">
-                      <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
-                    </div>
-                  </div>
-                ))}
+                />
+                <div className="p-4 sm:p-6">
+                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
 
-            {/* Machinery Section */}
+      {/* Machinery Section */}
             <div>
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Machinery & Equipment</h3>
@@ -161,14 +161,14 @@ const ShriBalajiIndustries = () => {
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {machinery.slice(0, 1).map((machine, index) => (
                   <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img 
-                      src={machine.image}
-                      alt={machine.name}
+                <img 
+                  src={machine.image}
+                  alt={machine.name}
                       className="w-full h-56 sm:h-64 object-cover"
-                    />
+                />
                     <div className="p-4 sm:p-6">
-                      <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
-                      <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
+                <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
+                <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
                     </div>
                   </div>
                 ))}
