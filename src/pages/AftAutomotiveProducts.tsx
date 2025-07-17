@@ -11,10 +11,7 @@ const AftAutomotiveProducts = () => {
     { name: "Clutch Plates", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Durable clutch plates for smooth power transmission in vehicles" },
     { name: "Control Levers", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Ergonomic control levers for brake and clutch operations" },
     { name: "Brake Drum Assembly", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Complete brake drum assemblies for reliable braking systems" },
-    { name: "Brake Linings", image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "High-friction brake linings for superior stopping power" },
-    { name: "Brake Cables", image: "/images/heat_treatment__surface_treatment_industrial_oven_or_baking_furnace.JPG", description: "Durable brake cables for reliable brake system operation" },
-    { name: "Throttle Cables", image: "/images/pressingforming_hydraulic_press_machine.JPG", description: "Precision throttle cables for smooth engine control" },
-    { name: "Speedometer Cables", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Accurate speedometer cables for vehicle speed measurement" }
+    
   ];
 
   return (
