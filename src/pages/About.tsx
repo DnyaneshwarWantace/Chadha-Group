@@ -169,73 +169,85 @@ const About = () => {
             </p>
           </div>
 
-          <div className="space-y-8">
-            {companies.map((company, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8 shadow-lg">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  {/* Company Info */}
-                  <div className="lg:col-span-2">
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <span className="text-blue-600 font-bold text-lg">{index + 1}</span>
-                      </div>
-                      <div>
-                        <h4 className="text-2xl font-bold text-gray-900">{company.name}</h4>
-                        <p className="text-gray-600">{company.location}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                        Established: {company.established}
-                      </span>
-                      <span className="inline-block bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full ml-2">
-                        {company.specialization}
-                      </span>
-                    </div>
-                    
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                      {company.description}
-                    </p>
-                    
-                    <div>
-                      <h5 className="font-semibold text-gray-900 mb-2">Key Products:</h5>
-                      <p className="text-gray-600">{company.products}</p>
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {companies.slice(0, 4).map((company, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-blue-600 font-bold text-xl">{index + 1}</span>
                   </div>
-                  
-                  {/* Company Card */}
-                  <div className="bg-white rounded-lg p-6 shadow-sm border">
-                    <h5 className="font-bold text-gray-900 mb-4 text-center">Company Overview</h5>
-                    <div className="space-y-3 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Name:</span>
-                        <span className="font-medium">{company.name}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Location:</span>
-                        <span className="font-medium">{company.location}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Established:</span>
-                        <span className="font-medium">{company.established}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Specialization:</span>
-                        <span className="font-medium">{company.specialization}</span>
-                      </div>
-                    </div>
-                    
-                    <Button 
-                      onClick={() => navigate(`/${company.name.toLowerCase().replace(/\s+/g, '-').replace('private-limited', '')}`)}
-                      className="w-full mt-6 bg-blue-900 hover:bg-blue-800"
-                    >
-                      Learn More
-                    </Button>
+                  <div>
+                    <h4 className="text-2xl font-bold text-gray-900">{company.name}</h4>
+                    <p className="text-gray-600">{company.location}</p>
                   </div>
                 </div>
+                
+                <div className="mb-6">
+                  <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                    Established: {company.established}
+                  </span>
+                  <span className="inline-block bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full ml-2">
+                    {company.specialization}
+                  </span>
+                </div>
+                
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  {company.description}
+                </p>
+                
+                <div className="mb-6">
+                  <h5 className="font-semibold text-gray-900 mb-2">Key Products:</h5>
+                  <p className="text-gray-600">{company.products}</p>
+                </div>
+
+                <Button 
+                  onClick={() => navigate(`/${company.name.toLowerCase().replace(/\s+/g, '-').replace('private-limited', '')}`)}
+                  className="w-full bg-blue-900 hover:bg-blue-800"
+                >
+                  Learn More
+                </Button>
               </div>
             ))}
+          </div>
+
+          {/* 5th Company - Centered */}
+          <div className="flex justify-center mt-8">
+            <div className="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow w-full lg:w-1/2">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <span className="text-blue-600 font-bold text-xl">5</span>
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold text-gray-900">{companies[4].name}</h4>
+                  <p className="text-gray-600">{companies[4].location}</p>
+                </div>
+              </div>
+              
+              <div className="mb-6">
+                <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                  Established: {companies[4].established}
+                </span>
+                <span className="inline-block bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full ml-2">
+                  {companies[4].specialization}
+                </span>
+              </div>
+              
+              <p className="text-gray-700 leading-relaxed mb-6">
+                {companies[4].description}
+              </p>
+              
+              <div className="mb-6">
+                <h5 className="font-semibold text-gray-900 mb-2">Key Products:</h5>
+                <p className="text-gray-600">{companies[4].products}</p>
+              </div>
+
+              <Button 
+                onClick={() => navigate(`/${companies[4].name.toLowerCase().replace(/\s+/g, '-').replace('private-limited', '')}`)}
+                className="w-full bg-blue-900 hover:bg-blue-800"
+              >
+                Learn More
+              </Button>
+            </div>
           </div>
         </div>
       </section>

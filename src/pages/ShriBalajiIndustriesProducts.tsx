@@ -32,7 +32,7 @@ const ShriBalajiIndustriesProducts = () => {
                 <span className="hidden sm:inline">Back to Shri Balaji Industries</span>
               </Button>
               <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
-              <h1 className="text-xl sm:text-2xl font-bold text-green-900 leading-tight">SHRI BALAJI INDUSTRIES - PRODUCTS</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-green-950 leading-tight">SHRI BALAJI INDUSTRIES - PRODUCTS</h1>
             </div>
             <Button 
                 variant="ghost" 
@@ -48,15 +48,15 @@ const ShriBalajiIndustriesProducts = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-900 to-green-700 text-white py-12 sm:py-16">
+      <section className="bg-gradient-to-r from-green-950 to-green-800 text-white py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Our Complete Product Range</h2>
-          <p className="text-lg sm:text-xl mb-6 text-green-100 max-w-3xl mx-auto">
+                      <p className="text-lg sm:text-xl mb-6 text-green-200 max-w-3xl mx-auto">
             Comprehensive range of sheet metal components and automotive parts designed for 
             durability, precision, and industrial excellence.
           </p>
           <div className="flex items-center justify-center space-x-4">
-            <Factory className="text-green-300" size={24} />
+                            <Factory className="text-green-400" size={24} />
             <span className="text-lg">Sheet Metal & Automotive Solutions</span>
           </div>
         </div>
@@ -76,7 +76,7 @@ const ShriBalajiIndustriesProducts = () => {
                 <div className="p-6">
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">{product.name}</h4>
                   <p className="text-gray-600 text-sm leading-relaxed">{product.description}</p>
-                  <Button className="w-full mt-4 bg-green-900 hover:bg-green-800">
+                  <Button className="w-full mt-4 bg-green-950 hover:bg-green-900">
                     Learn More
                   </Button>
                 </div>
@@ -87,13 +87,13 @@ const ShriBalajiIndustriesProducts = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-12 sm:py-16 bg-green-900 text-white">
+      <section className="py-12 sm:py-16 bg-green-950 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Interested in Our Products?</h3>
-          <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-green-100">
+                      <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-green-200">
             Get in touch with us to discuss your specific requirements and get custom quotes.
           </p>
-          <Button size="lg" className="bg-white text-green-900 hover:bg-gray-100">
+                      <Button size="lg" className="bg-white text-green-950 hover:bg-gray-100">
             Contact Us Today
           </Button>
         </div>

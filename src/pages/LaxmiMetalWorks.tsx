@@ -108,51 +108,47 @@ const LaxmiMetalWorks = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Products Section */}
             <div>
-              <div className="mb-6 sm:mb-8">
+              <div className="mb-6 sm:mb-8 flex flex-col lg:flex-row lg:items-center lg:justify-between">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Our Products</h3>
+                <Button 
+                  onClick={() => navigate("/laxmi-metal-works/products")}
+                  className="w-full lg:w-auto mt-4 lg:mt-0 bg-blue-900 hover:bg-blue-800"
+                >
+                  See All Products
+                </Button>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {products.slice(0, 1).map((product, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img 
-                  src={product.image}
-                  alt={product.name}
-                      className="w-full h-56 sm:h-64 object-cover"
-                />
-                <div className="p-4 sm:p-6">
-                  <Button 
-                    onClick={() => navigate("/laxmi-metal-works/products")}
-                    className="w-full bg-blue-900 hover:bg-blue-800"
-                  >
-                    See All Products
-                  </Button>
-                </div>
+                  <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img 
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-72 sm:h-80 object-cover"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
-      {/* Machinery Section */}
+            {/* Machinery Section */}
             <div>
-              <div className="mb-6 sm:mb-8">
+              <div className="mb-6 sm:mb-8 flex flex-col lg:flex-row lg:items-center lg:justify-between">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Machinery & Equipment</h3>
+                <Button 
+                  onClick={() => navigate("/laxmi-metal-works/equipment")}
+                  className="w-full lg:w-auto mt-4 lg:mt-0 bg-blue-900 hover:bg-blue-800"
+                >
+                  See All Equipment
+                </Button>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {machinery.slice(0, 1).map((machine, index) => (
                   <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img 
-                  src={machine.image}
-                  alt={machine.name}
-                      className="w-full h-56 sm:h-64 object-cover"
-                />
-                    <div className="p-4 sm:p-6">
-                      <Button 
-                        onClick={() => navigate("/laxmi-metal-works/equipment")}
-                        className="w-full bg-blue-900 hover:bg-blue-800"
-                      >
-                        See All Equipment
-                      </Button>
-                    </div>
+                    <img 
+                      src={machine.image}
+                      alt={machine.name}
+                      className="w-full h-72 sm:h-80 object-cover"
+                    />
                   </div>
                 ))}
               </div>

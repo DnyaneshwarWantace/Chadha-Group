@@ -24,8 +24,8 @@ const Index = () => {
       location: "Bhiwadi, Rajasthan",
       specialization: "Sheet Metal Components",
       description: "E-Rickshaw Parts, Hydraulic Press Work",
-      borderColor: "border-green-500",
-      bgColor: "bg-green-600"
+      borderColor: "border-green-700",
+      bgColor: "bg-green-800"
     },
     {
       id: "ess-ess-industries",
@@ -157,7 +157,7 @@ const Index = () => {
                 <div className="grid grid-cols-2 gap-4">
                 {keyFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 bg-green-700 rounded-full flex items-center justify-center flex-shrink-0">
                       <Check size={16} className="text-white" />
                     </div>
                     <span className="text-gray-200 font-medium">{feature}</span>
@@ -181,7 +181,7 @@ const Index = () => {
             {/* Section Title */}
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                OUR 5 SPECIALIZED CONGLOMERATES
+                OUR CONGLOMERATES
               </h3>
               <div className="w-20 h-1 bg-blue-900 mx-auto rounded"></div>
             </div>
@@ -286,7 +286,7 @@ const Index = () => {
                 <div className="grid grid-cols-1 gap-4">
                   {keyFeatures.map((feature, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-6 h-6 bg-green-700 rounded-full flex items-center justify-center flex-shrink-0">
                         <Check size={16} className="text-white" />
                       </div>
                       <span className="text-gray-200 font-medium">{feature}</span>
@@ -308,7 +308,7 @@ const Index = () => {
           <div className="bg-white px-6 py-12">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                OUR 5 SPECIALIZED CONGLOMERATES
+                OUR CONGLOMERATES
               </h3>
               <div className="w-20 h-1 bg-blue-900 mx-auto rounded"></div>
             </div>

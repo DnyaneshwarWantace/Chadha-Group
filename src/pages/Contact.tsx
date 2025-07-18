@@ -84,38 +84,38 @@ const Contact = () => {
       {/* Contact Information Section */}
       <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {companies.map((company, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {companies.slice(0, 4).map((company, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
                 {/* Company Name */}
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{company.name}</h3>
-                  <div className="w-16 h-1 bg-blue-900 mx-auto rounded"></div>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{company.name}</h3>
+                  <div className="w-20 h-1 bg-blue-900 mx-auto rounded"></div>
                 </div>
                 
                 {/* Contact Numbers */}
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Phone className="text-blue-600" size={20} />
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Phone className="text-blue-600" size={24} />
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-1">Contact Numbers</h4>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Contact Numbers</h4>
                       <div className="space-y-1">
-                        <p className="text-gray-700 text-sm font-medium">{company.phone1}</p>
-                        <p className="text-gray-700 text-sm font-medium">{company.phone2}</p>
+                        <p className="text-gray-700 font-medium">{company.phone1}</p>
+                        <p className="text-gray-700 font-medium">{company.phone2}</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Address */}
-                  <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="text-green-600" size={20} />
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="text-green-600" size={24} />
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-1">Address</h4>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Address</h4>
+                      <p className="text-gray-700 leading-relaxed">
                         {company.name}<br />
                         {company.location}
                       </p>
@@ -124,6 +124,47 @@ const Contact = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* 5th Company - Centered */}
+          <div className="flex justify-center mt-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow w-full lg:w-1/2">
+              {/* Company Name */}
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{companies[4].name}</h3>
+                <div className="w-20 h-1 bg-blue-900 mx-auto rounded"></div>
+              </div>
+              
+              {/* Contact Numbers */}
+              <div className="space-y-6 mb-8">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="text-blue-600" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Contact Numbers</h4>
+                    <div className="space-y-1">
+                      <p className="text-gray-700 font-medium">{companies[4].phone1}</p>
+                      <p className="text-gray-700 font-medium">{companies[4].phone2}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="text-green-600" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Address</h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      {companies[4].name}<br />
+                      {companies[4].location}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
