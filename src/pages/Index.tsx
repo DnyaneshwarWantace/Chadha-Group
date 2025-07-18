@@ -122,9 +122,9 @@ const Index = () => {
       </header>
 
       {/* Main Content - Responsive Layout */}
-      <main className="pt-20 h-screen overflow-hidden">
+      <main className="pt-20 md:h-screen md:overflow-hidden">
         {/* Desktop Layout */}
-        <div className="hidden md:flex h-screen overflow-hidden">
+        <div className="hidden md:flex h-full overflow-hidden">
         {/* Left Panel - Company Overview (60%) */}
           <div className="w-3/5 relative bg-black overflow-hidden">
             {/* Background Video */}

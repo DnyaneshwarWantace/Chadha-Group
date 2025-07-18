@@ -93,8 +93,8 @@ const LaxmiMetalWorks = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Laxmi Metal Works Facility"
+                src="/images/machiningturning_lathe_machine_heavyduty_lathe (2).jpg"
+                alt="Laxmi Metal Works - Heavy Duty Lathe Machine"
                 className="rounded-lg shadow-xl w-full h-48 sm:h-auto object-cover"
               />
             </div>
