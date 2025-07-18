@@ -8,45 +8,38 @@ const AftAutomotiveEquipment = () => {
   const machinery = [
     {
       name: "Pressure Die Casting Machines",
-      specs: "3 units for precision casting operations",
-      description: "Advanced pressure die casting machines for automotive component manufacturing",
-      image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG",
-      capacity: "3 units available"
+      description: "Advanced pressure die casting machines for precision aluminum component manufacturing",
+      image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG"
     },
     {
       name: "Industrial Furnaces", 
-      specs: "3 units for metal melting and heating",
-      description: "High-temperature industrial furnaces for metal processing and heat treatment",
-      image: "/images/heat_treatment__surface_treatment_industrial_oven_or_baking_furnace.JPG",
-      capacity: "3 units available"
+      description: "High-temperature industrial furnaces for metal melting and heat treatment processes",
+      image: "/images/heat_treatment__surface_treatment_industrial_oven_or_baking_furnace.JPG"
+    },
+    {
+      name: "Industrial Oven",
+      description: "Advanced industrial ovens for heat treatment and curing processes",
+      image: "/images/heat_treatment_heat_treatment_furnace_or_oven.JPG"
     },
     {
       name: "Forming Hydraulic Press",
-      specs: "5 units for final forming operations", 
-      description: "Precision hydraulic presses for automotive component forming and assembly",
-      image: "/images/pressingforming_hydraulic_press_machine.JPG",
-      capacity: "5 units available"
+      description: "Precision hydraulic presses for final forming operations of automotive components", 
+      image: "/images/pressingforming_hydraulic_press_machine.JPG"
     },
     {
       name: "Shot Blasting Machines",
-      specs: "2 units for surface preparation",
-      description: "Surface preparation equipment for automotive component finishing",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      capacity: "2 units available"
+      description: "Advanced shot blasting systems for surface preparation and finishing",
+      image: "/images/surface_treatment__coating_powder_coating_booth.JPG"
     },
     {
       name: "SPM Grinding Machines",
-      specs: "Specialized grinding operations for precision parts",
-      description: "Special purpose grinding machines for automotive component precision finishing",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      capacity: "Precision grinding"
+      description: "Specialized grinding machines for precision automotive component finishing",
+      image: "/images/machining_cnc_machining_cnc_milling_machine_model.JPG"
     },
     {
       name: "Powder Coating Equipment",
-      specs: "Advanced surface finishing technology",
-      description: "Modern powder coating equipment for automotive component surface finishing",
-      image: "/images/coating__surface_treatment_powder_coating_booth.JPG",
-      capacity: "Advanced finishing"
+      description: "Advanced powder coating systems for durable surface finishing",
+      image: "/images/coating__surface_treatment_powder_coating_booth.JPG"
     }
   ];
 
@@ -94,16 +87,6 @@ const AftAutomotiveEquipment = () => {
                 <div className="p-6">
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">{machine.name}</h4>
                   <p className="text-gray-600 text-sm leading-relaxed mb-3">{machine.description}</p>
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center space-x-2">
-                      <Settings size={16} className="text-slate-600" />
-                      <span className="text-sm font-medium text-gray-700">{machine.specs}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Factory size={16} className="text-slate-600" />
-                      <span className="text-sm text-gray-600">{machine.capacity}</span>
-                    </div>
-                  </div>
                   <Button className="w-full bg-slate-900 hover:bg-slate-800">View Details</Button>
                 </div>
               </div>

@@ -8,45 +8,33 @@ const ShriBalajiIndustriesEquipment = () => {
   const machinery = [
     {
       name: "Hydraulic Press (1200 ton)",
-      specs: "Size 2000X4000mm - Maximum capacity, precision capabilities",
       description: "Heavy-duty hydraulic press for large-scale sheet metal forming operations",
-      image: "/images/Hydraulic Press (1200 ton).png",
-      capacity: "1200 ton capacity"
+      image: "/images/Hydraulic Press (1200 ton).png"
     },
     {
       name: "Hydraulic Press (600 ton)", 
-      specs: "Size 800X1400mm - Medium capacity operations",
       description: "Medium-capacity hydraulic press for precision sheet metal work",
-      image: "/images/Hydraulic Press (600 ton).jpeg",
-      capacity: "600 ton capacity"
+      image: "/images/Hydraulic Press (600 ton).jpeg"
     },
     {
       name: "Robotic Plasma Machines",
-      specs: "4 units for automated cutting operations", 
       description: "Advanced robotic plasma cutting systems for automated precision cutting",
-      image: "/images/Robotic Plasma Machines.jpeg",
-      capacity: "Automated cutting operations"
+      image: "/images/Robotic Plasma Machines.jpeg"
     },
     {
       name: "Press Brake Machine",
-      specs: "Precision bending operations",
       description: "High-precision press brake for accurate sheet metal bending",
-      image: "/images/Press Brake Machine.jpeg",
-      capacity: "Precision bending"
+      image: "/images/Press Brake Machine.jpeg"
     },
     {
       name: "Power Presses",
-      specs: "High-speed stamping operations",
       description: "Industrial power presses for high-volume stamping and forming",
-      image: "/images/pressingforming_mechanical_power_press_models.JPG",
-      capacity: "High-speed production"
+      image: "/images/pressingforming_mechanical_power_press_models.JPG"
     },
     {
       name: "Shearing Cutting Machine",
-      specs: "Material preparation and cutting",
       description: "Precision shearing machines for material preparation and cutting",
-      image: "/images/cutting_metal_band_saw_horizontal_band_saw.JPG",
-      capacity: "Material cutting"
+      image: "/images/cutting_metal_band_saw_horizontal_band_saw.JPG"
     }
   ];
 
@@ -111,16 +99,6 @@ const ShriBalajiIndustriesEquipment = () => {
                 <div className="p-6">
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">{machine.name}</h4>
                   <p className="text-gray-600 text-sm leading-relaxed mb-3">{machine.description}</p>
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center space-x-2">
-                      <Settings size={16} className="text-green-600" />
-                      <span className="text-sm font-medium text-gray-700">{machine.specs}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Factory size={16} className="text-green-600" />
-                      <span className="text-sm text-gray-600">{machine.capacity}</span>
-                    </div>
-                  </div>
                   <Button className="w-full bg-green-900 hover:bg-green-800">
                     View Details
                   </Button>

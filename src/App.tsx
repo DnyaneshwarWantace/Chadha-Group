@@ -7,6 +7,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 import LaxmiMetalWorks from "./pages/LaxmiMetalWorks";
 import LaxmiMetalWorksProducts from "./pages/LaxmiMetalWorksProducts";
 import LaxmiMetalWorksEquipment from "./pages/LaxmiMetalWorksEquipment";
@@ -34,6 +36,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="/laxmi-metal-works" element={<LaxmiMetalWorks />} />
           <Route path="/laxmi-metal-works/products" element={<LaxmiMetalWorksProducts />} />
           <Route path="/laxmi-metal-works/equipment" element={<LaxmiMetalWorksEquipment />} />

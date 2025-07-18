@@ -8,45 +8,43 @@ const EssEssIndustriesEquipment = () => {
   const machinery = [
     {
       name: "Vertical Machining Centre",
-      specs: "3 units for precision machining differential components",
       description: "Advanced vertical machining centres for precision differential component manufacturing",
-      image: "/images/machiningmetalworking_cnc_vertical_machining_center_vmc.JPG",
-      capacity: "3 units available"
+      image: "/images/machiningmetalworking_cnc_vertical_machining_center_vmc.JPG"
     },
     {
       name: "Computer Numerical Control Machines", 
-      specs: "4 units for automated operations",
       description: "High-precision CNC machines for automated differential component production",
-      image: "/images/machiningmanufacturing_cnc_milling_machine_computer_numerical_control_milling_machine.JPG",
-      capacity: "4 units available"
+      image: "/images/machiningmanufacturing_cnc_milling_machine_computer_numerical_control_milling_machine.JPG"
+    },
+    {
+      name: "Pneumatic Presses",
+      description: "Advanced pneumatic press systems for precision component assembly and forming",
+      image: "/images/pressingforming_mechanical_power_press_models.JPG"
+    },
+    {
+      name: "Hardness Tester",
+      description: "Precision hardness testing equipment for quality control and material verification",
+      image: "/images/testing_and_measurement_digital_spring_testing_machine_visible_at_the_back_on_the_right_side_and_possibly_an_environmental_salt_spray_test_chamber_large_blue_machine_on_the_left.JPG"
     },
     {
       name: "Robotic Welding Machines",
-      specs: "Automated welding operations for precision assembly", 
       description: "Advanced robotic welding systems for precise differential component assembly",
-      image: "/images/Robotic Welding Machines.jpeg",
-      capacity: "Automated welding"
+      image: "/images/Robotic Welding Machines.jpeg"
     },
     {
       name: "SPM Machines",
-      specs: "15+ specialized purpose machines for custom operations",
       description: "Special purpose machines for custom differential component operations",
-      image: "/images/SPM Machines.jpeg",
-      capacity: "15+ units available"
+      image: "/images/SPM Machines.jpeg"
     },
     {
       name: "Laser Cutting Machine",
-      specs: "Precision material cutting with laser technology",
       description: "High-precision laser cutting for differential component manufacturing",
-      image: "/images/cutting_cnc_laser_cutting_machine.JPG",
-      capacity: "Precision cutting"
+      image: "/images/cutting_cnc_laser_cutting_machine.JPG"
     },
     {
       name: "Induction Hardening Machine",
-      specs: "Heat treatment for durability and precision",
       description: "Advanced induction hardening for differential component durability",
-      image: "/images/Induction Hardening Machine.jpeg",
-      capacity: "Heat treatment"
+      image: "/images/Induction Hardening Machine.jpeg"
     }
   ];
 
@@ -94,16 +92,6 @@ const EssEssIndustriesEquipment = () => {
                 <div className="p-6">
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">{machine.name}</h4>
                   <p className="text-gray-600 text-sm leading-relaxed mb-3">{machine.description}</p>
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center space-x-2">
-                      <Settings size={16} className="text-gray-600" />
-                      <span className="text-sm font-medium text-gray-700">{machine.specs}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Factory size={16} className="text-gray-600" />
-                      <span className="text-sm text-gray-600">{machine.capacity}</span>
-                    </div>
-                  </div>
                   <Button className="w-full bg-gray-900 hover:bg-gray-800">View Details</Button>
                 </div>
               </div>

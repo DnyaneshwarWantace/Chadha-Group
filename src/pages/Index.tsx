@@ -77,16 +77,19 @@ const Index = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Chadha Group</h1>
-              <p className="text-sm text-gray-600">Industrial Excellence Since 1971</p>
+              <p className="text-sm text-gray-600">Industrial Excellence Since 1968</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-gray-700 hover:text-blue-900 font-medium transition-colors">Home</a>
-            <a href="#" className="text-gray-700 hover:text-blue-900 font-medium transition-colors">About</a>
-            <a href="#" className="text-gray-700 hover:text-blue-900 font-medium transition-colors">Contact</a>
-            <Button className="bg-blue-900 hover:bg-blue-800 text-white px-6">
+            <a href="/about" className="text-gray-700 hover:text-blue-900 font-medium transition-colors">About</a>
+            <a href="/contact" className="text-gray-700 hover:text-blue-900 font-medium transition-colors">Contact</a>
+            <Button 
+              onClick={() => window.open('https://wa.me/919999884740', '_blank')}
+              className="bg-blue-900 hover:bg-blue-800 text-white px-6"
+            >
               Get Quote
             </Button>
           </nav>
@@ -105,9 +108,12 @@ const Index = () => {
           <div className="md:hidden bg-white border-t px-6 py-4">
             <nav className="flex flex-col space-y-4">
               <a href="#" className="text-gray-700 hover:text-blue-900 font-medium">Home</a>
-              <a href="#" className="text-gray-700 hover:text-blue-900 font-medium">About</a>
-              <a href="#" className="text-gray-700 hover:text-blue-900 font-medium">Contact</a>
-              <Button className="bg-blue-900 hover:bg-blue-800 text-white w-full">
+              <a href="/about" className="text-gray-700 hover:text-blue-900 font-medium">About</a>
+              <a href="/contact" className="text-gray-700 hover:text-blue-900 font-medium">Contact</a>
+              <Button 
+                onClick={() => window.open('https://wa.me/919999884740', '_blank')}
+                className="bg-blue-900 hover:bg-blue-800 text-white w-full"
+              >
                 Get Quote
               </Button>
             </nav>
@@ -116,9 +122,9 @@ const Index = () => {
       </header>
 
       {/* Main Content - Responsive Layout */}
-      <main className="pt-20 min-h-screen">
+      <main className="pt-20 h-screen overflow-hidden">
         {/* Desktop Layout */}
-        <div className="hidden md:flex h-screen">
+        <div className="hidden md:flex h-screen overflow-hidden">
         {/* Left Panel - Company Overview (60%) */}
           <div className="w-3/5 relative bg-black overflow-hidden">
             {/* Background Video */}
@@ -138,7 +144,7 @@ const Index = () => {
             <div className="mb-8">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
                 INDUSTRIAL EXCELLENCE<br />
-                <span className="text-blue-300">SINCE 1971</span>
+                <span className="text-blue-300">SINCE 1968</span>
               </h2>
               <p className="text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
                 Leading manufacturer of exclusive industrial products with 50+ years 
@@ -175,7 +181,7 @@ const Index = () => {
             {/* Section Title */}
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                OUR 5 SPECIALIZED COMPANIES
+                OUR 5 SPECIALIZED CONGLOMERATES
               </h3>
               <div className="w-20 h-1 bg-blue-900 mx-auto rounded"></div>
             </div>
@@ -302,7 +308,7 @@ const Index = () => {
           <div className="bg-white px-6 py-12">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                OUR 5 SPECIALIZED COMPANIES
+                OUR 5 SPECIALIZED CONGLOMERATES
               </h3>
               <div className="w-20 h-1 bg-blue-900 mx-auto rounded"></div>
             </div>

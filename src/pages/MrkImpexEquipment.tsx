@@ -7,46 +7,39 @@ const MrkImpexEquipment = () => {
 
   const machinery = [
     {
-      name: "Conventional Lathe Machines",
-      specs: "40+ units for various turning operations",
-      description: "Extensive fleet of conventional lathe machines for precision turning operations",
-      image: "/images/machining_metalworkingmachining_heavyduty_lathe_machine.JPG",
-      capacity: "40+ units available"
+      name: "CNC Machining Centers",
+      description: "Advanced CNC machining centers for precision component manufacturing",
+      image: "/images/machiningmanufacturing_cnc_milling_machine_computer_numerical_control_milling_machine.JPG"
     },
     {
-      name: "Vertical Machining Centre (KAFO3151)", 
-      specs: "X3000, Y5000, Z1400, Loading Capacity 22 Tons",
-      description: "Advanced vertical machining centre with large work envelope and high loading capacity",
-      image: "/images/machiningmetalworking_cnc_vertical_machining_center_vmc.JPG",
-      capacity: "22 tons loading capacity"
+      name: "X 5000 Y 3000 Vertical Machine Center",
+      description: "Large-scale vertical machining center with X5000 Y3000 work envelope for oversized components",
+      image: "/images/machiningmetalworking_cnc_vertical_machining_center_vmc.JPG"
     },
     {
-      name: "CNC Vertical Turning Lathe (TOS German)",
-      specs: "Turning Dia 2200MM, Z-2000mm - German precision", 
-      description: "German-made CNC vertical turning lathe for large diameter precision turning",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      capacity: "2200mm turning diameter"
+      name: "Precision Lathe Machines", 
+      description: "High-precision lathe machines for complex turning operations",
+      image: "/images/machining_metalworkingmachining_heavyduty_lathe_machine.JPG"
     },
     {
-      name: "Roll Grinder (TOS German)",
-      specs: "Job Capacity 900X5000MM - Precision roll grinding",
-      description: "German precision roll grinder for high-accuracy cylindrical grinding operations",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      capacity: "900X5000MM capacity"
+      name: "Surface Grinding Machines",
+      description: "Precision surface grinding machines for component finishing", 
+      image: "/images/machining_cnc_machining_cnc_milling_machine_model.JPG"
     },
     {
-      name: "ELGA Milling Machine",
-      specs: "Table Size 1250X8500MM - Large component machining",
-      description: "Large-scale milling machine for machining oversized industrial components",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      capacity: "1250X8500MM table"
+      name: "Quality Testing Equipment",
+      description: "Advanced quality testing and measurement equipment",
+      image: "/images/testing_and_measurement_digital_spring_testing_machine_visible_at_the_back_on_the_right_side_and_possibly_an_environmental_salt_spray_test_chamber_large_blue_machine_on_the_left.JPG"
     },
     {
-      name: "Bandsaw Cutting Machines",
-      specs: "7 units for material cutting and preparation",
-      description: "Multiple bandsaw cutting machines for efficient material preparation and cutting",
-      image: "/images/cutting_metal_band_saw_horizontal_band_saw.JPG",
-      capacity: "7 units available"
+      name: "Material Handling Systems",
+      description: "Automated material handling and conveyor systems",
+      image: "/images/conveying_and_sorting_vibratory_feeder_conveyor.JPG"
+    },
+    {
+      name: "Welding Equipment",
+      description: "Advanced welding equipment for precision component assembly",
+      image: "/images/welding_arc_welding_machine.JPG"
     }
   ];
 
@@ -111,16 +104,6 @@ const MrkImpexEquipment = () => {
                 <div className="p-6">
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">{machine.name}</h4>
                   <p className="text-gray-600 text-sm leading-relaxed mb-3">{machine.description}</p>
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center space-x-2">
-                      <Settings size={16} className="text-gray-600" />
-                      <span className="text-sm font-medium text-gray-700">{machine.specs}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Factory size={16} className="text-gray-600" />
-                      <span className="text-sm text-gray-600">{machine.capacity}</span>
-                    </div>
-                  </div>
                   <Button className="w-full bg-black hover:bg-gray-800">
                     View Details
                   </Button>

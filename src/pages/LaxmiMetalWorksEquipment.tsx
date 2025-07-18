@@ -8,24 +8,18 @@ const LaxmiMetalWorksEquipment = () => {
   const machinery = [
     {
       name: "Conventional Lathe Machines",
-      specs: "10+ units for precision turning operations",
       description: "Advanced conventional lathe machines for precision turning and machining operations",
-      image: "/images/machining_metalworkingmachining_heavyduty_lathe_machine.JPG",
-      capacity: "10+ units available"
+      image: "/images/machining_metalworkingmachining_heavyduty_lathe_machine.JPG"
     },
     {
       name: "Overhead Cranes", 
-      specs: "Heavy lifting and material handling",
       description: "Heavy-duty overhead cranes for material handling and lifting operations",
-      image: "/images/lifting_and_material_handling_overhead_crane_also_known_as_a_bridge_crane.JPG",
-      capacity: "Heavy lifting"
+      image: "/images/lifting_and_material_handling_overhead_crane_also_known_as_a_bridge_crane.JPG"
     },
     {
       name: "Shaper Machine",
-      specs: "Surface finishing and precision shaping", 
       description: "Precision shaper machines for surface finishing and shaping operations",
-      image: "/images/Shaper Machine.jpeg",
-      capacity: "Surface finishing"
+      image: "/images/Shaper Machine.jpeg"
     }
   ];
 
@@ -73,16 +67,6 @@ const LaxmiMetalWorksEquipment = () => {
                 <div className="p-6">
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">{machine.name}</h4>
                   <p className="text-gray-600 text-sm leading-relaxed mb-3">{machine.description}</p>
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center space-x-2">
-                      <Settings size={16} className="text-blue-600" />
-                      <span className="text-sm font-medium text-gray-700">{machine.specs}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Factory size={16} className="text-blue-600" />
-                      <span className="text-sm text-gray-600">{machine.capacity}</span>
-                    </div>
-                  </div>
                   <Button className="w-full bg-blue-900 hover:bg-blue-800">View Details</Button>
                 </div>
               </div>

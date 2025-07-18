@@ -9,9 +9,8 @@ const AftAutomotiveProducts = () => {
     { name: "Brake Shoes for 2&3 Wheelers", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "High-quality brake shoes designed for 2 and 3 wheeler vehicles" },
     { name: "Disc Pads", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Precision-engineered disc brake pads for optimal stopping performance" },
     { name: "Clutch Plates", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Durable clutch plates for smooth power transmission in vehicles" },
-    { name: "Control Levers", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Ergonomic control levers for brake and clutch operations" },
-    { name: "Brake Drum Assembly", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Complete brake drum assemblies for reliable braking systems" },
-    
+    { name: "Brake & Clutch Levers", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Precision-engineered brake and clutch levers for optimal control and smooth operation" },
+    { name: "Brake Drum Assembly", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Complete brake drum assemblies for reliable braking systems" }
   ];
 
   return (

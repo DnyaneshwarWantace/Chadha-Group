@@ -1,5 +1,5 @@
 
-import { Home, MapPin, Factory, Settings, ArrowRight } from "lucide-react";
+import { Home, MapPin, Factory, Settings, ArrowRight, MessageCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -10,7 +10,7 @@ const AftAutomotive = () => {
     { name: "Brake Shoes for 2&3 Wheelers", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
     { name: "Disc Pads", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
     { name: "Clutch Plates", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Control Levers", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+    { name: "Brake & Clutch Levers", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
     { name: "Brake Drum Assembly", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
   ];
 
@@ -65,7 +65,7 @@ const AftAutomotive = () => {
               </Button>
               <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
               <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">AFT AUTOMOTIVE</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">CHADHA GROUP</h1>
                 <div className="flex items-center space-x-2 text-gray-600 text-sm mt-1 sm:hidden">
                   <MapPin size={14} />
                   <span>Bhiwadi, Rajasthan</span>
@@ -85,11 +85,11 @@ const AftAutomotive = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Automotive Excellence</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">AFT AUTOMOTIVE</h2>
               <p className="text-lg sm:text-xl mb-6 text-slate-100">
                 Specialized division of Chadha Group focused on automotive components 
-                and brake systems. Located in Bhiwadi with advanced manufacturing 
-                capabilities for 2 & 3 wheeler industries.
+                and brake systems. Established in 2019, located in Bhiwadi with advanced 
+                manufacturing capabilities for 2 & 3 wheeler industries.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2">
@@ -119,15 +119,8 @@ const AftAutomotive = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Products Section */}
             <div>
-              <div className="flex items-center justify-between mb-6 sm:mb-8">
+              <div className="mb-6 sm:mb-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Our Products</h3>
-                <Button 
-                  onClick={() => navigate("/aft-automotive/products")}
-                  className="flex items-center space-x-2 bg-slate-900 hover:bg-slate-800"
-                >
-                  <span>See All Products</span>
-                  <ArrowRight size={16} />
-                </Button>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {products.slice(0, 1).map((product, index) => (
@@ -138,7 +131,12 @@ const AftAutomotive = () => {
                       className="w-full h-56 sm:h-64 object-cover"
                 />
                 <div className="p-4 sm:p-6">
-                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
+                  <Button 
+                    onClick={() => navigate("/aft-automotive/products")}
+                    className="w-full bg-slate-900 hover:bg-slate-800"
+                  >
+                    See All Products
+                  </Button>
                 </div>
               </div>
             ))}
@@ -147,15 +145,8 @@ const AftAutomotive = () => {
 
       {/* Machinery Section */}
             <div>
-              <div className="flex items-center justify-between mb-6 sm:mb-8">
+              <div className="mb-6 sm:mb-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Machinery & Equipment</h3>
-                <Button 
-                  onClick={() => navigate("/aft-automotive/equipment")}
-                  className="flex items-center space-x-2 bg-slate-900 hover:bg-slate-800"
-                >
-                  <span>See All Equipment</span>
-                  <ArrowRight size={16} />
-                </Button>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {machinery.slice(0, 1).map((machine, index) => (
@@ -166,8 +157,12 @@ const AftAutomotive = () => {
                       className="w-full h-56 sm:h-64 object-cover"
                 />
                     <div className="p-4 sm:p-6">
-                <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
-                <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
+                      <Button 
+                        onClick={() => navigate("/aft-automotive/equipment")}
+                        className="w-full bg-slate-900 hover:bg-slate-800"
+                      >
+                        See All Equipment
+                      </Button>
                     </div>
                   </div>
                 ))}
@@ -184,8 +179,13 @@ const AftAutomotive = () => {
           <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-slate-100">
             Ready to discuss your automotive component requirements?
           </p>
-          <Button size="lg" className="bg-white text-slate-900 hover:bg-gray-100">
-            Contact Us Today
+          <Button 
+            size="lg" 
+            className="bg-green-600 hover:bg-green-700 text-white"
+            onClick={() => window.open('https://wa.me/919999884740', '_blank')}
+          >
+            <MessageCircle className="mr-2" size={20} />
+            WhatsApp Us
           </Button>
         </div>
       </section>

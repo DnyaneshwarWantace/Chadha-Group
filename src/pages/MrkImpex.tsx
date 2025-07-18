@@ -1,5 +1,5 @@
 
-import { Home, MapPin, Factory, Cpu, ArrowRight } from "lucide-react";
+import { Home, MapPin, Factory, Cpu, ArrowRight, MessageCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -69,7 +69,7 @@ const MrkImpex = () => {
               </Button>
               <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
               <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-black leading-tight">MRK IMPEX PRIVATE LIMITED</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-black leading-tight">CHADHA GROUP</h1>
                 <div className="flex items-center space-x-2 text-gray-600 text-sm mt-1 sm:hidden">
                   <MapPin size={14} />
                   <span>Bhiwadi, Rajasthan</span>
@@ -89,11 +89,11 @@ const MrkImpex = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Advanced CNC Manufacturing</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">MRK IMPEX PRIVATE LIMITED</h2>
               <p className="text-lg sm:text-xl mb-6 text-gray-100">
                 Largest manufacturing unit of Chadha Group featuring advanced CNC machining 
-                and precision manufacturing. German-made machinery ensures highest quality 
-                standards in industrial component production.
+                and precision manufacturing. Established in 2008, German-made machinery 
+                ensures highest quality standards in industrial component production.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2">
@@ -123,15 +123,8 @@ const MrkImpex = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Products Section */}
             <div>
-              <div className="flex items-center justify-between mb-6 sm:mb-8">
+              <div className="mb-6 sm:mb-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Our Products</h3>
-                <Button 
-                  onClick={() => navigate("/mrk-impex/products")}
-                  className="flex items-center space-x-2 bg-black hover:bg-gray-800"
-                >
-                  <span>See All Products</span>
-                  <ArrowRight size={16} />
-                </Button>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {products.slice(0, 1).map((product, index) => (
@@ -142,7 +135,12 @@ const MrkImpex = () => {
                       className="w-full h-56 sm:h-64 object-cover"
                 />
                 <div className="p-4 sm:p-6">
-                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900">{product.name}</h4>
+                  <Button 
+                    onClick={() => navigate("/mrk-impex/products")}
+                    className="w-full bg-black hover:bg-gray-800"
+                  >
+                    See All Products
+                  </Button>
                 </div>
               </div>
             ))}
@@ -151,15 +149,8 @@ const MrkImpex = () => {
 
       {/* Machinery Section */}
             <div>
-              <div className="flex items-center justify-between mb-6 sm:mb-8">
+              <div className="mb-6 sm:mb-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Advanced Machinery & Equipment</h3>
-                <Button 
-                  onClick={() => navigate("/mrk-impex/equipment")}
-                  className="flex items-center space-x-2 bg-black hover:bg-gray-800"
-                >
-                  <span>See All Equipment</span>
-                  <ArrowRight size={16} />
-                </Button>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {machinery.slice(0, 1).map((machine, index) => (
@@ -170,8 +161,12 @@ const MrkImpex = () => {
                       className="w-full h-56 sm:h-64 object-cover"
                 />
                     <div className="p-4 sm:p-6">
-                <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{machine.name}</h4>
-                <p className="text-gray-600 text-sm sm:text-base">{machine.specs}</p>
+                      <Button 
+                        onClick={() => navigate("/mrk-impex/equipment")}
+                        className="w-full bg-black hover:bg-gray-800"
+                      >
+                        See All Equipment
+                      </Button>
                     </div>
                   </div>
                 ))}
@@ -188,8 +183,13 @@ const MrkImpex = () => {
           <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-gray-100">
             Ready to discuss your precision manufacturing requirements?
           </p>
-          <Button size="lg" className="bg-white text-black hover:bg-gray-100">
-            Contact Us Today
+          <Button 
+            size="lg" 
+            className="bg-green-600 hover:bg-green-700 text-white"
+            onClick={() => window.open('https://wa.me/919810133182', '_blank')}
+          >
+            <MessageCircle className="mr-2" size={20} />
+            WhatsApp Us
           </Button>
         </div>
       </section>
