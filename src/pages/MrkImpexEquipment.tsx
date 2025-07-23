@@ -7,39 +7,34 @@ const MrkImpexEquipment = () => {
 
   const machinery = [
     {
-      name: "CNC Machining Centers",
-      description: "Advanced CNC machining centers for precision component manufacturing",
-      image: "/images/machiningmanufacturing_cnc_milling_machine_computer_numerical_control_milling_machine.JPG"
+      name: "Conventional Lathe Machines",
+      description: "40+ units for various turning operations",
+      image: "/images/mrk/Conventional Lathe Machines.jpg"
     },
     {
-      name: "X 5000 Y 3000 Vertical Machine Center",
-      description: "Large-scale vertical machining center with X5000 Y3000 work envelope for oversized components",
-      image: "/images/machiningmetalworking_cnc_vertical_machining_center_vmc.JPG"
+      name: "Vertical Machining Centre (KAFO3151)",
+      description: "X5000, Y3000, Z1400, Loading Capacity 22 Tons",
+      image: "/images/mrk/Vertical Machining Centre (KAFO3151).jpg"
     },
     {
-      name: "Precision Lathe Machines", 
-      description: "High-precision lathe machines for complex turning operations",
-      image: "/images/machining_metalworkingmachining_heavyduty_lathe_machine.JPG"
+      name: "CNC Vertical Turning Lathe (TOS German)",
+      description: "Turning Dia 2200MM, Z-2000mm - German precision",
+      image: "/images/mrk/CNC Vertical Turning Lathe (TOS German).jpg"
     },
     {
-      name: "Surface Grinding Machines",
-      description: "Precision surface grinding machines for component finishing", 
-      image: "/images/machining_cnc_machining_cnc_milling_machine_model.JPG"
+      name: "Roll Grinder (TOS German)",
+      description: "Job Capacity 900X5000MM - Precision roll grinding",
+      image: "/images/mrk/Roll Grinder (TOS German).jpg"
     },
     {
-      name: "Quality Testing Equipment",
-      description: "Advanced quality testing and measurement equipment",
-      image: "/images/testing_and_measurement_digital_spring_testing_machine_visible_at_the_back_on_the_right_side_and_possibly_an_environmental_salt_spray_test_chamber_large_blue_machine_on_the_left.JPG"
+      name: "ELGA Milling Machine",
+      description: "Table Size 1250X8500MM - Large component machining",
+      image: "/images/mrk/ELGA Milling Machine.jpg"
     },
     {
-      name: "Material Handling Systems",
-      description: "Automated material handling and conveyor systems",
-      image: "/images/conveying_and_sorting_vibratory_feeder_conveyor.JPG"
-    },
-    {
-      name: "Welding Equipment",
-      description: "Advanced welding equipment for precision component assembly",
-      image: "/images/welding_arc_welding_machine.JPG"
+      name: "Bandsaw Cutting Machines",
+      description: "7 units for material cutting and preparation",
+      image: "/images/mrk/Bandsaw Cutting Machines.jpg"
     }
   ];
 

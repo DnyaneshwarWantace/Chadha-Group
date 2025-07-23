@@ -7,47 +7,47 @@ const MrkImpex = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: "Industrial Crankshafts", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+    { name: "Industrial Crankshafts", image: "/images/All Type of Crank Shafts.jpeg" },
     { name: "Mechanical Gears", image: "/images/cutting__machining_gear_hobbing_machine.JPG" },
-    { name: "Hydraulic Cylinders", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-    { name: "Shaft for Presses", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+    { name: "Hydraulic Cylinders", image: "/images/Hydraulic Cylinders.jpeg" },
+    { name: "Shaft for Presses", image: "/images/Shafts.jpeg" },
     { name: "Manifold for Hydraulic Presses", image: "/images/moldingpressing_hydraulicmechanical_press_machine.JPG" },
-    { name: "Die Block and Tie Rods", image: "/images/metal_formingpressing_mechanical_power_press_labeled_lgm200_and_ocp160.JPG" },
+    { name: "Die Block and Tie Rods", image: "/images/Tie Rods.jpeg" },
     { name: "Sheet Metal Components", image: "/images/cutting_cnc_plasma_cutting_machine.JPG" },
     { name: "Cast Iron Mould Manufacturing", image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG" },
-    { name: "Forming Tools", image: "/images/molding__forming_hydraulic_press_heat_molding_press.JPG" }
+    { name: "Forming Tools", image: "/images/Die Forming Components.jpeg" }
   ];
 
   const machinery = [
     {
       name: "Conventional Lathe Machines",
       specs: "40+ units for various turning operations",
-      image: "/images/machining_metalworkingmachining_heavyduty_lathe_machine.JPG"
+      image: "/images/mrk/Conventional Lathe Machines.jpg"
     },
     {
       name: "Vertical Machining Centre (KAFO3151)", 
-      specs: "X3000, Y5000, Z1400, Loading Capacity 22 Tons",
-      image: "/images/machiningmetalworking_cnc_vertical_machining_center_vmc.JPG"
+      specs: "X5000, Y3000, Z1400, Loading Capacity 22 Tons",
+      image: "/images/mrk/Vertical Machining Centre (KAFO3151).jpg"
     },
     {
       name: "CNC Vertical Turning Lathe (TOS German)",
       specs: "Turning Dia 2200MM, Z-2000mm - German precision", 
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/mrk/CNC Vertical Turning Lathe (TOS German).jpg"
     },
     {
       name: "Roll Grinder (TOS German)",
       specs: "Job Capacity 900X5000MM - Precision roll grinding",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/mrk/Roll Grinder (TOS German).jpg"
     },
     {
       name: "ELGA Milling Machine",
       specs: "Table Size 1250X8500MM - Large component machining",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/mrk/ELGA Milling Machine.jpg"
     },
     {
       name: "Bandsaw Cutting Machines",
       specs: "7 units for material cutting and preparation",
-      image: "/images/cutting_metal_band_saw_horizontal_band_saw.JPG"
+      image: "/images/mrk/Bandsaw Cutting Machines.jpg"
     }
   ];
 

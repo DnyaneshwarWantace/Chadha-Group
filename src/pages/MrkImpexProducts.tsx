@@ -6,15 +6,15 @@ const MrkImpexProducts = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: "Industrial Crankshafts", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Precision-engineered industrial crankshafts for heavy machinery applications" },
+    { name: "Industrial Crankshafts", image: "/images/All Type of Crank Shafts.jpeg", description: "Precision-engineered industrial crankshafts for heavy machinery applications" },
     { name: "Mechanical Gears", image: "/images/cutting__machining_gear_hobbing_machine.JPG", description: "High-precision mechanical gears manufactured using advanced hobbing technology" },
-    { name: "Hydraulic Cylinders", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Custom hydraulic cylinders for industrial and automotive applications" },
-    { name: "Shaft for Presses", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", description: "Specialized shafts designed for hydraulic and mechanical press operations" },
+    { name: "Hydraulic Cylinders", image: "/images/Hydraulic Cylinders.jpeg", description: "Custom hydraulic cylinders for industrial and automotive applications" },
+    { name: "Shaft for Presses", image: "/images/Shafts.jpeg", description: "Specialized shafts designed for hydraulic and mechanical press operations" },
     { name: "Manifold for Hydraulic Presses", image: "/images/moldingpressing_hydraulicmechanical_press_machine.JPG", description: "Precision hydraulic manifolds for efficient fluid distribution in press systems" },
-    { name: "Die Block and Tie Rods", image: "/images/metal_formingpressing_mechanical_power_press_labeled_lgm200_and_ocp160.JPG", description: "Heavy-duty die blocks and tie rods for mechanical power presses" },
+    { name: "Die Block and Tie Rods", image: "/images/Tie Rods.jpeg", description: "Heavy-duty die blocks and tie rods for mechanical power presses" },
     { name: "Sheet Metal Components", image: "/images/cutting_cnc_plasma_cutting_machine.JPG", description: "Precision sheet metal components manufactured using advanced CNC plasma cutting" },
     { name: "Cast Iron Mould Manufacturing", image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "High-quality cast iron moulds for die casting and manufacturing processes" },
-    { name: "Forming Tools", image: "/images/molding__forming_hydraulic_press_heat_molding_press.JPG", description: "Specialized forming tools for precision metal forming and molding operations" }
+    { name: "Forming Tools", image: "/images/Die Forming Components.jpeg", description: "Specialized forming tools for precision metal forming and molding operations" }
   ];
 
   return (
