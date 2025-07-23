@@ -33,7 +33,7 @@ const MrkImpexEquipment = () => {
     },
     {
       name: "Bandsaw Cutting Machines",
-      description: "7 units for material cutting and preparation",
+      description: "Material cutting and preparation",
       image: "/images/mrk/Bandsaw Cutting Machines.jpg"
     }
   ];
