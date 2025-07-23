@@ -7,15 +7,16 @@ const MrkImpexEquipment = () => {
 
   const machinery = [
     {
-      name: "Conventional Lathe Machines",
-      description: "40+ units for various turning operations",
-      image: "/images/mrk/Conventional Lathe Machines (2).jpg"
-    },
-    {
       name: "CNC Lathe Machines",
       description: "Computer numerical control turning operations",
       image: "/images/mrk/Conventional Lathe Machines 5.jpg"
     },
+    {
+      name: "Conventional Lathe Machines",
+      description: "40+ units for various turning operations",
+      image: "/images/mrk/Conventional Lathe Machines (2).jpg"
+    },
+
     {
       name: "Vertical Machining Centre (KAFO3151)",
       description: "X5000, Y3000, Z1400, Loading Capacity 22 Tons",
@@ -44,7 +45,7 @@ const MrkImpexEquipment = () => {
     {
       name: "Bandsaw Cutting Machines",
       description: "Material cutting and preparation",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
+      image: "/images/mrk/Bandsaw Cutting machine.jpg"
     }
   ];
 
