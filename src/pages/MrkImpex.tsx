@@ -22,7 +22,12 @@ const MrkImpex = () => {
     {
       name: "Conventional Lathe Machines",
       specs: "40+ units for various turning operations",
-      image: "/images/mrk/Conventional Lathe Machines.jpg"
+      image: "/images/mrk/Conventional Lathe Machines (2).jpg"
+    },
+    {
+      name: "CNC Lathe Machines",
+      specs: "Computer numerical control turning operations",
+      image: "/images/mrk/Conventional Lathe Machines 5.jpg"
     },
     {
       name: "Vertical Machining Centre (KAFO3151)", 
@@ -45,9 +50,14 @@ const MrkImpex = () => {
       image: "/images/mrk/ELGA Milling Machine.jpg"
     },
     {
+      name: "Horizontal Boring Machine",
+      specs: "Precision boring and drilling operations",
+      image: "/images/mrk/Bandsaw Cutting Machines.jpg"
+    },
+    {
       name: "Bandsaw Cutting Machines",
       specs: "Material cutting and preparation",
-      image: "/images/mrk/Bandsaw Cutting Machines.jpg"
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
     }
   ];
 
@@ -134,18 +144,18 @@ const MrkImpex = () => {
               </div>
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {products.slice(0, 1).map((product, index) => (
-                  <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img 
-                      src={product.image}
-                      alt={product.name}
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <img 
+                  src={product.image}
+                  alt={product.name}
                       className="w-full h-72 sm:h-80 object-cover"
-                    />
-                  </div>
-                ))}
+                />
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
 
-            {/* Machinery Section */}
+      {/* Machinery Section */}
             <div>
               <div className="mb-6 sm:mb-8 flex flex-col lg:flex-row lg:items-center lg:justify-between">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">Machinery & Equipment</h3>
@@ -159,11 +169,11 @@ const MrkImpex = () => {
               <div className="grid grid-cols-1 gap-6 sm:gap-8">
                 {machinery.slice(0, 1).map((machine, index) => (
                   <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img 
-                      src={machine.image}
-                      alt={machine.name}
+                <img 
+                  src={machine.image}
+                  alt={machine.name}
                       className="w-full h-72 sm:h-80 object-cover"
-                    />
+                />
                   </div>
                 ))}
               </div>
