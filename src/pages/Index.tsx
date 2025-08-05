@@ -273,7 +273,7 @@ const Index = () => {
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-white mb-4 leading-tight">
                   INDUSTRIAL EXCELLENCE<br />
-                  <span className="text-blue-300">SINCE 1971</span>
+                  <span className="text-blue-300">SINCE 1968</span>
                 </h2>
                 <p className="text-lg text-gray-200 mb-8 leading-relaxed">
                   Leading manufacturer of exclusive industrial products with 50+ years 

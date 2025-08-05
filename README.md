@@ -1,4 +1,4 @@
-# Chadha Group - Industrial Excellence Since 1971
+# Chadha Group - Industrial Excellence Since 1968
 
 A modern web application showcasing the Chadha Group's industrial manufacturing capabilities across 5 specialized companies.
 
