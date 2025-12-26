@@ -13,7 +13,7 @@ const MrkImpexEquipment = () => {
     },
     {
       name: "Vertical Machining Centre (KAFO3151)",
-      description: "X5000, Y3000, Z1400, Loading Capacity 22 Tons",
+      description: "X-5000mm, Y-3000mm, Z-1700mm",
       image: "/images/mrk/VMC-Kafo.jpeg"
     },
     {
