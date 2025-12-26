@@ -20,24 +20,19 @@ const MrkImpex = () => {
 
   const machinery = [
     {
-      name: "Conventional Lathe Machines",
-      specs: "40+ units for various turning operations",
-      image: "/images/mrk/Conventional Lathe Machines (2).jpg"
-    },
-    {
       name: "CNC Lathe Machines",
-      specs: "Computer numerical control turning operations",
-      image: "/images/mrk/Conventional Lathe Machines 5.jpg"
+      specs: "Swing Over Bed - Dia1600mm, Swing Over Slide - Dia2000mm, Total Length - 7500mm",
+      image: "/images/mrk/CNC-lathe-machine.jpeg"
     },
     {
-      name: "Vertical Machining Centre (KAFO3151)", 
+      name: "Vertical Machining Centre (KAFO3151)",
       specs: "X5000, Y3000, Z1400, Loading Capacity 22 Tons",
-      image: "/images/mrk/Vertical Machining Centre (KAFO3151).jpg"
+      image: "/images/mrk/VMC-Kafo.jpeg"
     },
     {
       name: "CNC Vertical Turning Lathe (TOS German)",
-      specs: "Turning Dia 2200MM, Z-2000mm - German precision", 
-      image: "/images/mrk/CNC Vertical Turning Lathe (TOS German).jpg"
+      specs: "Dia 2200mm, Z axis - 1600mm",
+      image: "/images/mrk/Vertical-Turning-Lathe.jpeg"
     },
     {
       name: "Roll Grinder (TOS German)",
@@ -46,13 +41,13 @@ const MrkImpex = () => {
     },
     {
       name: "ELGA Milling Machine",
-      specs: "Table Size 1250X8500MM - Large component machining",
-      image: "/images/mrk/ELGA Milling Machine.jpg"
+      specs: "X axis - 8000mm, Y axis - 1200mm, Z axis - 1000mm",
+      image: "/images/mrk/Elga-Milling.jpeg"
     },
     {
       name: "Horizontal Boring Machine",
-      specs: "Precision boring and drilling operations",
-      image: "/images/mrk/Bandsaw Cutting Machines.jpg"
+      specs: "Center - 125mm",
+      image: "/images/mrk/boring-TOS.jpeg"
     },
     {
       name: "Bandsaw Cutting Machines",
