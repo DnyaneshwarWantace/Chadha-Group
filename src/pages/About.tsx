@@ -1,6 +1,5 @@
-import { Home, ArrowLeft, Factory, Settings, Users, Award } from "lucide-react";
+import { Home, ChevronRight, MessageCircle, Info, Factory, Settings, Users, Award, MapPin, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 
 const About = () => {
   const navigate = useNavigate();
@@ -11,273 +10,251 @@ const About = () => {
       location: "New Delhi, Delhi",
       established: "1968",
       specialization: "Precision Engineering",
-      description: "Chadha Group's first unit established in 1968, specializes in precision engineering and is equipped with a variety of high-tech machines for quality manufacturing. Located in New Delhi with advanced machinery for high-quality manufacturing.",
-      products: "Crank Shafts, Gears, Hydraulic Components, Rolls, Crane Wheels, Die Forming Components"
+      description: "Chadha Group's first unit established in 1968, specializes in precision engineering equipped with high-tech machines for quality manufacturing.",
+      products: "Crank Shafts · Gears · Hydraulic Components · Rolls · Crane Wheels",
+      route: "/laxmi-metal-works",
+      img: "/images/All Type of Crank Shafts.jpeg",
     },
     {
       name: "SHRI BALAJI INDUSTRIES",
       location: "Bhiwadi, Rajasthan",
       established: "2020",
       specialization: "Sheet Metal Components",
-      description: "Shri Balaji Industries, established in 2020, is a specialized division of the Chadha Group specializing in sheet metal components and drop art for three-wheelers and four-wheelers. Located in Bhiwadi, it is equipped with state-of-the-art manufacturing capabilities and hydraulic press facilities.",
-      products: "E-Rickshaw Roof, Butterfly Components, Driver Box, Side Panel, Loader Roof"
+      description: "Specializing in sheet metal components and body parts for three-wheelers and four-wheelers with state-of-the-art hydraulic press facilities.",
+      products: "E-Rickshaw Roof · Butterfly Components · Driver Box · Side Panel",
+      route: "/shri-balaji-industries",
+      img: "/images/Hydraulic Press (1200 ton).png",
     },
     {
       name: "ESS ESS INDUSTRIES",
       location: "Bhiwadi, Rajasthan",
       established: "2022",
       specialization: "Differential Components",
-      description: "Established in 2022, is a specialized unit of the Chadha Group focusing on precision machining and assembly of drivetrain components, differential axles for three-wheelers, rugged rear axles, independent rear suspension systems, and handle brackets for both two-wheelers and three-wheelers.",
-      products: "Differential Components, Handle Brackets, Drivetrain Components, Suspension Systems"
+      description: "Precision machining and assembly of drivetrain components, differential axles for three-wheelers, and handle brackets for two-wheelers.",
+      products: "Differential Components · Handle Brackets · Neck Pipe Components",
+      route: "/ess-ess-industries",
+      img: "/images/Robotic Welding Machines.jpeg",
     },
     {
       name: "AFT AUTOMOTIVE",
       location: "Bhiwadi, Rajasthan",
       established: "2019",
       specialization: "Auto Components",
-      description: "Specialized division of Chadha Group focused on automotive components and brake systems. Located in Bhiwadi with advanced manufacturing capabilities for 2 & 3 wheeler industries.",
-      products: "Brake Shoes, Disc Pads, Clutch Plates, Brake & Clutch Levers, Brake Drum Assembly"
+      description: "Specialized in automotive components and brake systems for 2 & 3 wheeler industries with advanced manufacturing capabilities.",
+      products: "Brake Shoes · Disc Pads · Clutch Plates · Brake Drum Assembly",
+      route: "/aft-automotive",
+      img: "/images/automotive_manufacturingassembly_axle_assembly.JPG",
     },
     {
-      name: "MRK IMPEX PRIVATE LIMITED",
+      name: "MRK IMPEX PVT. LTD.",
       location: "Bhiwadi, Rajasthan",
       established: "2008",
-      specialization: "Industrial Manufacturing",
-      description: "Specialized division of Chadha Group focused on industrial manufacturing and precision components. Located in Bhiwadi with advanced CNC machining capabilities.",
-      products: "CNC Machined Components, Precision Parts, Industrial Components"
-    }
+      specialization: "Advanced CNC Machining",
+      description: "Largest manufacturing unit of Chadha Group — advanced CNC machining with German-made machinery for highest quality standards.",
+      products: "CNC Machined Components · Crankshafts · Hydraulic Cylinders · Gears",
+      route: "/mrk-impex",
+      img: "/images/machiningmanufacturing_cnc_milling_machine_computer_numerical_control_milling_machine.JPG",
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="w-full px-4 sm:px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2 sm:space-x-4">
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => navigate("/")}
-                className="flex items-center space-x-2 p-2 sm:p-2"
-              >
-                <ArrowLeft size={20} />
-                <span className="hidden sm:inline">Back to Home</span>
-              </Button>
-              <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
-              <h1 className="text-xl sm:text-2xl font-bold text-blue-900 leading-tight">ABOUT US</h1>
+    <div className="min-h-screen bg-[#f8f9fa] text-zinc-800 selection:bg-amber-500/30 font-sans overflow-x-hidden">
+      {/* ----------------- HERO SECTION ----------------- */}
+      <div className="relative w-full min-h-[500px] flex flex-col justify-between border-b border-gray-200">
+        <img src="/images/machiningmanufacturing_cnc_milling_machine_computer_numerical_control_milling_machine.JPG" alt="CNC Machining" className="absolute inset-0 w-full h-full object-cover opacity-100" />
+        {/* Architectural Reveal Effect: Center white bar, clear sides */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f8f9fa]/0 via-[#f8f9fa]/95 to-[#f8f9fa]/0 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f8f9fa]/20 via-transparent to-[#f8f9fa] pointer-events-none" />
+
+        <header className="relative z-50 border-b border-gray-200 bg-white/70 backdrop-blur-md">
+          <div className="w-full px-5 sm:px-10 h-14 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <button onClick={() => navigate("/")} className="flex items-center gap-1.5 text-gray-500 hover:text-zinc-800 text-xs font-bold uppercase tracking-widest transition-colors">
+                <Home size={14} /><span className="hidden sm:inline">Home</span>
+              </button>
+              <ChevronRight size={12} className="text-gray-300" />
+              <div className="flex items-center gap-2.5">
+                <div className="w-6 h-6 bg-amber-500/10 border border-amber-400/30 rounded flex items-center justify-center">
+                  <Info size={14} className="text-amber-500" />
+                </div>
+                <span className="text-zinc-800 font-extrabold text-sm uppercase tracking-widest">About Us</span>
+              </div>
             </div>
-            <Button 
-              variant="ghost" 
-              size="sm"
-              onClick={() => navigate("/")}
-              className="flex items-center space-x-2 p-2 sm:p-2"
+            <button 
+              onClick={() => window.open("https://wa.me/919999884740", "_blank")} 
+              className="btn-industrial-primary bg-amber-500 hover:bg-amber-400 text-zinc-800 h-8 px-4 shadow-amber-500/20"
             >
-              <Home size={20} />
-              <span className="hidden sm:inline">Home</span>
-            </Button>
+              <MessageCircle size={14} /> Get Quote
+            </button>
+          </div>
+        </header>
+
+        <div className="relative z-10 px-6 sm:px-12 pb-12 pt-16 sm:pt-20 max-w-7xl mx-auto w-full">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-[1px] w-8 sm:w-16 bg-amber-500" />
+            <span className="text-amber-500 text-[10px] sm:text-xs font-bold tracking-[0.4em] uppercase">Industrial Excellence · Since 1968</span>
+          </div>
+          <h1 className="text-zinc-800 font-bold tracking-tighter leading-[0.9] uppercase max-w-none drop-shadow-sm transition-all duration-700" style={{ fontSize: "clamp(1.75rem, 4.5vw, 3.5rem)" }}>
+            About Chadha Group
+          </h1>
+          <div className="mt-8 sm:mt-12 text-gray-600 max-w-xl text-xs sm:text-sm leading-relaxed border-l-[2px] border-amber-500/50 pl-5 font-medium">
+            5 specialized companies · 55+ years of precision manufacturing across New Delhi & Bhiwadi
           </div>
         </div>
-      </header>
+      </div>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">About Chadha Group</h2>
-          <p className="text-lg sm:text-xl mb-6 text-blue-100 max-w-3xl mx-auto">
-            Industrial Excellence Since 1968 - Leading manufacturer of exclusive industrial products 
-            with 50+ years of expertise across diverse sectors
-          </p>
-        </div>
-      </section>
-
-      {/* Main Group Section */}
-      <section className="py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-xl shadow-lg p-8 sm:p-12 mb-12">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Chadha Group</h3>
-              <div className="w-20 h-1 bg-blue-900 mx-auto rounded"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      {/* ----------------- OUR STORY (STATS & TEXT) ----------------- */}
+      <section className="px-6 sm:px-12 py-12 sm:py-14 max-w-7xl mx-auto border-b border-gray-200 relative">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none" />
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 relative z-10">
+          <div className="lg:col-span-5">
+            <h2 className="text-3xl sm:text-5xl font-bold uppercase tracking-tighter text-zinc-800 leading-none">
+              Chadha <br /> <span className="text-amber-500">Group</span>
+            </h2>
+            <div className="mt-12 sm:mt-16 grid grid-cols-2 gap-x-8 gap-y-12">
               <div>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Chadha Group is a leading industrial manufacturing conglomerate with over 50 years of excellence 
-                  in precision engineering and manufacturing. Founded in 1968, we have grown from a single unit 
-                  to become one of India's most trusted names in industrial manufacturing.
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Our group operates through 5 specialized companies, each focusing on specific industrial sectors 
-                  and delivering world-class products to domestic and international markets. With state-of-the-art 
-                  manufacturing facilities and a team of experienced professionals, we ensure the highest quality 
-                  standards in all our products.
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Today, Chadha Group is trusted by 50+ leading industrial partners and continues to expand its 
-                  capabilities while maintaining the core values of quality, innovation, and customer satisfaction 
-                  that have been our foundation since 1968.
-                </p>
+                <Award className="text-amber-500 mb-4 opacity-80" strokeWidth={1.5} size={28} />
+                <div className="text-3xl sm:text-4xl font-bold text-zinc-800 tracking-tighter">1968</div>
+                <div className="text-[9px] sm:text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mt-2">Founded</div>
               </div>
-              
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-6 bg-blue-50 rounded-xl">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Factory className="text-blue-600" size={32} />
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">5 Specialized Companies</h4>
-                  <p className="text-gray-600">Diverse manufacturing capabilities</p>
-                </div>
-                
-                <div className="text-center p-6 bg-green-50 rounded-xl">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="text-green-600" size={32} />
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">50+ Years Experience</h4>
-                  <p className="text-gray-600">Industry expertise since 1968</p>
-                </div>
-                
-                <div className="text-center p-6 bg-orange-50 rounded-xl">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="text-orange-600" size={32} />
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">50+ Industrial Partners</h4>
-                  <p className="text-gray-600">Trusted by leading companies</p>
-                </div>
-                
-                <div className="text-center p-6 bg-purple-50 rounded-xl">
-                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Settings className="text-purple-600" size={32} />
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Advanced Technology</h4>
-                  <p className="text-gray-600">State-of-the-art facilities</p>
-                </div>
+              <div>
+                <Factory className="text-gray-400 mb-4 opacity-80" strokeWidth={1.5} size={28} />
+                <div className="text-3xl sm:text-4xl font-bold text-amber-500 tracking-tighter">5</div>
+                <div className="text-[9px] sm:text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mt-2">Specialized Units</div>
               </div>
+              <div>
+                <Users className="text-gray-400 mb-4 opacity-80" strokeWidth={1.5} size={28} />
+                <div className="text-3xl sm:text-4xl font-bold text-zinc-800 tracking-tighter">50+</div>
+                <div className="text-[9px] sm:text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mt-2">Global Partners</div>
+              </div>
+              <div>
+                <Settings className="text-gray-400 mb-4 opacity-80" strokeWidth={1.5} size={28} />
+                <div className="text-3xl sm:text-4xl font-bold text-zinc-800 tracking-tighter">1200T</div>
+                <div className="text-[9px] sm:text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mt-2">Maximum Press</div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            <div className="prose prose-neutral max-w-none">
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed font-light">
+                Chadha Group is a leading industrial manufacturing conglomerate with over 55 years of excellence in precision engineering and manufacturing. Founded in 1968, we have grown from a single unit to become one of India's most trusted names in industrial manufacturing.
+              </p>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-light mt-6 sm:mt-8">
+                Our group operates through 5 specialized companies, each focusing on specific industrial sectors and delivering world-class products to domestic and international markets.
+              </p>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-light mt-6">
+                Today, Chadha Group is trusted by 50+ leading industrial partners and continues to expand its capabilities while maintaining the core values of quality, innovation, and customer satisfaction.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Companies Section */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our 5 Specialized Companies</h3>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Each company specializes in specific industrial sectors, delivering excellence 
-              through focused expertise and advanced manufacturing capabilities.
-            </p>
+      {/* ----------------- EDITORIAL PORTFOLIO ----------------- */}
+      <section className="bg-white py-12 sm:py-14">
+        <div className="max-w-7xl mx-auto px-6 sm:px-12">
+          <div className="flex items-center gap-4 mb-20 sm:mb-32">
+            <span className="text-gray-400 font-bold text-[10px] sm:text-xs tracking-[0.3em] uppercase">The Conglomerates</span>
+            <div className="h-[1px] flex-1 bg-gray-200" />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {companies.slice(0, 4).map((company, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <span className="text-blue-600 font-bold text-xl">{index + 1}</span>
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-bold text-gray-900">{company.name}</h4>
-                    <p className="text-gray-600">{company.location}</p>
-                  </div>
-                </div>
+          <div className="flex flex-col gap-16 sm:gap-20">
+            {companies.map((company, i) => (
+              <div key={company.name} className="group relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
                 
-                <div className="mb-6">
-                  <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                    Established: {company.established}
-                  </span>
-                  <span className="inline-block bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full ml-2">
-                    {company.specialization}
-                  </span>
-                </div>
-                
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  {company.description}
-                </p>
-                
-                <div className="mb-6">
-                  <h5 className="font-semibold text-gray-900 mb-2">Key Products:</h5>
-                  <p className="text-gray-600">{company.products}</p>
+                {/* Number Indicator */}
+                <div className="hidden lg:block lg:col-span-1">
+                  <span className="text-6xl font-bold text-gray-100 tracking-tighter group-hover:text-amber-500/20 transition-colors duration-500">0{i + 1}</span>
                 </div>
 
-                <Button 
-                  onClick={() => navigate(`/${company.name.toLowerCase().replace(/\s+/g, '-').replace('private-limited', '')}`)}
-                  className="w-full bg-blue-900 hover:bg-blue-800"
-                >
-                  Learn More
-                </Button>
+                {/* Information Block */}
+                <div className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-amber-600 border border-amber-500/30 px-3 py-1 bg-amber-50">
+                      Est. {company.established}
+                    </span>
+                    <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-gray-500 flex items-center gap-1.5 bg-gray-50 px-3 py-1 border border-gray-200">
+                      <MapPin size={10} /> {company.location}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-2xl sm:text-4xl font-bold text-zinc-800 uppercase tracking-tighter mb-2 group-hover:text-amber-600 transition-colors">
+                    {company.name}
+                  </h3>
+                  <h4 className="text-amber-600 font-bold uppercase tracking-widest text-[10px] sm:text-xs mb-6 sm:mb-8">
+                    {company.specialization}
+                  </h4>
+                  
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-8 max-w-xl font-light">
+                    {company.description}
+                  </p>
+
+                  <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 pt-6 sm:pt-8 border-t border-gray-200 w-full relative">
+                    <div className="absolute top-[-1px] left-0 w-12 h-[2px] bg-amber-500" />
+                    <div>
+                      <span className="block text-[9px] text-gray-400 font-bold uppercase tracking-[0.2em] mb-2">Capabilities / Focus</span>
+                      <span className="block text-xs font-medium text-gray-800 leading-snug">{company.products}</span>
+                    </div>
+                    <div className="flex items-start xl:items-end justify-start xl:justify-end mt-2 xl:mt-0">
+                      <button onClick={() => navigate(company.route)} className="flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.2em] text-zinc-800 uppercase hover:text-amber-600 transition-all group-hover:pl-2">
+                        View Facility <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Aesthetic Image Block */}
+                <div className="lg:col-span-5 relative h-64 sm:h-96 lg:h-[450px] w-full bg-gray-100 overflow-hidden border border-gray-200 order-1 lg:order-2 group-hover:border-amber-500/30 transition-colors duration-700">
+                  <div className="absolute inset-0 bg-white/20 z-10 group-hover:bg-transparent transition-colors duration-700" />
+                  <img src={company.img} alt={company.name} className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" />
+                  <div className="absolute top-0 right-0 w-16 h-16 border-t-[3px] border-r-[3px] border-amber-500/80 -translate-y-4 translate-x-4 group-hover:translate-y-0 group-hover:-translate-x-0 opacity-0 group-hover:opacity-100 transition-all duration-700 z-20" />
+                  <div className="absolute bottom-0 left-0 w-16 h-16 border-b-[3px] border-l-[3px] border-amber-500/80 translate-y-4 -translate-x-4 group-hover:translate-y-0 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all duration-700 z-20" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ----------------- CORE VALUES & CTA ----------------- */}
+      <section className="relative py-12 sm:py-14 bg-[#f8f9fa] overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-amber-500/10 to-transparent" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-amber-500/20 blur-[100px] rounded-full" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[1px] bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-50" />
+        
+        <div className="max-w-7xl mx-auto px-6 sm:px-12 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
+            <h2 className="text-3xl sm:text-5xl font-bold uppercase tracking-tighter text-zinc-800 mb-6 leading-none">
+              Our <span className="text-amber-500">Core Values</span>
+            </h2>
+            <div className="w-16 h-[2px] bg-amber-500 mx-auto" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 mb-20 relative z-10">
+            {[
+              { title: "Quality Excellence", desc: "Maintaining the highest standards in all our manufacturing processes", icon: Award },
+              { title: "Customer Focus", desc: "Building long-term relationships through exceptional service", icon: Users },
+              { title: "Innovation", desc: "Continuously improving our technology and processes", icon: Settings },
+            ].map((v) => (
+              <div key={v.title} className="flex flex-col items-center text-center group">
+                <div className="w-16 h-16 rounded-full bg-amber-500/10 flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors">
+                  <v.icon className="text-amber-500" size={28} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-zinc-800 mb-3 uppercase tracking-tight">{v.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed max-w-xs">{v.desc}</p>
               </div>
             ))}
           </div>
 
-          {/* 5th Company - Centered */}
-          <div className="flex justify-center mt-8">
-            <div className="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow w-full lg:w-1/2">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <span className="text-blue-600 font-bold text-xl">5</span>
-                </div>
-                <div>
-                  <h4 className="text-2xl font-bold text-gray-900">{companies[4].name}</h4>
-                  <p className="text-gray-600">{companies[4].location}</p>
-                </div>
-              </div>
-              
-              <div className="mb-6">
-                <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                  Established: {companies[4].established}
-                </span>
-                <span className="inline-block bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full ml-2">
-                  {companies[4].specialization}
-                </span>
-              </div>
-              
-              <p className="text-gray-700 leading-relaxed mb-6">
-                {companies[4].description}
-              </p>
-              
-              <div className="mb-6">
-                <h5 className="font-semibold text-gray-900 mb-2">Key Products:</h5>
-                <p className="text-gray-600">{companies[4].products}</p>
-              </div>
-
-              <Button 
-                onClick={() => navigate(`/${companies[4].name.toLowerCase().replace(/\s+/g, '-').replace('private-limited', '')}`)}
-                className="w-full bg-blue-900 hover:bg-blue-800"
-              >
-                Learn More
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-12 sm:py-16 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <h3 className="text-3xl sm:text-4xl font-bold mb-8">Our Core Values</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="text-white" size={32} />
-              </div>
-              <h4 className="text-xl font-bold mb-2">Quality Excellence</h4>
-              <p className="text-blue-100">Maintaining the highest standards in all our manufacturing processes</p>
-            </div>
-            <div>
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="text-white" size={32} />
-              </div>
-              <h4 className="text-xl font-bold mb-2">Customer Focus</h4>
-              <p className="text-blue-100">Building long-term relationships through exceptional service</p>
-            </div>
-            <div>
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Settings className="text-white" size={32} />
-              </div>
-              <h4 className="text-xl font-bold mb-2">Innovation</h4>
-              <p className="text-blue-100">Continuously improving our technology and processes</p>
-            </div>
+          <div className="text-center relative pt-8">
+            <button 
+              onClick={() => window.open("https://wa.me/919999884740", "_blank")} 
+              className="btn-industrial-primary bg-amber-500 hover:bg-gray-900 hover:text-white text-zinc-800 shadow-amber-500/40"
+            >
+              <MessageCircle size={20} /> WHATSAPP INQUIRY
+            </button>
           </div>
         </div>
       </section>
@@ -285,4 +262,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;

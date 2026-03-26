@@ -99,3 +99,19 @@
     @apply bg-background text-foreground;
   }
 }
+@layer components {
+  /* Industrial Precision Buttons (Rounded-LG, High Tracking, All-Caps) */
+  .btn-industrial {
+    @apply inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 h-10 sm:h-11 rounded-lg font-black uppercase tracking-[0.15em] text-[10px] sm:text-[11px] transition-all duration-300 transform hover:-translate-y-0.5 active:scale-[0.98];
+  }
+
+  /* Success/Primary Variants */
+  .btn-industrial-primary {
+    @apply btn-industrial text-white shadow-md hover:shadow-xl;
+  }
+
+  /* Secondary/Border Variants */
+  .btn-industrial-secondary {
+    @apply btn-industrial border-2 border-gray-100 bg-white text-zinc-800 hover:border-zinc-800 hover:bg-gray-50;
+  }
+}

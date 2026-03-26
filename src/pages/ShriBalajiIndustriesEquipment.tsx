@@ -1,107 +1,88 @@
-import { Home, ArrowLeft, Settings, Factory } from "lucide-react";
+import { Home, ChevronRight, MessageCircle, Hammer, ArrowLeft, Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 
 const ShriBalajiIndustriesEquipment = () => {
   const navigate = useNavigate();
 
   const machinery = [
-    {
-      name: "Hydraulic Press (1200 ton)",
-      description: "Heavy-duty hydraulic press for large-scale sheet metal forming operations",
-      image: "/images/Hydraulic Press (1200 ton).png"
-    },
-    {
-      name: "Hydraulic Press (600 ton)", 
-      description: "Medium-capacity hydraulic press for precision sheet metal work",
-      image: "/images/Hydraulic Press (600 ton).jpeg"
-    },
-    {
-      name: "Robotic Plasma Machines",
-      description: "Advanced robotic plasma cutting systems for automated precision cutting",
-      image: "/images/Robotic Plasma Machines.jpeg"
-    },
-    {
-      name: "Press Brake Machine",
-      description: "High-precision press brake for accurate sheet metal bending",
-      image: "/images/Press Brake Machine.jpeg"
-    },
-    {
-      name: "Power Presses",
-      description: "Industrial power presses for high-volume stamping and forming",
-      image: "/images/pressingforming_mechanical_power_press_models.JPG"
-    },
-    {
-      name: "Shearing Cutting Machine",
-      description: "Precision shearing machines for material preparation and cutting",
-      image: "/images/cutting_metal_band_saw_horizontal_band_saw.JPG"
-    }
+    { name: "Hydraulic Press (1200 ton)", image: "/images/Hydraulic Press (1200 ton).png", description: "Size 2000X4000mm — maximum capacity, precision capabilities" },
+    { name: "Hydraulic Press (600 ton)", image: "/images/Hydraulic Press (600 ton).jpeg", description: "Size 800X1400mm — medium capacity operations" },
+    { name: "Robotic Plasma Machines", image: "/images/Robotic Plasma Machines.jpeg", description: "4 units for automated cutting operations" },
+    { name: "Press Brake Machine", image: "/images/Press Brake Machine.jpeg", description: "Precision bending operations" },
+    { name: "Power Presses", image: "/images/pressingforming_mechanical_power_press_models.JPG", description: "High-speed stamping operations" },
+    { name: "Shearing Cutting Machine", image: "/images/cutting_metal_band_saw_horizontal_band_saw.JPG", description: "Material preparation and cutting" },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="w-full px-4 sm:px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2 sm:space-x-4">
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => navigate("/shri-balaji-industries")}
-                className="flex items-center space-x-2 p-2 sm:p-2"
-              >
-                <ArrowLeft size={20} />
-                <span className="hidden sm:inline">Back to Shri Balaji Industries</span>
-              </Button>
-              <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
-              <h1 className="text-xl sm:text-2xl font-bold text-green-950 leading-tight">SHRI BALAJI INDUSTRIES - EQUIPMENT</h1>
+    <div className="min-h-screen bg-[#f8f9fa] text-zinc-800 selection:bg-emerald-500/30 font-sans overflow-x-hidden flex flex-col">
+      
+      {/* ----------------- HERO SECTION ----------------- */}
+      <div className="relative w-full min-h-[350px] flex flex-col justify-between border-b border-gray-200">
+        <img src="/images/Robotic Plasma Machines.jpeg" alt="Precision Equipment" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-[#f8f9fa]/90 to-[#f8f9fa]" />
+
+        <header className="relative z-50 border-b border-gray-200 bg-white/70 backdrop-blur-md">
+          <div className="w-full px-5 sm:px-10 h-14 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <button onClick={() => navigate("/shri-balaji-industries")} className="flex items-center gap-1.5 text-gray-500 hover:text-emerald-600 text-[10px] font-bold uppercase tracking-widest transition-colors">
+                <ArrowLeft size={14} /><span className="hidden sm:inline">Shri Balaji Industries</span>
+              </button>
+              <ChevronRight size={12} className="text-gray-300" />
+              <div className="flex items-center gap-2.5">
+                <div className="w-6 h-6 bg-emerald-500/10 border border-emerald-400/30 rounded flex items-center justify-center">
+                  <Hammer size={14} className="text-emerald-600" />
+                </div>
+                <span className="text-zinc-800 font-extrabold text-sm uppercase tracking-widest">Equipment</span>
+              </div>
             </div>
-            <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => navigate("/")}
-                className="flex items-center space-x-2 p-2 sm:p-2"
-              >
-                <Home size={20} />
-                <span className="hidden sm:inline">Home</span>
-              </Button>
+          </div>
+        </header>
+
+        <div className="relative z-10 px-6 sm:px-12 pb-12 pt-16 max-w-7xl mx-auto w-full text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-4 mb-6 justify-center sm:justify-start">
+            <div className="h-[1px] w-8 sm:w-16 bg-emerald-600" />
+            <span className="text-emerald-600 text-[10px] sm:text-xs font-bold tracking-[0.4em] uppercase">Shri Balaji Industries · Est. 2020</span>
+            <div className="h-[1px] w-8 sm:w-16 bg-emerald-600 sm:hidden" />
+          </div>
+          <h1 className="text-zinc-800 font-bold tracking-tighter leading-[0.9] text-[clamp(2.5rem,7vw,5rem)] uppercase max-w-4xl drop-shadow-sm mx-auto sm:mx-0">
+            Forming <br /> Power.
+          </h1>
+          <div className="mt-8 text-gray-600 max-w-xl text-xs sm:text-sm leading-relaxed border-l-[2px] border-emerald-600/50 pl-5 font-medium mx-auto sm:mx-0 text-left">
+            Powering our facility with {machinery.length} specialized heavy-duty machines, including our flagship 1200T hydraulic press for extreme precision.
           </div>
         </div>
-      </header>
+      </div>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-950 to-green-800 text-white py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Our Advanced Manufacturing Equipment</h2>
-                      <p className="text-lg sm:text-xl mb-6 text-green-200 max-w-3xl mx-auto">
-            State-of-the-art hydraulic presses, robotic systems, and precision machinery 
-            that enable us to deliver high-quality sheet metal components.
-          </p>
-          <div className="flex items-center justify-center space-x-4">
-                            <Settings className="text-green-400" size={24} />
-            <span className="text-lg">Sheet Metal Manufacturing Excellence</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Equipment Grid */}
-      <section className="py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {machinery.map((machine, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <img 
-                  src={machine.image}
-                  alt={machine.name}
-                  className="w-full h-48 sm:h-56 object-cover"
-                />
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">{machine.name}</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-3">{machine.description}</p>
-                  <Button className="w-full bg-green-950 hover:bg-green-900">
-                    View Details
-                  </Button>
+      {/* ----------------- EQUIPMENT GRID ----------------- */}
+      <section className="py-12 sm:py-14 bg-white flex-1">
+        <div className="max-w-7xl mx-auto px-6 sm:px-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {machinery.map((m, i) => (
+              <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-emerald-600/40 transition-all duration-500 flex flex-col h-full rounded-none overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
+                  <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+                  <div className="absolute inset-0 bg-emerald-900/10 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute top-4 left-4">
+                    <span className="text-[10px] font-bold bg-white/90 text-zinc-800 px-2 py-1 uppercase tracking-widest border border-gray-200">
+                      Asset 0{i + 1}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8 flex flex-col flex-1 relative">
+                  <div className="absolute top-0 left-0 w-full h-[3px] bg-emerald-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-3 group-hover:text-emerald-600 transition-colors">
+                    {m.name}
+                  </h3>
+                  <p className="text-gray-500 text-xs sm:text-sm leading-relaxed font-normal mb-8">
+                    {m.description}
+                  </p>
+                  <div className="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Facility Asset</span>
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
+                      <span className="text-[9px] font-bold text-emerald-600 uppercase tracking-widest">Active</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -109,20 +90,37 @@ const ShriBalajiIndustriesEquipment = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-12 sm:py-16 bg-green-950 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Need Custom Sheet Metal Solutions?</h3>
-                      <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-green-200">
-            Our advanced equipment can handle your most complex sheet metal manufacturing requirements.
+      {/* ----------------- BOTTOM CTA ----------------- */}
+      <section className="relative py-12 sm:py-14 bg-[#f8f9fa] overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-emerald-600/5 to-transparent" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-emerald-600/10 blur-[100px] rounded-full" />
+        
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-2xl sm:text-5xl font-bold uppercase tracking-tighter text-zinc-800 mb-6 leading-none">
+            High-Capacity <span className="text-emerald-600">Solutions</span>
+          </h2>
+          <p className="text-gray-600 text-xs sm:text-sm max-w-xl mx-auto mb-10 font-medium leading-relaxed">
+            Need high-tonnage sheet metal forming? Our 1200T facility at Shri Balaji Industries is ready for your project.
           </p>
-                      <Button size="lg" className="bg-white text-green-950 hover:bg-gray-100">
-            Get Quote
-          </Button>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <button 
+              onClick={() => window.open("https://wa.me/919999884740", "_blank")} 
+              className="btn-industrial-primary bg-emerald-600 hover:bg-gray-900 shadow-emerald-600/30"
+            >
+              <MessageCircle size={16} /> WHATSAPP INQUIRY
+            </button>
+            <button 
+              onClick={() => window.open("tel:+919999884740")} 
+              className="btn-industrial-secondary border-gray-300 hover:border-emerald-600 hover:text-emerald-600"
+            >
+              <Phone size={16} /> CALL NOW
+            </button>
+          </div>
         </div>
       </section>
+
     </div>
   );
 };
 
-export default ShriBalajiIndustriesEquipment; 
+export default ShriBalajiIndustriesEquipment;
