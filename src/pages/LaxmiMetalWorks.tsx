@@ -112,9 +112,9 @@ const LaxmiMetalWorks = () => {
                   <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
-                <div className="p-8 flex flex-col flex-1 relative">
+                <div className="p-3 flex flex-col flex-1 relative">
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-blue-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-3 group-hover:text-blue-600 transition-colors line-clamp-1">
+                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-1 group-hover:text-blue-600 transition-colors line-clamp-1">
                     {p.name}
                   </h3>
                   <p className="text-gray-500 text-xs sm:text-sm leading-relaxed font-normal line-clamp-2">
@@ -124,7 +124,7 @@ const LaxmiMetalWorks = () => {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <button 
               onClick={() => navigate("/laxmi-metal-works/products")}
               className="btn-industrial-secondary border-blue-600/20 hover:border-blue-600 hover:text-blue-600"
@@ -151,9 +151,9 @@ const LaxmiMetalWorks = () => {
                   <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
-                <div className="p-8 flex flex-col flex-1 relative">
+                <div className="p-3 flex flex-col flex-1 relative">
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-blue-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-3 group-hover:text-blue-600 transition-colors line-clamp-1">
+                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-1 group-hover:text-blue-600 transition-colors line-clamp-1">
                     {m.name}
                   </h3>
                   <p className="text-gray-500 text-xs sm:text-sm leading-relaxed font-normal line-clamp-2">
@@ -163,7 +163,7 @@ const LaxmiMetalWorks = () => {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <button 
               onClick={() => navigate("/laxmi-metal-works/equipment")}
               className="btn-industrial-secondary border-blue-600/20 hover:border-blue-600 hover:text-blue-600"

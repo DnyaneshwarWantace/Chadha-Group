@@ -103,9 +103,9 @@ const AftAutomotive = () => {
                   <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
-                <div className="p-8 flex flex-col flex-1 relative">
+                <div className="p-3 flex flex-col flex-1 relative">
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-slate-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-3 group-hover:text-slate-600 transition-colors line-clamp-1">
+                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-1 group-hover:text-slate-600 transition-colors line-clamp-1">
                     {p.name}
                   </h3>
                   <p className="text-gray-500 text-xs sm:text-sm leading-relaxed font-normal line-clamp-2">
@@ -115,7 +115,7 @@ const AftAutomotive = () => {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <button 
               onClick={() => navigate("/aft-automotive/products")}
               className="btn-industrial-secondary border-slate-600/20 hover:border-slate-600 hover:text-slate-600"
@@ -143,9 +143,9 @@ const AftAutomotive = () => {
                   <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
-                <div className="p-8 flex flex-col flex-1 relative">
+                <div className="p-3 flex flex-col flex-1 relative">
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-slate-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-3 group-hover:text-slate-600 transition-colors line-clamp-1">
+                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-1 group-hover:text-slate-600 transition-colors line-clamp-1">
                     {m.name}
                   </h3>
                   <p className="text-gray-500 text-xs sm:text-sm leading-relaxed font-normal line-clamp-2">
@@ -155,7 +155,7 @@ const AftAutomotive = () => {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <button 
               onClick={() => navigate("/aft-automotive/equipment")}
               className="btn-industrial-secondary border-slate-600/20 hover:border-slate-600 hover:text-slate-600"

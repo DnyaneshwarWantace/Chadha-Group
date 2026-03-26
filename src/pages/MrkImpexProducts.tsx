@@ -71,15 +71,15 @@ const MrkImpexProducts = () => {
                     </span>
                   </div>
                 </div>
-                <div className="p-8 flex flex-col flex-1 relative">
+                <div className="p-4 flex flex-col flex-1 relative">
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-amber-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-3 group-hover:text-amber-600 transition-colors">
+                  <h3 className="text-lg font-bold text-zinc-800 uppercase tracking-tight mb-1 group-hover:text-amber-600 transition-colors">
                     {p.name}
                   </h3>
-                  <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+                  <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-1 font-normal">
                     {p.description}
                   </p>
-                  <div className="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+                  <div className="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
                     <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">MRK Impex</span>
                     <button className="text-amber-600 text-[10px] font-bold uppercase tracking-widest flex items-center gap-1 group/btn">
                       Request <ChevronRight size={10} className="group-hover/btn:translate-x-1 transition-transform" />
