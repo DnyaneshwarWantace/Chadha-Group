@@ -8,6 +8,12 @@ const LaxmiMetalWorks = () => {
     { name: "All Type of Crank Shafts", image: "/images/All Type of Crank Shafts.jpeg", description: "Precision-engineered crankshafts for various industrial applications" },
     { name: "Rolls", image: "/images/Rolls.avif", description: "High-quality rolls for manufacturing and processing industries" },
     { name: "Gears", image: "/images/cutting__machining_gear_hobbing_machine.JPG", description: "Precision gears manufactured using advanced hobbing technology" },
+    { name: "Hydraulic Cylinders", image: "/images/Hydraulic Cylinders.jpeg", description: "Custom hydraulic cylinders for heavy machinery applications" },
+    { name: "Tie Rods", image: "/images/Tie Rods.jpeg", description: "High-strength tie rods for structural applications" },
+    { name: "Shafts", image: "/images/Shafts.jpeg", description: "Precision shafts for various industrial machinery" },
+    { name: "Chilled Iron Ram", image: "/images/rChilled Iron Ram.webp", description: "Durable chilled iron rams for hydraulic applications" },
+    { name: "Crane Wheels", image: "/images/Crane Wheels.jpeg", description: "Heavy-duty crane wheels for material handling systems" },
+    { name: "Die Forming Components", image: "/images/Die Forming Components.jpeg", description: "Precision die forming components for manufacturing processes" },
   ];
 
   const machinery = [
@@ -99,9 +105,8 @@ const LaxmiMetalWorks = () => {
             </h2>
             <div className="h-1 w-12 bg-blue-600" />
           </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((p, i) => (
+            {products.slice(0, 3).map((p, i) => (
               <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-blue-600/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
@@ -119,6 +124,14 @@ const LaxmiMetalWorks = () => {
               </div>
             ))}
           </div>
+          <div className="mt-12 flex justify-center">
+            <button 
+              onClick={() => navigate("/laxmi-metal-works/products")}
+              className="btn-industrial-secondary border-blue-600/20 hover:border-blue-600 hover:text-blue-600"
+            >
+              View All Products <ArrowRight size={14} />
+            </button>
+          </div>
         </div>
       </section>
 
@@ -131,9 +144,8 @@ const LaxmiMetalWorks = () => {
             </h2>
             <div className="h-1 w-12 bg-blue-600" />
           </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {machinery.map((m, i) => (
+            {machinery.slice(0, 3).map((m, i) => (
               <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-blue-600/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
@@ -150,6 +162,14 @@ const LaxmiMetalWorks = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-12 flex justify-center">
+            <button 
+              onClick={() => navigate("/laxmi-metal-works/equipment")}
+              className="btn-industrial-secondary border-blue-600/20 hover:border-blue-600 hover:text-blue-600"
+            >
+              View Facility <ArrowRight size={14} />
+            </button>
           </div>
         </div>
       </section>

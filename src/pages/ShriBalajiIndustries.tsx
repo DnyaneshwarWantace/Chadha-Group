@@ -8,12 +8,17 @@ const ShriBalajiIndustries = () => {
     { name: "E-Rickshaw Roof", image: "/images/e-rickshaw roof.jpeg", description: "Precision-engineered roof components for electric rickshaws" },
     { name: "Butterfly Components", image: "/images/Butterfly Components.jpeg", description: "Specialized butterfly valve components for industrial applications" },
     { name: "Back Panel", image: "/images/download.jpeg", description: "Durable back panels for automotive and industrial use" },
+    { name: "Side Panel", image: "/images/Side Panel.jpeg", description: "High-quality side panels for cargo and passenger vehicles" },
+    { name: "Driver Box", image: "/images/Driver Box.jpeg", description: "Ergonomic driver seating and storage solutions" },
+    { name: "Loader Roof", image: "/images/Loader Roof.jpeg", description: "Heavy-duty roofs for loading vehicles and industrial carriers" },
   ];
 
   const machinery = [
     { name: "Hydraulic Press (1200 ton)", image: "/images/Hydraulic Press (1200 ton).png", description: "Size 2000X4000mm — maximum capacity, precision capabilities" },
     { name: "Hydraulic Press (600 ton)", image: "/images/Hydraulic Press (600 ton).jpeg", description: "Size 800X1400mm — medium capacity operations" },
     { name: "Robotic Plasma Machines", image: "/images/Robotic Plasma Machines.jpeg", description: "4 units for automated cutting operations" },
+    { name: "Power Presses", image: "/images/pressingforming_mechanical_power_press_models.JPG", description: "High-speed stamping operations" },
+    { name: "Shearing Cutting Machine", image: "/images/cutting_metal_band_saw_horizontal_band_saw.JPG", description: "Material preparation and cutting" },
   ];
 
   return (
@@ -96,7 +101,7 @@ const ShriBalajiIndustries = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((p, i) => (
+            {products.slice(0, 3).map((p, i) => (
               <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-emerald-600/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
@@ -114,6 +119,14 @@ const ShriBalajiIndustries = () => {
               </div>
             ))}
           </div>
+          <div className="mt-12 flex justify-center">
+            <button 
+              onClick={() => navigate("/shri-balaji-industries/products")}
+              className="btn-industrial-secondary border-emerald-600/20 hover:border-emerald-600 hover:text-emerald-600"
+            >
+              View All Products <ArrowRight size={14} />
+            </button>
+          </div>
         </div>
       </section>
 
@@ -128,7 +141,7 @@ const ShriBalajiIndustries = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {machinery.map((m, i) => (
+            {machinery.slice(0, 3).map((m, i) => (
               <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-emerald-600/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
@@ -145,6 +158,14 @@ const ShriBalajiIndustries = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-12 flex justify-center">
+            <button 
+              onClick={() => navigate("/shri-balaji-industries/equipment")}
+              className="btn-industrial-secondary border-emerald-600/20 hover:border-emerald-600 hover:text-emerald-600"
+            >
+              View Facility <ArrowRight size={14} />
+            </button>
           </div>
         </div>
       </section>

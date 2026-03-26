@@ -8,6 +8,8 @@ const AftAutomotive = () => {
     { name: "Brake Shoes for 2&3 Wheelers", image: "/images/automotive_manufacturingassembly_axle_assembly.JPG", description: "High-quality brake shoes designed for 2 and 3 wheeler vehicles" },
     { name: "Disc Pads", image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "Precision-engineered disc brake pads for optimal stopping performance" },
     { name: "Clutch Plates", image: "/images/pressingforming_hydraulic_press_machine.JPG", description: "Durable clutch plates for smooth power transmission in vehicles" },
+    { name: "Brake & Clutch Levers", image: "/images/coating__surface_treatment_powder_coating_booth.JPG", description: "Precision-engineered brake and clutch levers for optimal control" },
+    { name: "Brake Drum Assembly", image: "/images/heat_treatment__surface_treatment_industrial_oven_or_baking_furnace.JPG", description: "Complete brake drum assemblies for reliable braking systems" },
   ];
 
   const machinery = [
@@ -95,7 +97,7 @@ const AftAutomotive = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((p, i) => (
+            {products.slice(0, 3).map((p, i) => (
               <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-slate-600/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
@@ -135,7 +137,7 @@ const AftAutomotive = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {machinery.map((m, i) => (
+            {machinery.slice(0, 3).map((m, i) => (
               <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-slate-600/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />

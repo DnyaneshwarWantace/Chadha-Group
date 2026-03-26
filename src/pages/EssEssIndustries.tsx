@@ -8,12 +8,19 @@ const EssEssIndustries = () => {
     { name: 'Differential 33" Size', image: "/images/manufacturing__assembly_differential_assembly_table.JPG", description: "Precision differential components for 33-inch applications" },
     { name: 'Differential 35" Size', image: "/images/assembly_and_manufacturing_mechanical_parts_assembly_line_likely_gearboxes_or_motor_components.JPG", description: "High-quality differential assemblies for 35-inch systems" },
     { name: 'Differential 38" Size', image: "/images/manufacturingassembly_gearbox_or_axle_assembly_line_parts_for_transmissions_or_drive_axles.JPG", description: "Advanced differential components for 38-inch applications" },
+    { name: 'Differential 42" Size', image: "/images/automotive_manufacturingassembly_axle_assembly.JPG", description: "Heavy-duty differential systems for 42-inch industrial vehicles" },
+    { name: 'Handle T - Casting Version', image: "/images/molding__forming_hydraulic_press_heat_molding_press.JPG", description: "Precision cast handle T components" },
+    { name: 'Handle T - Forging Version', image: "/images/pressingforming_hydraulic_press_machine.JPG", description: "High-strength forged handle T components" },
+    { name: 'Neck Pipe Components', image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "Durable neck pipe components for structural use" },
   ];
 
   const machinery = [
     { name: "Vertical Machining Centre", image: "/images/machiningmetalworking_cnc_vertical_machining_center_vmc.JPG", description: "3 units for precision machining differential components" },
     { name: "CNC Machines", image: "/images/machiningmanufacturing_cnc_milling_machine_computer_numerical_control_milling_machine.JPG", description: "4 units for automated operations" },
     { name: "Robotic Welding Machines", image: "/images/Robotic Welding Machines.jpeg", description: "Automated welding for precision assembly" },
+    { name: "SPM Machines", image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "15+ specialized purpose machines for custom operations" },
+    { name: "Laser Cutting Machine", image: "/images/cutting_cnc_laser_cutting_machine.JPG", description: "Precision material cutting with laser technology" },
+    { name: "Induction Hardening Machine", image: "/images/heat_treatment__surface_treatment_industrial_oven_or_baking_furnace.JPG", description: "Heat treatment for durability and precision" },
   ];
 
   return (
@@ -95,7 +102,7 @@ const EssEssIndustries = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((p, i) => (
+            {products.slice(0, 3).map((p, i) => (
               <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-zinc-600/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
@@ -113,6 +120,14 @@ const EssEssIndustries = () => {
               </div>
             ))}
           </div>
+          <div className="mt-12 flex justify-center">
+            <button 
+              onClick={() => navigate("/ess-ess-industries/products")}
+              className="btn-industrial-secondary border-zinc-600/20 hover:border-zinc-600 hover:text-zinc-800"
+            >
+              View All Products <ArrowRight size={14} />
+            </button>
+          </div>
         </div>
       </section>
 
@@ -127,7 +142,7 @@ const EssEssIndustries = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {machinery.map((m, i) => (
+            {machinery.slice(0, 3).map((m, i) => (
               <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-zinc-600/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
@@ -144,6 +159,14 @@ const EssEssIndustries = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-12 flex justify-center">
+            <button 
+              onClick={() => navigate("/ess-ess-industries/equipment")}
+              className="btn-industrial-secondary border-zinc-600/20 hover:border-zinc-600 hover:text-zinc-800"
+            >
+              View Facility <ArrowRight size={14} />
+            </button>
           </div>
         </div>
       </section>

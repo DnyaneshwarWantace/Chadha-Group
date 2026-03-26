@@ -8,12 +8,22 @@ const MrkImpex = () => {
     { name: "Industrial Crankshafts", image: "/images/All Type of Crank Shafts.jpeg", description: "Precision-engineered industrial crankshafts for heavy machinery applications" },
     { name: "Mechanical Gears", image: "/images/cutting__machining_gear_hobbing_machine.JPG", description: "High-precision mechanical gears using advanced hobbing technology" },
     { name: "Hydraulic Cylinders", image: "/images/Hydraulic Cylinders.jpeg", description: "Custom hydraulic cylinders for industrial and automotive applications" },
+    { name: "Shaft for Presses", image: "/images/Shafts.jpeg", description: "Specialized shafts designed for hydraulic and mechanical press operations" },
+    { name: "Manifold for Hydraulic Presses", image: "/images/moldingpressing_hydraulicmechanical_press_machine.JPG", description: "Precision hydraulic manifolds for efficient fluid distribution" },
+    { name: "Die Block and Tie Rods", image: "/images/Tie Rods.jpeg", description: "Heavy-duty die blocks and tie rods for mechanical power presses" },
+    { name: "Sheet Metal Components", image: "/images/cutting_cnc_plasma_cutting_machine.JPG", description: "Precision sheet metal components using advanced CNC plasma cutting" },
+    { name: "Cast Iron Mould Manufacturing", image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "High-quality cast iron moulds for die casting and manufacturing" },
+    { name: "Forming Tools", image: "/images/Die Forming Components.jpeg", description: "Specialized forming tools for precision metal forming and molding" },
   ];
 
   const machinery = [
     { name: "CNC Lathe Machines", image: "/images/mrk/CNC-lathe-machine.jpeg", description: "Swing Over Bed - Dia1600mm, Swing Over Slide - Dia2000mm, Total Length - 7500mm" },
     { name: "Vertical Machining Centre (KAFO3151)", image: "/images/mrk/VMC-Kafo.jpeg", description: "X-5000mm, Y-3000mm, Z-1700mm" },
     { name: "CNC Vertical Turning Lathe (TOS German)", image: "/images/mrk/Vertical-Turning-Lathe.jpeg", description: "Dia 2200mm, Z axis - 1600mm" },
+    { name: "Roll Grinder (TOS German)", image: "/images/mrk/Roll Grinder (TOS German).jpg", description: "Job Capacity 900X5000MM — Precision roll grinding" },
+    { name: "ELGA Milling Machine", image: "/images/mrk/Elga-Milling.jpeg", description: "X axis - 8000mm, Y axis - 1200mm, Z axis - 1000mm" },
+    { name: "Horizontal Boring Machine", image: "/images/mrk/boring-TOS.jpeg", description: "Center - 125mm" },
+    { name: "Bandsaw Cutting Machines", image: "/images/mrk/Bandsaw Cutting machine.jpg", description: "Material cutting and preparation" },
   ];
 
   return (
@@ -96,7 +106,7 @@ const MrkImpex = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((p, i) => (
+            {products.slice(0, 3).map((p, i) => (
               <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-amber-600/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
@@ -136,7 +146,7 @@ const MrkImpex = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {machinery.map((m, i) => (
+            {machinery.slice(0, 3).map((m, i) => (
               <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-amber-600/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />

@@ -302,7 +302,7 @@ const Index = () => {
         </div>
 
         {/* Scroll Indicator Arrow */}
-        <div className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-30 transition-all duration-700 pointer-events-none ${showScrollArrow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+        <div className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-30 transition-all duration-700 pointer-events-none lg:hidden ${showScrollArrow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           <div className="flex flex-col items-center gap-2">
             <span className="text-white/30 text-[9px] font-bold tracking-[0.3em] uppercase">Scroll</span>
             <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center bg-zinc-950/40 backdrop-blur-md animate-bounce">
