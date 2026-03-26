@@ -149,6 +149,16 @@ const Index = () => {
         </div>
       </div>
 
+      {/* Bottom left Address - Requested for mobile/small cards visibility */}
+      {!large && (
+        <div className="absolute bottom-4 sm:bottom-5 left-5 z-20 flex items-center gap-1.5 opacity-80 group-hover:opacity-100 transition-opacity max-w-[50%] lg:hidden">
+          <MapPin size={10} className={c.accent} />
+          <span className="text-[9px] sm:text-[10px] text-white/70 font-medium tracking-tight truncate">
+            {c.location}
+          </span>
+        </div>
+      )}
+
       {/* Bottom right Explore button */}
       <div className={`absolute bottom-4 sm:bottom-5 right-4 sm:right-5 z-20 ${c.dot} text-zinc-800 font-bold rounded-full inline-flex items-center gap-1.5 transition-transform group-hover:translate-x-1 shadow-lg ${large ? "px-6 py-2.5 text-xs sm:text-sm" : "px-4 sm:px-5 py-1.5 text-[10px] sm:text-[11px]"}`}>
         Explore <ArrowRight size={large ? 14 : 11} />
