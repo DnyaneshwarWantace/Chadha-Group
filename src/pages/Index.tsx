@@ -78,7 +78,7 @@ const Index = () => {
   const Card = ({ c, large }: { c: typeof companies[0]; large?: boolean }) => (
     <button
       onClick={() => navigate(`/${c.id}`)}
-      className={`group relative w-full text-left bg-zinc-950 overflow-hidden rounded-2xl transition-all duration-300 hover:scale-[1.015] border border-solid ${c.border} hover:border-opacity-100 ${large ? "h-full min-h-[290px] sm:min-h-[460px] lg:min-h-full" : "min-h-[190px] sm:min-h-[220px]"}`}
+      className={`group relative w-full text-left bg-zinc-950 overflow-hidden rounded-2xl transition-all duration-300 hover:scale-[1.015] border border-solid ${c.border} hover:border-opacity-100 ${large ? "h-full min-h-[290px] sm:min-h-[420px] lg:min-h-0 lg:flex-1" : "min-h-[160px] sm:min-h-[190px] lg:min-h-0"}`}
     >
       {/* Full bleed image */}
       <img
@@ -132,7 +132,7 @@ const Index = () => {
   );
 
   return (
-    <div className="h-screen w-screen overflow-y-auto overflow-x-hidden relative bg-zinc-950 flex flex-col">
+    <div className="h-screen w-screen overflow-y-auto lg:overflow-hidden overflow-x-hidden relative bg-zinc-950 flex flex-col">
 
       {/* Video */}
       <video
@@ -190,7 +190,7 @@ const Index = () => {
       </header>
 
       {/* MAIN — flex layout pushed slightly up, bottom fixed */}
-      <div className="relative z-10 flex-1 flex flex-col justify-start gap-8 sm:gap-10 pt-4 sm:pt-6 px-5 sm:px-10 pb-6 sm:pb-8">
+      <div className="relative z-10 flex-1 flex flex-col justify-start gap-6 sm:gap-8 lg:gap-4 pt-2 sm:pt-4 px-5 sm:px-10 pb-4 sm:pb-6">
 
         {/* HEADLINE BLOCK */}
         <div className="text-center z-20">
@@ -213,28 +213,28 @@ const Index = () => {
         </div>
 
         {/* CONGLOMERATES */}
-        <div className="w-full xl:w-[96%] 2xl:max-w-[1500px] mx-auto z-20">
-          <div className="flex items-center gap-3 mb-2.5 sm:mb-3">
+        <div className="w-full xl:w-[96%] 2xl:max-w-[1500px] mx-auto z-20 flex-1 flex flex-col min-h-0">
+          <div className="flex items-center gap-3 mb-2 lg:mb-1.5 flex-shrink-0">
             <div className="h-px flex-1 bg-white/10" />
             <span className="text-white/35 text-[10px] sm:text-[11px] font-bold tracking-[0.35em] uppercase">Our Conglomerates</span>
             <div className="h-px flex-1 bg-white/10" />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 sm:gap-3 lg:gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 sm:gap-3 lg:gap-3 flex-1 min-h-0">
             {/* Left side: 4 cards in a 2x2 grid */}
-            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 lg:gap-4">
+            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 lg:gap-3">
                {companies.slice(0, 4).map((c) => <Card key={c.id} c={c} />)}
             </div>
             {/* Right side: 1 large MRK card */}
-            <div className="lg:col-span-1 h-full">
+            <div className="lg:col-span-1 h-full min-h-0">
                <Card c={companies[4]} large />
             </div>
           </div>
         </div>
 
         {/* CTA + STATS */}
-        <div className="text-center mt-auto z-20">
-          <div className="flex flex-wrap gap-6 justify-center mb-8">
+        <div className="text-center mt-auto z-20 pt-2 flex-shrink-0">
+          <div className="flex flex-wrap gap-4 sm:gap-6 justify-center mb-4 lg:mb-6">
             <button
               onClick={() => window.open("https://wa.me/919999884740", "_blank")}
               className="btn-industrial-primary bg-amber-500 hover:bg-amber-400 text-zinc-800 shadow-amber-500/40"
