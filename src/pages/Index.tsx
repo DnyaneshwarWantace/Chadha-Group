@@ -142,7 +142,7 @@ const Index = () => {
 
         <div className={`flex flex-col gap-0.5 sm:gap-1.5 ${large ? "items-center" : ""}`}>
           {c.info.map((line, idx) => (
-             <p key={idx} className={`text-white/60 line-clamp-1 sm:line-clamp-2 ${large ? "text-[11px] sm:text-[14px]" : "text-[10px] sm:text-[12px]"}`}>
+             <p key={idx} className={`text-white/85 line-clamp-1 sm:line-clamp-2 ${large ? "text-[11px] sm:text-[14px]" : "text-[10px] sm:text-[12px]"}`}>
                {large && "• "} {line}
              </p>
           ))}
@@ -191,7 +191,7 @@ const Index = () => {
             </div>
             <div>
               <div className="text-white font-extrabold text-sm tracking-widest leading-none">CHADHA GROUP</div>
-              <div className="text-white/35 text-[8px] tracking-widest uppercase mt-0.5">Industrial Excellence Since 1968</div>
+              <div className="text-white/60 text-[8px] tracking-widest uppercase mt-0.5">Industrial Excellence Since 1968</div>
             </div>
           </div>
 
@@ -233,19 +233,19 @@ const Index = () => {
         {/* HEADLINE BLOCK */}
         <div className="text-center z-20">
           <div className="flex items-center justify-center gap-2.5 mb-3">
-            <div className="h-px w-6 bg-amber-400/60" />
-            <span className="text-amber-400 text-[10px] sm:text-[11px] font-bold tracking-[0.3em] uppercase">
+            <div className="h-px w-6 bg-amber-600" />
+            <span className="text-amber-500 text-[10px] sm:text-[11px] font-bold tracking-[0.3em] uppercase">
               India's Trusted Industrial Manufacturer
             </span>
-            <div className="h-px w-6 bg-amber-400/60" />
+            <div className="h-px w-6 bg-amber-600" />
           </div>
           <h1
             className="text-white font-bold tracking-tight leading-none"
-            style={{ fontSize: "clamp(1.75rem, 4.5vw, 3.5rem)" }}
+            style={{ fontSize: "clamp(2.2rem, 6vw, 4.5rem)" }}
           >
             INDUSTRIAL EXCELLENCE <span className="text-amber-400">SINCE 1968</span>
           </h1>
-          <p className="text-white/40 text-xs sm:text-sm mt-4 max-w-lg mx-auto leading-relaxed">
+          <p className="text-white/70 text-xs sm:text-sm mt-4 max-w-lg mx-auto leading-relaxed">
             55+ years of precision manufacturing across New Delhi &amp; Bhiwadi. Trusted by 50+ leading industrial partners.
           </p>
         </div>
@@ -253,9 +253,9 @@ const Index = () => {
         {/* CONGLOMERATES */}
         <div className="w-full xl:w-[96%] 2xl:max-w-[1500px] mx-auto z-20 flex-1 flex flex-col min-h-0">
           <div className="flex items-center gap-3 mb-2 lg:mb-1.5 flex-shrink-0">
-            <div className="h-px flex-1 bg-white/10" />
-            <span className="text-white/35 text-[10px] sm:text-[11px] font-bold tracking-[0.35em] uppercase">Our Conglomerates</span>
-            <div className="h-px flex-1 bg-white/10" />
+            <div className="h-px flex-1 bg-white/20" />
+            <span className="text-white/60 text-[10px] sm:text-[11px] font-bold tracking-[0.35em] uppercase">Our Conglomerate</span>
+            <div className="h-px flex-1 bg-white/20" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 sm:gap-3 lg:gap-3 flex-1 min-h-0">
@@ -286,7 +286,7 @@ const Index = () => {
               Learn More <ArrowRight size={18} />
             </button>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 pt-2.5 border-t border-white/10">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 pt-2.5 border-t border-white/20">
             {[
               { n: "5000+", l: "Tons Inventory" },
               { n: "1200T", l: "Press Capacity" },
@@ -294,8 +294,8 @@ const Index = () => {
               { n: "50+",   l: "Partners" },
             ].map((s, i) => (
               <div key={i} className="flex items-baseline gap-1">
-                <span className="text-amber-400 font-extrabold text-sm">{s.n}</span>
-                <span className="text-white/30 text-[9px]">{s.l}</span>
+                <span className="text-amber-500 font-extrabold text-sm">{s.n}</span>
+                <span className="text-white/60 text-[9px]">{s.l}</span>
               </div>
             ))}
           </div>
