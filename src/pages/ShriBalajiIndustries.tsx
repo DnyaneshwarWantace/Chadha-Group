@@ -46,7 +46,12 @@ const ShriBalajiIndustries = () => {
             </div>
             <div className="hidden sm:flex items-center gap-8">
               <button onClick={() => navigate("/about")} className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-emerald-600 transition-colors">About</button>
-              <button onClick={() => navigate("/contact")} className="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-emerald-600 transition-colors">Contact</button>
+              <button 
+                onClick={() => navigate("/contact")}
+                className="btn-industrial-primary bg-emerald-600 hover:bg-emerald-500 text-white h-8 px-4 shadow-emerald-600/20"
+              >
+                <MessageCircle size={14} /> Contact
+              </button>
             </div>
           </div>
         </header>
@@ -156,18 +161,18 @@ const ShriBalajiIndustries = () => {
           <p className="text-gray-600 text-sm sm:text-lg max-w-2xl mx-auto mb-16 font-medium leading-relaxed italic border-x border-emerald-600/20 px-8">
             "Over five decades of delivering mission-critical components to the heart of Global Industry."
           </p>
-          <div className="flex flex-wrap gap-8 justify-center">
+          <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
             <button 
               onClick={() => window.open("https://wa.me/919999884740", "_blank")}
               className="btn-industrial-primary bg-emerald-600 hover:bg-gray-900 shadow-emerald-600/40"
             >
-              <MessageCircle size={20} /> WHATSAPP INQUIRY
+              <MessageCircle size={18} /> WhatsApp Inquiry
             </button>
             <button 
               onClick={() => window.open("tel:+919999884740")}
               className="btn-industrial-secondary border-emerald-600/20 hover:border-emerald-600 hover:text-emerald-600"
             >
-              <Phone size={20} /> CALL FACTORY
+              <Phone size={18} /> Call Factory
             </button>
           </div>
         </div>

@@ -150,13 +150,13 @@ const Contact = () => {
                     <div className="absolute top-[-1px] left-0 w-8 h-[2px] bg-amber-500" />
                     <button
                       onClick={() => window.open(`https://wa.me/${company.wa1}`, "_blank")}
-                      className="btn-industrial-primary bg-amber-500 hover:bg-gray-900 border-none h-11 w-full"
+                      className="btn-industrial-primary bg-amber-500 hover:bg-gray-900 border-none"
                     >
                       <MessageCircle size={14} /> WhatsApp 1
                     </button>
                     <button
                       onClick={() => window.open(`https://wa.me/${company.wa2}`, "_blank")}
-                      className="btn-industrial-secondary border-gray-200 hover:border-amber-600 hover:text-amber-600 h-11 w-full"
+                      className="btn-industrial-secondary border-gray-200 hover:border-amber-600 hover:text-amber-600"
                     >
                       WhatsApp 2
                     </button>
@@ -187,18 +187,18 @@ const Contact = () => {
           <p className="text-gray-600 text-xs sm:text-sm max-w-xl mx-auto mb-10 font-light leading-relaxed">
             55+ years of manufacturing excellence, ready to serve your industrial needs.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
             <button 
               onClick={() => window.open("https://wa.me/919999884740", "_blank")} 
               className="btn-industrial-primary bg-amber-500 hover:bg-gray-900 shadow-amber-500/30"
             >
-              <MessageCircle size={16} /> WHATSAPP INQUIRY
+              <MessageCircle size={18} /> WhatsApp Inquiry
             </button>
             <button 
               onClick={() => window.open("tel:+919999884740")} 
               className="btn-industrial-secondary border-gray-300 hover:border-amber-600 hover:text-amber-600"
             >
-              <Phone size={16} /> CALL US
+              <Phone size={18} /> Call Us
             </button>
           </div>
         </div>
