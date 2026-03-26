@@ -1,7 +1,8 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Menu, X, MessageCircle, ArrowRight, ArrowUpRight, MapPin, Cog, Hammer, Wrench, Car, Gauge } from "lucide-react";
+import { Menu, X, MessageCircle, ArrowRight, ArrowUpRight, MapPin, Cog, Hammer, Wrench, Car, Gauge, ChevronDown } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 const companies = [
   {
@@ -74,6 +75,30 @@ const companies = [
 const Index = () => {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showScrollArrow, setShowScrollArrow] = useState(true);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollContainerRef.current) {
+        if (scrollContainerRef.current.scrollTop > 50) {
+          setShowScrollArrow(false);
+        } else {
+          setShowScrollArrow(true);
+        }
+      }
+    };
+
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+    }
+    return () => {
+      if (container) {
+        container.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
 
   const Card = ({ c, large }: { c: typeof companies[0]; large?: boolean }) => (
     <button
@@ -132,7 +157,10 @@ const Index = () => {
   );
 
   return (
-    <div className="h-screen w-screen overflow-y-auto lg:overflow-hidden overflow-x-hidden relative bg-zinc-950 flex flex-col">
+    <div 
+      ref={scrollContainerRef}
+      className="h-screen w-screen overflow-y-auto lg:overflow-hidden overflow-x-hidden relative bg-zinc-950 flex flex-col"
+    >
 
       {/* Video */}
       <video
@@ -260,6 +288,16 @@ const Index = () => {
                 <span className="text-white/30 text-[9px]">{s.l}</span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Scroll Indicator Arrow */}
+        <div className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-30 transition-all duration-700 pointer-events-none ${showScrollArrow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-white/30 text-[9px] font-bold tracking-[0.3em] uppercase">Scroll</span>
+            <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center bg-zinc-950/40 backdrop-blur-md animate-bounce">
+              <ChevronDown size={20} className="text-amber-500" />
+            </div>
           </div>
         </div>
 

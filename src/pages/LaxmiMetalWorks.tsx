@@ -93,19 +93,11 @@ const LaxmiMetalWorks = () => {
       {/* ----------------- PRODUCTS SHOWCASE ----------------- */}
       <section className="py-12 sm:py-14 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 sm:px-12">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-6">
-            <div className="flex flex-col">
-              <h2 className="text-xl sm:text-2xl font-bold uppercase tracking-tighter leading-none text-zinc-800 mb-4">
-                Our <span className="text-blue-600">Products</span>
-              </h2>
-              <div className="h-1 w-12 bg-blue-600" />
-            </div>
-            <button 
-              onClick={() => navigate("/laxmi-metal-works/products")}
-              className="btn-industrial-secondary border-blue-600/20 hover:border-blue-600 hover:text-blue-600 self-start sm:self-auto"
-            >
-              View All Products <ArrowRight size={14} />
-            </button>
+          <div className="flex flex-col items-center text-center sm:items-start sm:text-left mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold uppercase tracking-tighter leading-none text-zinc-800 mb-4">
+              Our <span className="text-blue-600">Products</span>
+            </h2>
+            <div className="h-1 w-12 bg-blue-600" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -133,19 +125,11 @@ const LaxmiMetalWorks = () => {
       {/* ----------------- MACHINERY SHOWCASE ----------------- */}
       <section className="py-12 sm:py-14 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-12">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-6">
-            <div className="flex flex-col">
-              <h2 className="text-xl sm:text-2xl font-bold uppercase tracking-tighter leading-none text-zinc-800 mb-4">
-                Machinery <span className="text-blue-600">& Equipment</span>
-              </h2>
-              <div className="h-1 w-12 bg-blue-600" />
-            </div>
-            <button 
-              onClick={() => navigate("/laxmi-metal-works/equipment")}
-              className="btn-industrial-secondary border-blue-600/20 hover:border-blue-600 hover:text-blue-600 self-start sm:self-auto"
-            >
-              View Facility <ArrowRight size={14} />
-            </button>
+          <div className="flex flex-col items-center text-center sm:items-start sm:text-left mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold uppercase tracking-tighter leading-none text-zinc-800 mb-4">
+              Machinery <span className="text-blue-600">& Equipment</span>
+            </h2>
+            <div className="h-1 w-12 bg-blue-600" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
