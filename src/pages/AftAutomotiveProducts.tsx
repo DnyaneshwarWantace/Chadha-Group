@@ -1,15 +1,58 @@
-import { Home, ChevronRight, MessageCircle, Car, ArrowLeft, Phone } from "lucide-react";
+import { useState } from "react";
+import { Home, ChevronRight, ChevronLeft, Maximize2, X, MessageCircle, Car, ArrowLeft, Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
+const CardImage = ({ image, images, name }: { image?: string; images?: string[]; name: string }) => {
+  const [idx, setIdx] = useState(0);
+  const [open, setOpen] = useState(false);
+  const all = images && images.length > 0 ? images : [image!];
+  const active = all[idx];
+  return (
+    <>
+      <div onClick={(e) => { e.stopPropagation(); setOpen(true); }} className="absolute inset-0 bg-white flex items-center justify-center cursor-zoom-in p-3 group/img">
+        <img src={active} alt={name} className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/img:scale-105" />
+        <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/5 transition-colors flex items-center justify-center pointer-events-none">
+          <div className="w-9 h-9 rounded-full bg-white/90 shadow flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity text-zinc-700"><Maximize2 size={16} /></div>
+        </div>
+        {all.length > 1 && (
+          <>
+            <button onClick={(e) => { e.stopPropagation(); setIdx((p) => (p === 0 ? all.length - 1 : p - 1)); }} className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/95 text-zinc-800 flex items-center justify-center border border-gray-200 shadow-sm opacity-0 group-hover/img:opacity-100 z-10 hover:text-slate-600 pointer-events-auto"><ChevronLeft size={16} /></button>
+            <button onClick={(e) => { e.stopPropagation(); setIdx((p) => (p === all.length - 1 ? 0 : p + 1)); }} className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/95 text-zinc-800 flex items-center justify-center border border-gray-200 shadow-sm opacity-0 group-hover/img:opacity-100 z-10 hover:text-slate-600 pointer-events-auto"><ChevronRight size={16} /></button>
+          </>
+        )}
+      </div>
+
+      {open && (
+        <div onClick={() => setOpen(false)} className="fixed inset-0 bg-black/95 z-[9999] flex flex-col items-center justify-center p-4 backdrop-blur-md">
+          <button onClick={() => setOpen(false)} className="absolute top-4 right-4 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all z-[10000]"><X size={24} /></button>
+          <div className="absolute top-4 left-6 text-white text-left max-w-[75%]">
+            <h4 className="text-lg font-bold uppercase">{name}</h4>
+            {all.length > 1 && <p className="text-xs text-white/60 mt-0.5 uppercase">Variant {idx + 1} of {all.length}</p>}
+          </div>
+          <div className="relative max-w-5xl w-full h-[80vh] flex items-center justify-center select-none">
+            <img src={active} alt={name} className="max-w-full max-h-full object-contain" onClick={(e) => e.stopPropagation()} />
+            {all.length > 1 && (
+              <>
+                <button onClick={(e) => { e.stopPropagation(); setIdx((p) => (p === 0 ? all.length - 1 : p - 1)); }} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all"><ChevronLeft size={28} /></button>
+                <button onClick={(e) => { e.stopPropagation(); setIdx((p) => (p === all.length - 1 ? 0 : p + 1)); }} className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all"><ChevronRight size={28} /></button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
 const AftAutomotiveProducts = () => {
   const navigate = useNavigate();
 
-  const products = [
-    { name: "Brake Shoes for 2&3 Wheelers", image: "/images/automotive_manufacturingassembly_axle_assembly.JPG", description: "High-quality brake shoes designed for 2 and 3 wheeler vehicles" },
-    { name: "Disc Pads", image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "Precision-engineered disc brake pads for optimal stopping performance" },
-    { name: "Clutch Plates", image: "/images/pressingforming_hydraulic_press_machine.JPG", description: "Durable clutch plates for smooth power transmission in vehicles" },
-    { name: "Brake & Clutch Levers", image: "/images/coating__surface_treatment_powder_coating_booth.JPG", description: "Precision-engineered brake and clutch levers for optimal control" },
-    { name: "Brake Drum Assembly", image: "/images/heat_treatment__surface_treatment_industrial_oven_or_baking_furnace.JPG", description: "Complete brake drum assemblies for reliable braking systems" },
+  const products: { name: string; image?: string; images?: string[]; description: string }[] = [
+    { name: "Brake Shoes for 2&3 Wheelers", image: "/images/aft/products/Brake Shoes.JPG", description: "High-quality brake shoes designed for 2 and 3 wheeler vehicles" },
+    { name: "Disc Pads", image: "/images/aft/products/Disc Pads.JPG", description: "Precision-engineered disc brake pads for optimal stopping performance" },
+    { name: "Clutch Plates", image: "/images/aft/products/Clutch Plates.JPG", description: "Durable clutch plates for smooth power transmission in vehicles" },
+    { name: "Brake & Clutch Levers", image: "/images/aft/products/Brake & Clutch Levers.JPG", description: "Precision-engineered brake and clutch levers for optimal control" },
+    { name: "Brake Drum Assembly", image: "/images/aft/products/Brake Drum Assembly.JPG", description: "Complete brake drum assemblies for reliable braking systems" },
   ];
 
   return (
@@ -57,11 +100,11 @@ const AftAutomotiveProducts = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {products.map((p, i) => (
-              <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-slate-600/40 transition-all duration-500 flex flex-col h-full rounded-none overflow-hidden">
-                <div className="relative h-64 overflow-hidden">
-                  <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500" />
-                  <div className="absolute top-4 left-4">
+              <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-slate-600/40 transition-all duration-500 flex flex-col h-full rounded-none">
+                <div className="relative h-64 bg-white overflow-hidden">
+                  <CardImage image={p.image} images={p.images} name={p.name} />
+                  <div className="absolute inset-0 bg-slate-900/10 pointer-events-none group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute top-4 left-4 pointer-events-none z-10">
                     <span className="text-[10px] font-bold bg-white/90 text-zinc-800 px-2 py-1 uppercase tracking-widest border border-gray-200">
                       SKU-0{i + 1}
                     </span>

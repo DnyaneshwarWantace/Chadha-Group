@@ -1,25 +1,72 @@
-import { Home, ChevronRight, MessageCircle, Cog, ArrowRight, Phone, ArrowLeft } from "lucide-react";
+import { useState } from "react";
+import { Home, ChevronRight, ChevronLeft, Maximize2, X, MessageCircle, Cog, ArrowRight, Phone, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
+const CardImage = ({ image, images, name }: { image?: string; images?: string[]; name: string }) => {
+  const [idx, setIdx] = useState(0);
+  const [open, setOpen] = useState(false);
+  const all = images && images.length > 0 ? images : [image!];
+  const active = all[idx];
+  return (
+    <>
+      <div onClick={(e) => { e.stopPropagation(); setOpen(true); }} className="absolute inset-0 bg-white flex items-center justify-center cursor-zoom-in p-3 group/img">
+        <img src={active} alt={name} className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/img:scale-105" />
+        <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/5 transition-colors flex items-center justify-center pointer-events-none">
+          <div className="w-9 h-9 rounded-full bg-white/90 shadow flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity text-zinc-700"><Maximize2 size={16} /></div>
+        </div>
+        {all.length > 1 && (
+          <>
+            <button onClick={(e) => { e.stopPropagation(); setIdx((p) => (p === 0 ? all.length - 1 : p - 1)); }} className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/95 text-zinc-800 flex items-center justify-center border border-gray-200 shadow-sm opacity-0 group-hover/img:opacity-100 z-10 hover:text-blue-600 pointer-events-auto"><ChevronLeft size={16} /></button>
+            <button onClick={(e) => { e.stopPropagation(); setIdx((p) => (p === all.length - 1 ? 0 : p + 1)); }} className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/95 text-zinc-800 flex items-center justify-center border border-gray-200 shadow-sm opacity-0 group-hover/img:opacity-100 z-10 hover:text-blue-600 pointer-events-auto"><ChevronRight size={16} /></button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 bg-black/45 px-2.5 py-1 rounded-full z-10 pointer-events-none">
+              {all.map((_, i) => <span key={i} className={`w-1.5 h-1.5 rounded-full transition-all ${i === idx ? "bg-white scale-110" : "bg-white/50"}`} />)}
+            </div>
+            <div className="absolute top-2 right-2 bg-blue-600 text-white text-[9px] font-extrabold uppercase px-2 py-0.5 tracking-wider rounded-sm shadow-sm pointer-events-none">{idx + 1} / {all.length}</div>
+          </>
+        )}
+      </div>
+      {open && (
+        <div onClick={() => setOpen(false)} className="fixed inset-0 bg-black/95 z-[9999] flex flex-col items-center justify-center p-4 backdrop-blur-md">
+          <button onClick={(e) => { e.stopPropagation(); setOpen(false); }} className="absolute top-4 right-4 text-white/70 hover:text-white bg-white/10 p-2 rounded-full z-[10000]"><X size={24} /></button>
+          <div className="absolute top-4 left-6 pointer-events-none">
+            <h4 className="text-lg font-bold tracking-tight uppercase text-white">{name}</h4>
+            {all.length > 1 && <p className="text-xs text-white/60 mt-0.5 uppercase tracking-wider font-semibold">Unit {idx + 1} of {all.length}</p>}
+          </div>
+          <div className="relative max-w-5xl w-full h-[80vh] flex items-center justify-center">
+            <img src={active} alt={name} className="max-w-full max-h-full object-contain" onClick={(e) => e.stopPropagation()} />
+            {all.length > 1 && (
+              <>
+                <button onClick={(e) => { e.stopPropagation(); setIdx((p) => (p === 0 ? all.length - 1 : p - 1)); }} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center"><ChevronLeft size={28} /></button>
+                <button onClick={(e) => { e.stopPropagation(); setIdx((p) => (p === all.length - 1 ? 0 : p + 1)); }} className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center"><ChevronRight size={28} /></button>
+              </>
+            )}
+          </div>
+          <p className="text-white/40 text-xs mt-4 uppercase tracking-widest font-bold select-none">Click anywhere to close</p>
+        </div>
+      )}
+    </>
+  );
+};
 
 const LaxmiMetalWorks = () => {
   const navigate = useNavigate();
 
-  const products = [
-    { name: "All Type of Crank Shafts", image: "/images/All Type of Crank Shafts.jpeg", description: "Precision-engineered crankshafts for various industrial applications" },
-    { name: "Rolls", image: "/images/Rolls.avif", description: "High-quality rolls for manufacturing and processing industries" },
-    { name: "Gears", image: "/images/cutting__machining_gear_hobbing_machine.JPG", description: "Precision gears manufactured using advanced hobbing technology" },
-    { name: "Hydraulic Cylinders", image: "/images/Hydraulic Cylinders.jpeg", description: "Custom hydraulic cylinders for heavy machinery applications" },
-    { name: "Tie Rods", image: "/images/Tie Rods.jpeg", description: "High-strength tie rods for structural applications" },
-    { name: "Shafts", image: "/images/Shafts.jpeg", description: "Precision shafts for various industrial machinery" },
-    { name: "Chilled Iron Ram", image: "/images/rChilled Iron Ram.webp", description: "Durable chilled iron rams for hydraulic applications" },
-    { name: "Crane Wheels", image: "/images/Crane Wheels.jpeg", description: "Heavy-duty crane wheels for material handling systems" },
-    { name: "Die Forming Components", image: "/images/Die Forming Components.jpeg", description: "Precision die forming components for manufacturing processes" },
+  const products: { name: string; image?: string; images?: string[]; description: string }[] = [
+    { name: "All Type of Crank Shafts", image: "/images/laxmi/products/All Type of Crank Shafts.jpeg", description: "Precision-engineered crankshafts for various industrial applications" },
+    { name: "Rolls", image: "/images/laxmi/products/Rolls.avif", description: "High-quality rolls for manufacturing and processing industries" },
+    { name: "Gears", image: "/images/laxmi/products/Gears.JPG", description: "Precision gears manufactured using advanced hobbing technology" },
+    { name: "Hydraulic Cylinders", image: "/images/laxmi/products/Hydraulic Cylinders.jpeg", description: "Custom hydraulic cylinders for heavy machinery applications" },
+    { name: "Tie Rods", image: "/images/laxmi/products/Tie Rods.jpeg", description: "High-strength tie rods for structural applications" },
+    { name: "Shafts", image: "/images/laxmi/products/Shafts.jpeg", description: "Precision shafts for various industrial machinery" },
+    { name: "Chilled Iron Ram", image: "/images/laxmi/products/rChilled Iron Ram.webp", description: "Durable chilled iron rams for hydraulic applications" },
+    { name: "Crane Wheels", image: "/images/laxmi/products/Crane Wheels.jpeg", description: "Heavy-duty crane wheels for material handling systems" },
+    { name: "Die Forming Components", image: "/images/laxmi/products/Die Forming Components.jpeg", description: "Precision die forming components for manufacturing processes" },
   ];
 
-  const machinery = [
-    { name: "Conventional Lathe Machines", image: "/images/machining_metalworkingmachining_heavyduty_lathe_machine.JPG", description: "10+ units for precision turning operations" },
-    { name: "Overhead Cranes", image: "/images/lifting_and_material_handling_overhead_crane_also_known_as_a_bridge_crane.JPG", description: "Heavy lifting and material handling" },
-    { name: "Shaper Machine", image: "/images/Shaper Machine.jpeg", description: "Surface finishing and precision shaping" },
+  const machinery: { name: string; image?: string; images?: string[]; description: string }[] = [
+    { name: "Conventional Lathe Machines", image: "/images/laxmi/equipment/Conventional Lathe Machines.JPG", description: "10+ units for precision turning operations" },
+    { name: "Overhead Cranes", image: "/images/laxmi/equipment/Overhead Cranes.JPG", description: "Heavy lifting and material handling" },
+    { name: "Shaper Machine", image: "/images/laxmi/equipment/Shaper Machine.jpeg", description: "Surface finishing and precision shaping" },
   ];
 
   return (
@@ -28,7 +75,7 @@ const LaxmiMetalWorks = () => {
       {/* ----------------- HERO SECTION ----------------- */}
       <div className="relative w-full min-h-[500px] flex flex-col justify-between border-b border-gray-200">
         <img 
-          src="/images/machiningturning_lathe_machine_heavyduty_lathe (2).jpg" 
+          src="/images/laxmi/products/Industrial Manufacturing.jpg" 
           alt="Laxmi Metal Works Hero" 
           className="absolute inset-0 w-full h-full object-cover opacity-100"
         />
@@ -107,10 +154,10 @@ const LaxmiMetalWorks = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.slice(0, 3).map((p, i) => (
-              <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-blue-600/40 transition-all duration-500 overflow-hidden flex flex-col">
-                <div className="relative h-64 overflow-hidden">
-                  <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500" />
+              <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full rounded-none">
+                <div className="relative h-64 bg-white overflow-hidden">
+                  <CardImage image={p.image} images={p.images} name={p.name} />
+                  <div className="absolute inset-0 bg-blue-900/10 pointer-events-none group-hover:bg-transparent transition-colors duration-500" />
                 </div>
                 <div className="p-3 flex flex-col flex-1 relative">
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-blue-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
@@ -146,10 +193,10 @@ const LaxmiMetalWorks = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {machinery.slice(0, 3).map((m, i) => (
-              <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-blue-600/40 transition-all duration-500 overflow-hidden flex flex-col">
-                <div className="relative h-64 overflow-hidden">
-                  <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500" />
+              <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-blue-600/40 transition-all duration-500 flex flex-col h-full rounded-none">
+                <div className="relative h-64 bg-white overflow-hidden">
+                  <CardImage image={m.image} images={m.images} name={m.name} />
+                  <div className="absolute inset-0 bg-blue-900/10 pointer-events-none group-hover:bg-transparent transition-colors duration-500" />
                 </div>
                 <div className="p-3 flex flex-col flex-1 relative">
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-blue-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />

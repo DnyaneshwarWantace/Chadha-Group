@@ -15,7 +15,7 @@ const companies = [
     dot: "bg-blue-400",
     border: "border-blue-400/40",
     accent: "text-blue-300",
-    img: "/images/All Type of Crank Shafts.jpeg",
+    img: "/images/laxmi/products/Industrial Manufacturing.jpg",
     Icon: Cog,
   },
   {
@@ -28,7 +28,7 @@ const companies = [
     dot: "bg-emerald-400",
     border: "border-emerald-400/40",
     accent: "text-emerald-300",
-    img: "/images/Hydraulic Press (1200 ton).png",
+    img: "/images/shri-balaji/equipment/Hydraulic Press (1200 ton).png",
     Icon: Hammer,
   },
   {
@@ -41,7 +41,7 @@ const companies = [
     dot: "bg-gray-300",
     border: "border-gray-300/35",
     accent: "text-zinc-800",
-    img: "/images/Robotic Welding Machines.jpeg",
+    img: "/images/ess-ess/equipment/Robotic Welding Machines.jpeg",
     Icon: Wrench,
   },
   {
@@ -54,7 +54,7 @@ const companies = [
     dot: "bg-slate-300",
     border: "border-slate-300/35",
     accent: "text-slate-300",
-    img: "/images/automotive_manufacturingassembly_axle_assembly.JPG",
+    img: "/images/aft/products/Brake Shoes.JPG",
     Icon: Car,
   },
   {
