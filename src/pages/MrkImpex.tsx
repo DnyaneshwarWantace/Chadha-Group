@@ -10,7 +10,6 @@ const MrkImpex = () => {
     { name: "Hydraulic Cylinders", image: "/images/Hydraulic Cylinders.jpeg", description: "Custom hydraulic cylinders for industrial and automotive applications" },
     { name: "Shaft for Presses", image: "/images/Shafts.jpeg", description: "Specialized shafts designed for hydraulic and mechanical press operations" },
     { name: "Manifold for Hydraulic Presses", image: "/images/moldingpressing_hydraulicmechanical_press_machine.JPG", description: "Precision hydraulic manifolds for efficient fluid distribution" },
-    { name: "Die Block and Tie Rods", image: "/images/Tie Rods.jpeg", description: "Heavy-duty die blocks and tie rods for mechanical power presses" },
     { name: "Sheet Metal Components", image: "/images/cutting_cnc_plasma_cutting_machine.JPG", description: "Precision sheet metal components using advanced CNC plasma cutting" },
     { name: "Cast Iron Mould Manufacturing", image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "High-quality cast iron moulds for die casting and manufacturing" },
     { name: "Forming Tools", image: "/images/Die Forming Components.jpeg", description: "Specialized forming tools for precision metal forming and molding" },
@@ -20,10 +19,12 @@ const MrkImpex = () => {
     { name: "CNC Lathe Machines", image: "/images/mrk/CNC-lathe-machine.jpeg", description: "Swing Over Bed - Dia1600mm, Swing Over Slide - Dia2000mm, Total Length - 7500mm" },
     { name: "Vertical Machining Centre (KAFO3151)", image: "/images/mrk/VMC-Kafo.jpeg", description: "X-5000mm, Y-3000mm, Z-1700mm" },
     { name: "CNC Vertical Turning Lathe (TOS German)", image: "/images/mrk/Vertical-Turning-Lathe.jpeg", description: "Dia 2200mm, Z axis - 1600mm" },
-    { name: "Roll Grinder (TOS German)", image: "/images/mrk/Roll Grinder (TOS German).jpg", description: "Job Capacity 900X5000MM — Precision roll grinding" },
+    { name: "Roll Grinder (TOS German)", image: "/images/mrk/Roll Grinder (TOS German).jpg", description: "Job Capacity 900X5000MM & Dia 400X1400MM — Precision roll grinding" },
     { name: "ELGA Milling Machine", image: "/images/mrk/Elga-Milling.jpeg", description: "X axis - 8000mm, Y axis - 1200mm, Z axis - 1000mm" },
     { name: "Horizontal Boring Machine", image: "/images/mrk/boring-TOS.jpeg", description: "Center - 125mm" },
-    { name: "Bandsaw Cutting Machines", image: "/images/mrk/Bandsaw Cutting machine.jpg", description: "Material cutting and preparation" },
+    { name: "Bandsaw Cutting Machines", image: "/images/mrk/Bandsaw Cutting machine.jpg", description: "Capacity: Dia 80mm to 1250mm — 7 units for material cutting and preparation" },
+    { name: "Hydraulic Press", image: "/images/mrk/equipment/IMG_9428.jpg", description: "Heavy-duty hydraulic press for precision metal forming and industrial component pressing operations" },
+    { name: "Overhead Cranes", image: "/images/mrk/equipment/Overhead Crane_1.jpg", description: "Capacity: 40 Ton — Heavy-duty overhead gantry cranes (EOT Crane) for material handling and lifting heavy industrial components" },
   ];
 
   return (

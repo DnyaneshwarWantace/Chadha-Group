@@ -1,16 +1,187 @@
-import { Home, ChevronRight, MessageCircle, Hammer, ArrowLeft, Phone } from "lucide-react";
+import { useState } from "react";
+import { Home, ChevronRight, ChevronLeft, Maximize2, X, MessageCircle, Hammer, ArrowLeft, Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
+const ProductCardImage = ({ 
+  image, 
+  images, 
+  name 
+}: { 
+  image?: string; 
+  images?: string[]; 
+  name: string; 
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+  const activeImage = images && images.length > 0 ? images[currentIndex] : image;
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const openLightbox = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsLightboxOpen(false);
+  };
+
+  const handleLightboxPrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (images && images.length > 0) {
+      setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    }
+  };
+
+  const handleLightboxNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (images && images.length > 0) {
+      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }
+  };
+
+  return (
+    <>
+      <div 
+        onClick={openLightbox} 
+        className="relative w-full h-full group/slider bg-white flex items-center justify-center cursor-zoom-in"
+      >
+        <img
+          src={activeImage}
+          alt={name}
+          className="w-full h-full object-contain p-4 transition-all duration-500 group-hover/slider:scale-102"
+        />
+        
+        {/* Zoom hint overlay on hover */}
+        <div className="absolute inset-0 bg-black/0 group-hover/slider:bg-black/5 transition-colors flex items-center justify-center pointer-events-none">
+          <div className="w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity text-zinc-700">
+            <Maximize2 size={18} />
+          </div>
+        </div>
+
+        {images && images.length > 1 && (
+          <>
+            <button
+              onClick={handlePrev}
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/95 hover:bg-white text-zinc-800 flex items-center justify-center border border-gray-200 shadow-sm transition-all opacity-0 group-hover/slider:opacity-100 z-10 hover:text-emerald-600 pointer-events-auto"
+            >
+              <ChevronLeft size={16} />
+            </button>
+            <button
+              onClick={handleNext}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/95 hover:bg-white text-zinc-800 flex items-center justify-center border border-gray-200 shadow-sm transition-all opacity-0 group-hover/slider:opacity-100 z-10 hover:text-emerald-600 pointer-events-auto"
+            >
+              <ChevronRight size={16} />
+            </button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 bg-black/45 px-2.5 py-1 rounded-full z-10 pointer-events-none">
+              {images.map((_, idx) => (
+                <span
+                  key={idx}
+                  className={`w-1.5 h-1.5 rounded-full transition-all ${
+                    idx === currentIndex ? "bg-white scale-110" : "bg-white/50"
+                  }`}
+                />
+              ))}
+            </div>
+            <div className="absolute top-2 right-2 bg-emerald-600 text-white text-[9px] font-extrabold uppercase px-2 py-0.5 tracking-wider rounded-sm shadow-sm pointer-events-none">
+              {currentIndex + 1} / {images.length} Variants
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* Lightbox Modal Overlay */}
+      {isLightboxOpen && (
+        <div 
+          onClick={closeLightbox}
+          className="fixed inset-0 bg-black/95 z-[9999] flex flex-col items-center justify-center p-4 backdrop-blur-md animate-fade-in"
+        >
+          {/* Close button */}
+          <button 
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all z-[10000]"
+          >
+            <X size={24} />
+          </button>
+
+          {/* Title / Variant Badge */}
+          <div className="absolute top-4 left-6 text-white text-left max-w-[75%] pointer-events-none">
+            <h4 className="text-lg font-bold tracking-tight uppercase">{name}</h4>
+            {images && images.length > 1 && (
+              <p className="text-xs text-white/60 mt-0.5 uppercase tracking-wider font-semibold">
+                Variant {currentIndex + 1} of {images.length}
+              </p>
+            )}
+          </div>
+
+          {/* Main Image Container */}
+          <div className="relative max-w-5xl w-full h-[80vh] flex items-center justify-center select-none">
+            <img
+              src={activeImage}
+              alt={name}
+              className="max-w-full max-h-full object-contain pointer-events-auto"
+              onClick={(e) => e.stopPropagation()} 
+            />
+
+            {/* Lightbox navigation arrows for multi-image variants */}
+            {images && images.length > 1 && (
+              <>
+                <button
+                  onClick={handleLightboxPrev}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all hover:scale-105"
+                >
+                  <ChevronLeft size={28} />
+                </button>
+                <button
+                  onClick={handleLightboxNext}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all hover:scale-105"
+                >
+                  <ChevronRight size={28} />
+                </button>
+              </>
+            )}
+          </div>
+          
+          {/* Helper caption */}
+          <p className="text-white/40 text-xs mt-4 pointer-events-none select-none uppercase tracking-widest font-bold">
+            Click anywhere to close
+          </p>
+        </div>
+      )}
+    </>
+  );
+};
 
 const ShriBalajiIndustriesEquipment = () => {
   const navigate = useNavigate();
 
   const machinery = [
-    { name: "Hydraulic Press (1200 ton)", image: "/images/Hydraulic Press (1200 ton).png", description: "Size 2000X4000mm — maximum capacity, precision capabilities" },
-    { name: "Hydraulic Press (600 ton)", image: "/images/Hydraulic Press (600 ton).jpeg", description: "Size 800X1400mm — medium capacity operations" },
-    { name: "Robotic Plasma Machines", image: "/images/Robotic Plasma Machines.jpeg", description: "4 units for automated cutting operations" },
-    { name: "Press Brake Machine", image: "/images/Press Brake Machine.jpeg", description: "Precision bending operations" },
-    { name: "Power Presses", image: "/images/pressingforming_mechanical_power_press_models.JPG", description: "High-speed stamping operations" },
-    { name: "Shearing Cutting Machine", image: "/images/cutting_metal_band_saw_horizontal_band_saw.JPG", description: "Material preparation and cutting" },
+    { name: "Hydraulic Press (1200 ton)", image: "/images/shri-balaji/equipment/Hydraulic Press (1200 ton).png", description: "Size 2000X4000mm — maximum capacity, precision capabilities" },
+    { name: "Hydraulic Press (600 ton)", image: "/images/shri-balaji/equipment/Hydraulic Press (600 ton).png", description: "Size 800X1400mm — medium capacity operations" },
+    { name: "Robotic Plasma Machines", image: "/images/shri-balaji/equipment/Robotic Plasma Machines.jpeg", description: "4 units for automated cutting operations" },
+    { name: "Press Brake Machine", image: "/images/shri-balaji/equipment/PRESS BRAKE MACHINE.png", description: "Precision bending operations" },
+    {
+      name: "Shearing Cutting Machine", 
+      images: [
+        "/images/shri-balaji/equipment/SHEARING_CUTTING_MACHINE_1.png",
+        "/images/shri-balaji/equipment/SHEARING_CUTTING_MACHINE_2.png"
+      ], 
+      description: "Material preparation and cutting (2 variants available)" 
+    },
   ];
 
   return (
@@ -18,7 +189,7 @@ const ShriBalajiIndustriesEquipment = () => {
       
       {/* ----------------- HERO SECTION ----------------- */}
       <div className="relative w-full min-h-[350px] flex flex-col justify-between border-b border-gray-200">
-        <img src="/images/Robotic Plasma Machines.jpeg" alt="Precision Equipment" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
+        <img src="/images/shri-balaji/equipment/Robotic Plasma Machines.jpeg" alt="Precision Equipment" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-[#f8f9fa]/90 to-[#f8f9fa]" />
 
         <header className="relative z-50 border-b border-gray-200 bg-white/70 backdrop-blur-md">
@@ -60,9 +231,9 @@ const ShriBalajiIndustriesEquipment = () => {
             {machinery.map((m, i) => (
               <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-emerald-600/40 transition-all duration-500 flex flex-col h-full rounded-none overflow-hidden">
                 <div className="relative h-64 overflow-hidden">
-                  <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-emerald-900/10 group-hover:bg-transparent transition-colors duration-500" />
-                  <div className="absolute top-4 left-4">
+                  <ProductCardImage image={m.image} images={m.images} name={m.name} />
+                  <div className="absolute inset-0 bg-emerald-900/10 pointer-events-none group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute top-4 left-4 pointer-events-none">
                     <span className="text-[10px] font-bold bg-white/90 text-zinc-800 px-2 py-1 uppercase tracking-widest border border-gray-200">
                       Asset 0{i + 1}
                     </span>

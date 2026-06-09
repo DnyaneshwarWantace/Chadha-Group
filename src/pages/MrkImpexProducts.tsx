@@ -5,15 +5,13 @@ const MrkImpexProducts = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: "Industrial Crankshafts", image: "/images/All Type of Crank Shafts.jpeg", description: "Precision-engineered industrial crankshafts for heavy machinery applications" },
-    { name: "Mechanical Gears", image: "/images/cutting__machining_gear_hobbing_machine.JPG", description: "High-precision mechanical gears using advanced hobbing technology" },
-    { name: "Hydraulic Cylinders", image: "/images/Hydraulic Cylinders.jpeg", description: "Custom hydraulic cylinders for industrial and automotive applications" },
-    { name: "Shaft for Presses", image: "/images/Shafts.jpeg", description: "Specialized shafts designed for hydraulic and mechanical press operations" },
-    { name: "Manifold for Hydraulic Presses", image: "/images/moldingpressing_hydraulicmechanical_press_machine.JPG", description: "Precision hydraulic manifolds for efficient fluid distribution" },
-    { name: "Die Block and Tie Rods", image: "/images/Tie Rods.jpeg", description: "Heavy-duty die blocks and tie rods for mechanical power presses" },
-    { name: "Sheet Metal Components", image: "/images/cutting_cnc_plasma_cutting_machine.JPG", description: "Precision sheet metal components using advanced CNC plasma cutting" },
-    { name: "Cast Iron Mould Manufacturing", image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "High-quality cast iron moulds for die casting and manufacturing" },
-    { name: "Forming Tools", image: "/images/Die Forming Components.jpeg", description: "Specialized forming tools for precision metal forming and molding" },
+    { name: "Industrial Crankshafts", image: "/images/mrk/products/Industrial Crankshafts.jpeg", description: "Precision-engineered industrial crankshafts for heavy machinery applications" },
+    { name: "Mechanical Gears", image: "/images/mrk/products/Mechanical Gears.JPG", description: "High-precision mechanical gears using advanced hobbing technology" },
+    { name: "Hydraulic Cylinders", image: "/images/mrk/products/Hydraulic Cylinders.jpeg", description: "Custom hydraulic cylinders for industrial and automotive applications" },
+    { name: "Shaft for Presses", image: "/images/mrk/products/Shaft for Presses.jpeg", description: "Specialized shafts designed for hydraulic and mechanical press operations" },
+    { name: "Manifold for Hydraulic Presses", image: "/images/mrk/products/Manifold for Hydraulic Presses.JPG", description: "Precision hydraulic manifolds for efficient fluid distribution" },
+    { name: "Sheet Metal Components", image: "/images/mrk/products/Sheet Metal Components.JPG", description: "Precision sheet metal components using advanced CNC plasma cutting" },
+    { name: "Forming Tools", image: "/images/mrk/products/Forming Tools.jpeg", description: "Specialized forming tools for precision metal forming and molding" },
   ];
 
   return (

@@ -1,22 +1,102 @@
-import { Home, ChevronRight, MessageCircle, Wrench, ArrowLeft, Phone } from "lucide-react";
+import { useState } from "react";
+import { ChevronRight, ChevronLeft, Maximize2, X, MessageCircle, Wrench, ArrowLeft, Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
+const ProductCardImage = ({ image, images, name }: { image?: string; images?: string[]; name: string }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+  const activeImage = images && images.length > 0 ? images[currentIndex] : image;
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.preventDefault(); e.stopPropagation();
+    setCurrentIndex((prev) => (prev === 0 ? images!.length - 1 : prev - 1));
+  };
+  const handleNext = (e: React.MouseEvent) => {
+    e.preventDefault(); e.stopPropagation();
+    setCurrentIndex((prev) => (prev === images!.length - 1 ? 0 : prev + 1));
+  };
+  const openLightbox = (e: React.MouseEvent) => { e.preventDefault(); e.stopPropagation(); setIsLightboxOpen(true); };
+  const closeLightbox = (e: React.MouseEvent) => { e.preventDefault(); e.stopPropagation(); setIsLightboxOpen(false); };
+
+  return (
+    <>
+      <div onClick={openLightbox} className="relative w-full h-full group/slider bg-white flex items-center justify-center cursor-zoom-in p-4">
+        <img src={activeImage} alt={name} className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/slider:scale-105" />
+        <div className="absolute inset-0 bg-black/0 group-hover/slider:bg-black/5 transition-colors flex items-center justify-center pointer-events-none">
+          <div className="w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity text-zinc-700">
+            <Maximize2 size={18} />
+          </div>
+        </div>
+        {images && images.length > 1 && (
+          <>
+            <button onClick={handlePrev} className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/95 hover:bg-white text-zinc-800 flex items-center justify-center border border-gray-200 shadow-sm transition-all opacity-0 group-hover/slider:opacity-100 z-10 hover:text-zinc-600 pointer-events-auto">
+              <ChevronLeft size={16} />
+            </button>
+            <button onClick={handleNext} className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/95 hover:bg-white text-zinc-800 flex items-center justify-center border border-gray-200 shadow-sm transition-all opacity-0 group-hover/slider:opacity-100 z-10 hover:text-zinc-600 pointer-events-auto">
+              <ChevronRight size={16} />
+            </button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 bg-black/45 px-2.5 py-1 rounded-full z-10 pointer-events-none">
+              {images.map((_, idx) => (
+                <span key={idx} className={`w-1.5 h-1.5 rounded-full transition-all ${idx === currentIndex ? "bg-white scale-110" : "bg-white/50"}`} />
+              ))}
+            </div>
+            <div className="absolute top-2 right-2 bg-zinc-600 text-white text-[9px] font-extrabold uppercase px-2 py-0.5 tracking-wider rounded-sm shadow-sm pointer-events-none">
+              {currentIndex + 1} / {images.length} Variants
+            </div>
+          </>
+        )}
+      </div>
+
+      {isLightboxOpen && (
+        <div onClick={closeLightbox} className="fixed inset-0 bg-black/95 z-[9999] flex flex-col items-center justify-center p-4 backdrop-blur-md animate-fade-in">
+          <button onClick={closeLightbox} className="absolute top-4 right-4 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all z-[10000]">
+            <X size={24} />
+          </button>
+          <div className="absolute top-4 left-6 text-white text-left max-w-[75%] pointer-events-none">
+            <h4 className="text-lg font-bold tracking-tight uppercase">{name}</h4>
+            {images && images.length > 1 && (
+              <p className="text-xs text-white/60 mt-0.5 uppercase tracking-wider font-semibold">Variant {currentIndex + 1} of {images.length}</p>
+            )}
+          </div>
+          <div className="relative max-w-5xl w-full h-[80vh] flex items-center justify-center select-none">
+            <img src={activeImage} alt={name} className="max-w-full max-h-full object-contain pointer-events-auto" onClick={(e) => e.stopPropagation()} />
+            {images && images.length > 1 && (
+              <>
+                <button onClick={(e) => { e.stopPropagation(); setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1)); }} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all hover:scale-105">
+                  <ChevronLeft size={28} />
+                </button>
+                <button onClick={(e) => { e.stopPropagation(); setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1)); }} className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all hover:scale-105">
+                  <ChevronRight size={28} />
+                </button>
+              </>
+            )}
+          </div>
+          <p className="text-white/40 text-xs mt-4 pointer-events-none select-none uppercase tracking-widest font-bold">Click anywhere to close</p>
+        </div>
+      )}
+    </>
+  );
+};
 
 const EssEssIndustriesProducts = () => {
   const navigate = useNavigate();
 
-  const products = [
-    { name: 'Differential 33" Size', image: "/images/manufacturing__assembly_differential_assembly_table.JPG", description: "Precision differential components for 33-inch applications" },
-    { name: 'Differential 35" Size', image: "/images/assembly_and_manufacturing_mechanical_parts_assembly_line_likely_gearboxes_or_motor_components.JPG", description: "High-quality differential assemblies for 35-inch systems" },
-    { name: 'Differential 38" Size', image: "/images/manufacturingassembly_gearbox_or_axle_assembly_line_parts_for_transmissions_or_drive_axles.JPG", description: "Advanced differential components for 38-inch applications" },
-    { name: 'Differential 42" Size', image: "/images/automotive_manufacturingassembly_axle_assembly.JPG", description: "Heavy-duty differential assemblies for 42-inch systems" },
-    { name: "Handle T - Casting Version", image: "/images/Handle T - Casting Version.jpeg", description: "Precision-cast T-handle components for industrial applications" },
-    { name: "Handle T - Forging Version", image: "/images/Handle T - Forging Version.jpeg", description: "Forged T-handle components for enhanced strength and durability" },
-    { name: "Neck Pipe Components", image: "/images/Neck Pipe Components.webp", description: "Precision neck pipe components for fluid transfer systems" },
+  const products: { name: string; image?: string; images?: string[]; description: string }[] = [
+    { name: 'Differential 33" Size', image: '/images/ess-ess/products/DIFFERENTIAL 33" SIZE.png', description: "Precision differential components for 33-inch applications" },
+    { name: 'Differential 35" Size', image: '/images/ess-ess/products/DIFFERENTIAL 35" SIZE.png', description: "High-quality differential assemblies for 35-inch systems" },
+    { name: 'Differential 38" Size', image: '/images/ess-ess/products/DIFFERENTIAL 38" SIZE.png', description: "Advanced differential components for 38-inch applications" },
+    { name: 'Differential 42" Size', image: '/images/ess-ess/products/DIFFERENTIAL 42" SIZE.png', description: "Heavy-duty differential assemblies for 42-inch systems" },
+    { name: "Handle T - Casting Version", image: "/images/ess-ess/products/HANDLE T_CASTING_VERSION.png", description: "Cast T-handle component — without lock mechanism" },
+    { name: "Handle T - Forging Version", images: ["/images/ess-ess/products/HANDLE_T_FORGING_VERSION_WITH_LOCK.png", "/images/ess-ess/products/HANDLE_T_FORGING_VERSION_WITHOUT_LOCK.png"], description: "Forged T-handle component — available with lock and without lock versions" },
+    { name: "Neck Pipe Components", image: "/images/ess-ess/products/NECK_PIPE.jpg", description: "Precision neck pipe components for fluid transfer systems" },
+    { name: "Drum Brake Hub Assembly 25.5", images: ["/images/ess-ess/products/DRUM_BRAKE_HUB_ASSEMBLY_1.jpg", "/images/ess-ess/products/DRUM_BRAKE_HUB_ASSEMBLY_2.jpg"], description: "25.5 size drum brake hub assembly — includes wheel hub, brake plate with shoes, and axle spindle" },
+    { name: "Handi (4mm)", images: ["/images/ess-ess/products/4MM_HANDI.jpg", "/images/ess-ess/products/4MM_HANDI_2.jpg"], description: "Press formed chassis tube components — structural frame members for e-rickshaw assembly" },
   ];
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-zinc-800 selection:bg-zinc-500/30 font-sans overflow-x-hidden flex flex-col">
-      
+
       {/* ----------------- HERO SECTION ----------------- */}
       <div className="relative w-full min-h-[350px] flex flex-col justify-between border-b border-gray-200">
         <img src="/images/manufacturing__assembly_differential_assembly_table.JPG" alt="Drivetrain Manufacturing" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
@@ -61,9 +141,8 @@ const EssEssIndustriesProducts = () => {
             {products.map((p, i) => (
               <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-zinc-600/40 transition-all duration-500 flex flex-col h-full rounded-none overflow-hidden">
                 <div className="relative h-64 overflow-hidden">
-                  <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-zinc-900/10 group-hover:bg-transparent transition-colors duration-500" />
-                  <div className="absolute top-4 left-4">
+                  <ProductCardImage image={p.image} images={p.images} name={p.name} />
+                  <div className="absolute top-4 left-4 pointer-events-none">
                     <span className="text-[10px] font-bold bg-white/90 text-zinc-800 px-2 py-1 uppercase tracking-widest border border-gray-200">
                       Component 0{i + 1}
                     </span>
@@ -94,7 +173,7 @@ const EssEssIndustriesProducts = () => {
       <section className="relative py-12 sm:py-14 bg-[#f8f9fa] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-600/5 to-transparent" />
         <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-zinc-600/10 blur-[100px] rounded-full" />
-        
+
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-2xl sm:text-5xl font-bold uppercase tracking-tighter text-zinc-800 mb-6 leading-none">
             Mechanical <span className="text-zinc-600">Surpass</span>
@@ -103,14 +182,14 @@ const EssEssIndustriesProducts = () => {
             Engineering the future of drivetrain components. Contact Ess Ess Industries for custom mechanical solutions.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <button 
-              onClick={() => window.open("https://wa.me/919999884740", "_blank")} 
+            <button
+              onClick={() => window.open("https://wa.me/919999884740", "_blank")}
               className="btn-industrial-primary bg-zinc-600 hover:bg-gray-900 shadow-zinc-600/30"
             >
               <MessageCircle size={16} /> WHATSAPP INQUIRY
             </button>
-            <button 
-              onClick={() => window.open("tel:+919999884740")} 
+            <button
+              onClick={() => window.open("tel:+919999884740")}
               className="btn-industrial-secondary border-gray-300 hover:border-zinc-600 hover:text-zinc-600"
             >
               <Phone size={16} /> CALL NOW

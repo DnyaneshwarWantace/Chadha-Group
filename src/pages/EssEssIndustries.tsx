@@ -1,26 +1,60 @@
-import { Home, ChevronRight, MessageCircle, Wrench, ArrowRight, Phone, ArrowLeft } from "lucide-react";
+import { useState } from "react";
+import { ChevronRight, ChevronLeft, Maximize2, X, MessageCircle, Wrench, ArrowRight, Phone, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
+const CardImage = ({ image, name }: { image: string; name: string }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <div
+        onClick={(e) => { e.stopPropagation(); setOpen(true); }}
+        className="absolute inset-0 bg-white flex items-center justify-center cursor-zoom-in p-3 group/img"
+      >
+        <img src={image} alt={name} className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/img:scale-105" />
+        <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/5 transition-colors flex items-center justify-center pointer-events-none">
+          <div className="w-9 h-9 rounded-full bg-white/90 shadow flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity text-zinc-700">
+            <Maximize2 size={16} />
+          </div>
+        </div>
+      </div>
+      {open && (
+        <div onClick={() => setOpen(false)} className="fixed inset-0 bg-black/95 z-[9999] flex flex-col items-center justify-center p-4 backdrop-blur-md">
+          <button onClick={(e) => { e.stopPropagation(); setOpen(false); }} className="absolute top-4 right-4 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all z-[10000]">
+            <X size={24} />
+          </button>
+          <div className="absolute top-4 left-6 pointer-events-none">
+            <h4 className="text-lg font-bold tracking-tight uppercase text-white">{name}</h4>
+          </div>
+          <div className="max-w-5xl w-full h-[80vh] flex items-center justify-center">
+            <img src={image} alt={name} className="max-w-full max-h-full object-contain" onClick={(e) => e.stopPropagation()} />
+          </div>
+          <p className="text-white/40 text-xs mt-4 uppercase tracking-widest font-bold select-none">Click anywhere to close</p>
+        </div>
+      )}
+    </>
+  );
+};
 
 const EssEssIndustries = () => {
   const navigate = useNavigate();
 
   const products = [
-    { name: 'Differential 33" Size', image: "/images/manufacturing__assembly_differential_assembly_table.JPG", description: "Precision differential components for 33-inch applications" },
-    { name: 'Differential 35" Size', image: "/images/assembly_and_manufacturing_mechanical_parts_assembly_line_likely_gearboxes_or_motor_components.JPG", description: "High-quality differential assemblies for 35-inch systems" },
-    { name: 'Differential 38" Size', image: "/images/manufacturingassembly_gearbox_or_axle_assembly_line_parts_for_transmissions_or_drive_axles.JPG", description: "Advanced differential components for 38-inch applications" },
-    { name: 'Differential 42" Size', image: "/images/automotive_manufacturingassembly_axle_assembly.JPG", description: "Heavy-duty differential systems for 42-inch industrial vehicles" },
-    { name: 'Handle T - Casting Version', image: "/images/molding__forming_hydraulic_press_heat_molding_press.JPG", description: "Precision cast handle T components" },
-    { name: 'Handle T - Forging Version', image: "/images/pressingforming_hydraulic_press_machine.JPG", description: "High-strength forged handle T components" },
-    { name: 'Neck Pipe Components', image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "Durable neck pipe components for structural use" },
+    { name: 'Differential 33" Size', image: '/images/ess-ess/products/DIFFERENTIAL 33" SIZE.png', description: "Precision differential components for 33-inch applications" },
+    { name: 'Differential 35" Size', image: '/images/ess-ess/products/DIFFERENTIAL 35" SIZE.png', description: "High-quality differential assemblies for 35-inch systems" },
+    { name: 'Differential 38" Size', image: '/images/ess-ess/products/DIFFERENTIAL 38" SIZE.png', description: "Advanced differential components for 38-inch applications" },
+    { name: 'Differential 42" Size', image: '/images/ess-ess/products/DIFFERENTIAL 42" SIZE.png', description: "Heavy-duty differential systems for 42-inch industrial vehicles" },
+    { name: 'Handle T - Casting Version', image: "/images/ess-ess/products/HANDLE T_CASTING_VERSION.png", description: "Cast T-handle component — without lock mechanism" },
+    { name: 'Handle T - Forging Version', image: "/images/ess-ess/products/HANDLE_T_FORGING_VERSION_WITH_LOCK.png", description: "Forged T-handle component — with lock mechanism" },
+    { name: 'Neck Pipe Components', image: "/images/ess-ess/products/NECK_PIPE.jpg", description: "Precision neck pipe components for fluid transfer systems" },
   ];
 
   const machinery = [
-    { name: "Vertical Machining Centre", image: "/images/machiningmetalworking_cnc_vertical_machining_center_vmc.JPG", description: "3 units for precision machining differential components" },
-    { name: "CNC Machines", image: "/images/machiningmanufacturing_cnc_milling_machine_computer_numerical_control_milling_machine.JPG", description: "4 units for automated operations" },
-    { name: "Robotic Welding Machines", image: "/images/Robotic Welding Machines.jpeg", description: "Automated welding for precision assembly" },
-    { name: "SPM Machines", image: "/images/manufacturing__castingdie_casting_die_casting_machine.JPG", description: "15+ specialized purpose machines for custom operations" },
-    { name: "Laser Cutting Machine", image: "/images/cutting_cnc_laser_cutting_machine.JPG", description: "Precision material cutting with laser technology" },
-    { name: "Induction Hardening Machine", image: "/images/heat_treatment__surface_treatment_industrial_oven_or_baking_furnace.JPG", description: "Heat treatment for durability and precision" },
+    { name: "VMC (Vertical Machining Centre)", image: "/images/ess-ess/equipment/Vertical Machining Centre.JPG", description: "3 units for precision machining differential components" },
+    { name: "CNC Machines", image: "/images/ess-ess/equipment/CNC.png", description: "4 units for automated operations" },
+    { name: "Robotic Welding Machines", image: "/images/ess-ess/equipment/Robotic Welding Machines.jpeg", description: "Automated welding for precision assembly" },
+    { name: "SPM Machines", image: "/images/ess-ess/equipment/SPM.png", description: "15+ specialized purpose machines for custom operations" },
+    { name: "Laser Cutting Machine", image: "/images/ess-ess/equipment/Laser Cutting Machine.JPG", description: "Precision material cutting with laser technology" },
+    { name: "Induction Hardening Machine", image: "/images/ess-ess/equipment/Induction Hardening Machine.jpeg", description: "Heat treatment for durability and precision" },
   ];
 
   return (
@@ -102,11 +136,10 @@ const EssEssIndustries = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.slice(0, 3).map((p, i) => (
-              <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-zinc-600/40 transition-all duration-500 overflow-hidden flex flex-col">
-                <div className="relative h-64 overflow-hidden">
-                  <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-zinc-900/10 group-hover:bg-transparent transition-colors duration-500" />
+            {products.slice(0, 3).map((p) => (
+              <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-zinc-600/40 transition-all duration-500 flex flex-col">
+                <div className="relative h-64 bg-white overflow-hidden">
+                  <CardImage image={p.image} name={p.name} />
                 </div>
                 <div className="p-3 flex flex-col flex-1 relative">
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-zinc-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
@@ -142,11 +175,10 @@ const EssEssIndustries = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {machinery.slice(0, 3).map((m, i) => (
-              <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-zinc-600/40 transition-all duration-500 overflow-hidden flex flex-col">
-                <div className="relative h-64 overflow-hidden">
-                  <img src={m.image} alt={m.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-zinc-900/10 group-hover:bg-transparent transition-colors duration-500" />
+            {machinery.slice(0, 3).map((m) => (
+              <div key={m.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-zinc-600/40 transition-all duration-500 flex flex-col">
+                <div className="relative h-64 bg-white overflow-hidden">
+                  <CardImage image={m.image} name={m.name} />
                 </div>
                 <div className="p-3 flex flex-col flex-1 relative">
                   <div className="absolute top-0 left-0 w-full h-[3px] bg-zinc-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
