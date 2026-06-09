@@ -53,9 +53,9 @@ const MrkImpexEquipment = () => {
 
   const machinery: { name: string; image?: string; images?: string[]; description: string }[] = [
     { name: "CNC Lathe Machines", image: "/images/mrk/equipment/CNC Lathe Machines.jpeg", description: "Swing Over Bed - Dia1600mm, Swing Over Slide - Dia2000mm, Total Length - 7500mm" },
-    { name: "Vertical Machining Centre (KAFO3151)", image: "/images/mrk/equipment/VMC KAFO3151.jpeg", description: "X-5000mm, Y-3000mm, Z-1700mm" },
-    { name: "Vertical Machining Centre (VMC-2)", image: "/images/mrk/equipment/VMC_2.png", description: "X-4100mm, Y-3500mm, Z-1500mm" },
-    { name: "Vertical Machining Centre (VMC-3)", image: "/images/mrk/equipment/VMC_1.png", description: "X-2700mm, Y-1700mm, Z-100mm" },
+    { name: "Vertical Machining Centre (KAFO3151)", image: "/images/mrk/equipment/VMC KAFO3151.jpeg", description: "Unit 1 — X-5000mm, Y-3000mm, Z-1700mm" },
+    { name: "Vertical Machining Centre (VMC-2)", image: "/images/mrk/equipment/VMC_2.png", description: "Unit 2 — X-4100mm, Y-3500mm, Z-1500mm" },
+    { name: "Vertical Machining Centre (VMC-3)", image: "/images/mrk/equipment/VMC_1.png", description: "Unit 3 — X-2700mm, Y-1700mm, Z-100mm" },
     { name: "CNC Vertical Turning Lathe (TOS German)", image: "/images/mrk/equipment/CNC Vertical Turning Lathe.png", description: "Dia 2200mm, Z axis - 1600mm" },
     { name: "Roll Grinder (TOS German)", image: "/images/mrk/equipment/Roll Grinder TOS.png", description: "Job Capacity 900X5000MM & Dia 400X1400MM — Precision roll grinding" },
     { name: "ELGA Milling Machine", image: "/images/mrk/equipment/ELGA Milling Machine.jpeg", description: "X axis - 8000mm, Y axis - 1200mm, Z axis - 1000mm" },

@@ -205,7 +205,7 @@ const ShriBalajiIndustries = () => {
     { name: "Robotic Plasma Machines", image: "/images/Robotic Plasma Machines.jpeg", description: "4 units for automated cutting operations" },
     { name: "Power Presses", image: "/images/pressingforming_mechanical_power_press_models.JPG", description: "High-speed stamping operations" },
     { 
-      name: "Shearing Cutting Machine", 
+      name: "Laser Cutting Machine", 
       images: [
         "/images/shri-balaji/equipment/SHEARING_CUTTING_MACHINE_1.png",
         "/images/shri-balaji/equipment/SHEARING_CUTTING_MACHINE_2.png"

@@ -85,13 +85,13 @@ const EssEssIndustriesProducts = () => {
   const products: { name: string; image?: string; images?: string[]; description: string }[] = [
     { name: 'Differential 33" Size', image: '/images/ess-ess/products/DIFFERENTIAL 33" SIZE.png', description: "Precision differential components for 33-inch applications" },
     { name: 'Differential 35" Size', image: '/images/ess-ess/products/DIFFERENTIAL 35" SIZE.png', description: "High-quality differential assemblies for 35-inch systems" },
-    { name: 'Differential 38" Size', image: '/images/ess-ess/products/DIFFERENTIAL 38" SIZE.png', description: "Advanced differential components for 38-inch applications" },
-    { name: 'Differential 42" Size', image: '/images/ess-ess/products/DIFFERENTIAL 42" SIZE.png', description: "Heavy-duty differential assemblies for 42-inch systems" },
+    { name: 'Differential 38" Size', image: '/images/ess-ess/products/DIFFERENTIAL 38" SIZE.png', description: "Advanced differential components for 38-inch applications — uses 4mm Handi" },
+    { name: 'Differential 42" Size', image: '/images/ess-ess/products/DIFFERENTIAL 42" SIZE.png', description: "Heavy-duty differential assemblies for 42-inch systems — uses 4mm Handi" },
     { name: "Handle T - Casting Version", image: "/images/ess-ess/products/HANDLE T_CASTING_VERSION.png", description: "Cast T-handle component — without lock mechanism" },
     { name: "Handle T - Forging Version", images: ["/images/ess-ess/products/HANDLE_T_FORGING_VERSION_WITH_LOCK.png", "/images/ess-ess/products/HANDLE_T_FORGING_VERSION_WITHOUT_LOCK.png"], description: "Forged T-handle component — available with lock and without lock versions" },
     { name: "Neck Pipe Components", image: "/images/ess-ess/products/NECK_PIPE.jpg", description: "Precision neck pipe components for fluid transfer systems" },
     { name: "Drum Brake Hub Assembly 25.5", images: ["/images/ess-ess/products/DRUM_BRAKE_HUB_ASSEMBLY_1.jpg", "/images/ess-ess/products/DRUM_BRAKE_HUB_ASSEMBLY_2.jpg"], description: "25.5 size drum brake hub assembly — includes wheel hub, brake plate with shoes, and axle spindle" },
-    { name: "Handi (4mm)", images: ["/images/ess-ess/products/4MM_HANDI.jpg", "/images/ess-ess/products/4MM_HANDI_2.jpg"], description: "Press formed chassis tube components — structural frame members for e-rickshaw assembly" },
+    { name: "Handi (4mm)", images: ["/images/ess-ess/products/4MM_HANDI.jpg", "/images/ess-ess/products/4MM_HANDI_2.jpg"], description: "4mm thickness press formed chassis tube components — structural frame members for e-rickshaw assembly" },
   ];
 
   return (
