@@ -10,7 +10,7 @@ const CardImage = ({ image, name }: { image: string; name: string }) => {
         onClick={(e) => { e.stopPropagation(); setOpen(true); }}
         className="absolute inset-0 bg-white flex items-center justify-center cursor-zoom-in p-3 group/img"
       >
-        <img src={image} alt={name} className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/img:scale-105" />
+        <img src={image} alt={name} loading="lazy" className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/img:scale-105" />
         <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/5 transition-colors flex items-center justify-center pointer-events-none">
           <div className="w-9 h-9 rounded-full bg-white/90 shadow flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity text-zinc-700">
             <Maximize2 size={16} />
@@ -26,7 +26,7 @@ const CardImage = ({ image, name }: { image: string; name: string }) => {
             <h4 className="text-lg font-bold tracking-tight uppercase text-white">{name}</h4>
           </div>
           <div className="max-w-5xl w-full h-[80vh] flex items-center justify-center">
-            <img src={image} alt={name} className="max-w-full max-h-full object-contain" onClick={(e) => e.stopPropagation()} />
+            <img src={image} alt={name} loading="lazy" className="max-w-full max-h-full object-contain" onClick={(e) => e.stopPropagation()} />
           </div>
           <p className="text-white/40 text-xs mt-4 uppercase tracking-widest font-bold select-none">Click anywhere to close</p>
         </div>

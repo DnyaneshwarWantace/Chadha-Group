@@ -19,7 +19,7 @@ const MrkImpexProducts = () => {
       
       {/* ----------------- HERO SECTION ----------------- */}
       <div className="relative w-full min-h-[350px] flex flex-col justify-between border-b border-gray-200">
-        <img src="/images/All Type of Crank Shafts.jpeg" alt="Precision Engineering" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
+        <img src="/images/All Type of Crank Shafts.jpeg" alt="Precision Engineering" loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-[#f8f9fa]/90 to-[#f8f9fa]" />
 
         <header className="relative z-50 border-b border-gray-200 bg-white/70 backdrop-blur-md">
@@ -61,7 +61,7 @@ const MrkImpexProducts = () => {
             {products.map((p, i) => (
               <div key={p.name} className="group relative bg-[#f8f9fa] border border-gray-100 hover:border-amber-600/40 transition-all duration-500 flex flex-col h-full rounded-none overflow-hidden">
                 <div className="relative h-64 overflow-hidden">
-                  <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+                  <img src={p.image} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-amber-900/10 group-hover:bg-transparent transition-colors duration-500" />
                   <div className="absolute top-4 left-4">
                     <span className="text-[10px] font-bold bg-white/90 text-zinc-800 px-2 py-1 uppercase tracking-widest border border-gray-200">

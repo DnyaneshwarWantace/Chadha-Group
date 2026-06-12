@@ -22,7 +22,7 @@ const ProductCardImage = ({ image, images, name }: { image?: string; images?: st
   return (
     <>
       <div onClick={openLightbox} className="relative w-full h-full group/slider bg-white flex items-center justify-center cursor-zoom-in p-4">
-        <img src={activeImage} alt={name} className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/slider:scale-105" />
+        <img src={activeImage} alt={name} loading="lazy" className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/slider:scale-105" />
         <div className="absolute inset-0 bg-black/0 group-hover/slider:bg-black/5 transition-colors flex items-center justify-center pointer-events-none">
           <div className="w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity text-zinc-700">
             <Maximize2 size={18} />
@@ -60,7 +60,7 @@ const ProductCardImage = ({ image, images, name }: { image?: string; images?: st
             )}
           </div>
           <div className="relative max-w-5xl w-full h-[80vh] flex items-center justify-center select-none">
-            <img src={activeImage} alt={name} className="max-w-full max-h-full object-contain pointer-events-auto" onClick={(e) => e.stopPropagation()} />
+            <img src={activeImage} alt={name} loading="lazy" className="max-w-full max-h-full object-contain pointer-events-auto" onClick={(e) => e.stopPropagation()} />
             {images && images.length > 1 && (
               <>
                 <button onClick={(e) => { e.stopPropagation(); setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1)); }} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all hover:scale-105">
@@ -99,7 +99,7 @@ const EssEssIndustriesProducts = () => {
 
       {/* ----------------- HERO SECTION ----------------- */}
       <div className="relative w-full min-h-[350px] flex flex-col justify-between border-b border-gray-200">
-        <img src="/images/manufacturing__assembly_differential_assembly_table.JPG" alt="Drivetrain Manufacturing" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
+        <img src="/images/manufacturing__assembly_differential_assembly_table.JPG" alt="Drivetrain Manufacturing" loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-[#f8f9fa]/90 to-[#f8f9fa]" />
 
         <header className="relative z-50 border-b border-gray-200 bg-white/70 backdrop-blur-md">

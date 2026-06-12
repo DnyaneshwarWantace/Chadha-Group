@@ -189,7 +189,7 @@ const ShriBalajiIndustriesEquipment = () => {
       
       {/* ----------------- HERO SECTION ----------------- */}
       <div className="relative w-full min-h-[350px] flex flex-col justify-between border-b border-gray-200">
-        <img src="/images/shri-balaji/equipment/Robotic Plasma Machines.jpeg" alt="Precision Equipment" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
+        <img src="/images/shri-balaji/equipment/Robotic Plasma Machines.jpeg" alt="Precision Equipment" loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-[#f8f9fa]/90 to-[#f8f9fa]" />
 
         <header className="relative z-50 border-b border-gray-200 bg-white/70 backdrop-blur-md">

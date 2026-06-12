@@ -10,7 +10,7 @@ const CardImage = ({ image, images, name }: { image?: string; images?: string[];
   return (
     <>
       <div onClick={(e) => { e.stopPropagation(); setOpen(true); }} className="absolute inset-0 bg-white flex items-center justify-center cursor-zoom-in p-3 group/img">
-        <img src={active} alt={name} className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/img:scale-105" />
+        <img src={active} alt={name} loading="lazy" className="max-w-full max-h-full object-contain transition-all duration-500 group-hover/img:scale-105" />
         <div className="absolute inset-0 bg-black/0 group-hover/img:bg-black/5 transition-colors flex items-center justify-center pointer-events-none">
           <div className="w-9 h-9 rounded-full bg-white/90 shadow flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity text-zinc-700"><Maximize2 size={16} /></div>
         </div>
@@ -33,7 +33,7 @@ const CardImage = ({ image, images, name }: { image?: string; images?: string[];
             {all.length > 1 && <p className="text-xs text-white/60 mt-0.5 uppercase tracking-wider font-semibold">Unit {idx + 1} of {all.length}</p>}
           </div>
           <div className="relative max-w-5xl w-full h-[80vh] flex items-center justify-center">
-            <img src={active} alt={name} className="max-w-full max-h-full object-contain" onClick={(e) => e.stopPropagation()} />
+            <img src={active} alt={name} loading="lazy" className="max-w-full max-h-full object-contain" onClick={(e) => e.stopPropagation()} />
             {all.length > 1 && (
               <>
                 <button onClick={(e) => { e.stopPropagation(); setIdx((p) => (p === 0 ? all.length - 1 : p - 1)); }} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center"><ChevronLeft size={28} /></button>
@@ -70,7 +70,7 @@ const MrkImpexEquipment = () => {
 
       {/* ----------------- HERO SECTION ----------------- */}
       <div className="relative w-full min-h-[350px] flex flex-col justify-between border-b border-gray-200">
-        <img src="/images/machiningmanufacturing_cnc_milling_machine_computer_numerical_control_milling_machine.JPG" alt="High-Tech Equipment" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
+        <img src="/images/machiningmanufacturing_cnc_milling_machine_computer_numerical_control_milling_machine.JPG" alt="High-Tech Equipment" loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-15 grayscale sepia-[.1]" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-[#f8f9fa]/90 to-[#f8f9fa]" />
 
         <header className="relative z-50 border-b border-gray-200 bg-white/70 backdrop-blur-md">
