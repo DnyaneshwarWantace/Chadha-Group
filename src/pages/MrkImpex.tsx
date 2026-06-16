@@ -16,8 +16,8 @@ const MrkImpex = () => {
   ];
 
   const machinery = [
-    { name: "CNC Lathe Machines", image: "/images/mrk/CNC-lathe-machine.jpeg", description: "Swing Over Bed - Dia1600mm, Swing Over Slide - Dia2000mm, Total Length - 7500mm" },
-    { name: "Vertical Machining Centre (KAFO3151)", image: "/images/mrk/VMC-Kafo.jpeg", description: "X-5000mm, Y-3000mm, Z-1700mm" },
+    { name: "CNC Lathe Machines", image: "/images/mrk/equipment/CNC Lathe Machines.jpeg", description: "Swing Over Bed - Dia1600mm, Swing Over Slide - Dia2000mm, Total Length - 7500mm" },
+    { name: "Vertical Machining Centre (KAFO3151)", image: "/images/mrk/equipment/VMC KAFO3151.jpeg", description: "X-5000mm, Y-3000mm, Z-1700mm" },
     { name: "CNC Vertical Turning Lathe (TOS German)", image: "/images/mrk/equipment/CNC Vertical Turning Lathe.png", description: "Dia 2200mm, Z axis - 1600mm" },
     { name: "Roll Grinder (TOS German)", image: "/images/mrk/Roll Grinder (TOS German).jpg", description: "Job Capacity 900X5000MM & Dia 400X1400MM — Precision roll grinding" },
     { name: "ELGA Milling Machine", image: "/images/mrk/Elga-Milling.jpeg", description: "X axis - 8000mm, Y axis - 1200mm, Z axis - 1000mm" },
